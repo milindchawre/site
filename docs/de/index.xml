@@ -1,0 +1,15 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Das ist Kiss&#39;Em!</title>
+    <link>https://milindchawre.github.io/site/de/</link>
+    <description>Recent content on Das ist Kiss&#39;Em!</description>
+    <generator>Hugo - gohugo.io</generator>
+    <language>de</language>
+    <contact>milindchawre@outlook.com</contact>
+    <copyright>© <a href="https://github.com/milindchawre">Milind Chawre</a> 2020</copyright>
+    
+        <atom:link href="https://milindchawre.github.io/site/de/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+  </channel>
+</rss>

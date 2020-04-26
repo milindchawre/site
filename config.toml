@@ -1,0 +1,51 @@
+baseurl = "https://milindchawre.github.io/site/"
+languageCode = "en"
+theme = "kiss-em"
+Paginate = 5 # Number of posts per page
+enableRobotsTXT = true
+defaultContentLanguage = "en"
+publishDir = "docs"
+
+[languages]
+  [languages.de]
+    title = "Das ist Kiss'Em!"
+    weight = 2
+  [languages.en]
+    title = "Milind's Blog"
+    weight = 1
+
+[params.microblog]
+number = 2
+
+[params.assets]
+customCSS = ["css/custom.css"]
+
+[params.rss]
+enable = true
+includeContent = true
+authorName = "Milind Chawre"
+authorEmail = "milindchawre@outlook.com"
+
+[params.info]
+poweredby = true
+related = true
+copyright = "© <a href=\"https://github.com/milindchawre\">Milind Chawre</a> 2020"
+
+[params.social]
+about = "about"
+twitter = "@_pavel_pi_"
+github = "milindchawre"
+email = "milindchawre@outlook.com"
+linkedin = "milind-chawre"
+facebook = "milind.chawre"
+stackoverflow = "users/6790948/mchawre?tab=profile"
+resume = "milindchawre.github.io"
+rss = "index.xml"
+
+# Define the order of the icons:
+[params.social.config]
+platforms = ["about", "resume", "email", "github", "linkedin", "stackoverflow", "facebook", "rss"]
+
+[taxonomies]
+tag ="tags"
+

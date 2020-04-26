@@ -1,0 +1,40 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Milind&#39;s Blog</title>
+    <link>https://milindchawre.github.io/site/</link>
+    <description>Recent content on Milind&#39;s Blog</description>
+    <generator>Hugo - gohugo.io</generator>
+    <language>en</language>
+    <contact>milindchawre@outlook.com</contact>
+    <copyright>© <a href="https://github.com/milindchawre">Milind Chawre</a> 2020</copyright>
+    
+        <atom:link href="https://milindchawre.github.io/site/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Blogs</title>
+      <link>https://milindchawre.github.io/site/blog/</link>
+      <pubDate>Sun, 26 Apr 2020 18:01:10 +0530</pubDate>
+      <author>Milind Chawre</author>
+      <guid>https://milindchawre.github.io/site/blog/</guid>
+      <description></description>
+      
+      <content></content>
+      
+    </item>
+    
+    <item>
+      <title>About me</title>
+      <link>https://milindchawre.github.io/site/about/</link>
+      <pubDate>Sun, 26 Apr 2020 00:00:00 +0000</pubDate>
+      <author>Milind Chawre</author>
+      <guid>https://milindchawre.github.io/site/about/</guid>
+      <description></description>
+      
+      <content>&lt;p&gt;My name is &lt;a href=&#34;https://milindchawre.github.io&#34;&gt;Milind Chawre&lt;/a&gt;. I&amp;rsquo;m devops engineer based in &lt;a href=&#34;https://en.wikipedia.org/wiki/Pune&#34;&gt;Pune, India&lt;/a&gt; - passionate about &lt;a href=&#34;https://landscape.cncf.io/&#34;&gt;cloud native technologies&lt;/a&gt; and anything related to &lt;a href=&#34;https://www.docker.com/&#34;&gt;docker&lt;/a&gt; &amp;amp; &lt;a href=&#34;https://kubernetes.io/&#34;&gt;kubernetes&lt;/a&gt;. I enjoy creating great products with great user experiences and loves working in a dynamic environment with a focus on good development practices, automation, frequent releases. I loves building systems from scratch with best practices like security, automation, CI/CD, logging, monitoring, alerting, etc in mind.&lt;/p&gt;
+</content>
+      
+    </item>
+    
+  </channel>
+</rss>

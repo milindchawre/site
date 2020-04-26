@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>kubernetes on Milind&#39;s Blog</title>
+    <link>https://milindchawre.github.io/site/tags/kubernetes/</link>
+    <description>Recent content in kubernetes on Milind&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 26 Apr 2020 18:01:10 +0530</lastBuildDate>
+    
+	<atom:link href="https://milindchawre.github.io/site/tags/kubernetes/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Setting Up Polaris on Kubernetes</title>
+      <link>https://milindchawre.github.io/site/blog/setting-up-polaris-on-kubernetes/</link>
+      <pubDate>Sun, 26 Apr 2020 18:01:10 +0530</pubDate>
+      
+      <guid>https://milindchawre.github.io/site/blog/setting-up-polaris-on-kubernetes/</guid>
+      <description>Polaris is an open-source project that looks for configuration issues in kubernetes that can affect stability, reliability, scalability, and security. It was built by Fairwinds (formerly ReactiveOps).
+Problem Creating cluster is easy, but running it at scale with stability and security is hard. We have seen this often a small mistake in deployment configuration can later result in bigger issues. Something like missing to configure resource requests can break auto scaling or even cause workloads to run out of resources.</description>
+    </item>
+    
+  </channel>
+</rss>
