@@ -1,6 +1,6 @@
 ---
 title: "Setting Up Polaris on Kubernetes"
-date: 2020-04-26T18:01:10+05:30
+date: 2020-04-27T18:01:10+05:30
 tags: [
     "kubernetes",
     "polaris",
@@ -11,19 +11,24 @@ categories: [
 draft: false
 ---
 
+_This blog was originally featured as a [guide](https://www.civo.com/learn/setting-up-polaris-on-k8s) in civo cloud community._
+
 [Polaris](https://www.fairwinds.com/polaris) is an open-source project that looks for configuration issues in kubernetes that can affect stability, reliability, scalability, and security. It was built by [Fairwinds (formerly ReactiveOps)](https://www.fairwinds.com/).
 
 #### Problem
-Creating cluster is easy, but running it at scale with stability and security is hard. We have seen this often a small mistake in deployment configuration can later result in bigger issues. Something like missing to configure resource requests can break auto scaling or even cause workloads to run out of resources. Polaris aims to catch and prevent such problems.
+Creating cluster is easy, but running it at scale with stability and security is hard. We have seen this often: a small mistake in deployment configuration can later result in bigger issues. Something like failing to configure resource requests can break auto scaling or even cause workloads to run out of resources. Polaris aims to catch and prevent such problems.
 
 #### Polaris Features
 - Dashboard for auditing Kubernetes workload configuration
-- Cli utility for auditing k8s yamls
-- polaris webhook that prevents future deployments if it doesn't meets the configured standard
-- audits more than just k8s resources like container health checks, image tags, networking, security settings, etc
+- Cli utility for auditing k8s yaml files
+- Polaris webhook that prevents future deployments if they don't meet the configured standard
+- Auditing more than just k8s resources like container health checks, image tags, networking, security settings, etc
 
 #### Installation
 The polaris dashboard can be [installed](https://github.com/FairwindsOps/polaris/blob/master/docs/usage.md#installing) using `kubectl`, `helm` or `local binary`.
+
+All methods will require you to have a cluster running, and the `KUBECONFIG` environment variable set up.
+
 - kubectl
 ```
 kubectl apply -f https://github.com/fairwindsops/polaris/releases/latest/download/dashboard.yaml
@@ -45,6 +50,8 @@ and visit `http://localhost:8080/` to view the dashboard.
 
 As shown in the dashboard, the polaris gives a `grade` and `score` to your kubernetes cluster based on the configuration of your workloads. You can now work to improve the workload configuration to improve your cluster `grade` and `score`. This will help in making your cluster more secure, stable, scalable, and resilient.
 
+The standards out of the box are meant to be industry-leading, but can be adjusted in the dashboard to match your preferences and requirements.
+
 The dashboard also provides a  high-level summary of checks for each category with some helpful information.
 
 ![polaris2](https://github.com/milindchawre/civo-k8s/raw/master/blog/polaris/images/polaris2.png)
@@ -53,15 +60,15 @@ You can also see kubernetes deployments with specific misconfigurations listed.
 
 ![polaris3](https://github.com/milindchawre/civo-k8s/raw/master/blog/polaris/images/polaris3.png)
 
-As shown this [nginx-deployment](https://raw.githubusercontent.com/milindchawre/civo-k8s/master/blog/polaris/nginx.yaml) have few misconfigurations like image tag is not specified, resources like cpu and memory are missing, health checks are not configured and so on. Let's try to fix few of them.
+As shown in the image above, this [nginx-deployment](https://raw.githubusercontent.com/milindchawre/civo-k8s/master/blog/polaris/nginx.yaml) have few misconfigurations. For example, the image tag is not specified, resources like cpu and memory are missing, health checks are not configured and so on. Let's try to fix few of them.
 
-Polaris also shows the meaning of each configuration and what config is missing with some reference links explaining the use and importance of those configuration.
+Polaris also shows the meaning of each configuration and what config is missing with some reference links explaining the use and importance of each.
 
 ![polaris4](https://github.com/milindchawre/civo-k8s/raw/master/blog/polaris/images/polaris4.png)
 
 ![polaris5](https://github.com/milindchawre/civo-k8s/raw/master/blog/polaris/images/polaris5.png)
 
-Now apply the new [nginx-deployment](https://raw.githubusercontent.com/milindchawre/civo-k8s/master/blog/polaris/nginx-fix.yaml) where we had changed few things to fix few of the misconfigurations.
+Now we can apply the new [nginx-deployment](https://raw.githubusercontent.com/milindchawre/civo-k8s/master/blog/polaris/nginx-fix.yaml) where we have changed few things to fix few of the misconfigurations. The changes are summarised in the diff below:
 ```
 17c17
 -         image: nginx:latest
@@ -96,20 +103,20 @@ Now apply the new [nginx-deployment](https://raw.githubusercontent.com/milindcha
 +           failureThreshold: 3
 ```
 
-Now check the nginx-deployment in polaris dashboard, few of the mis-configurations should have gone.
+Now checking the nginx-deployment in polaris dashboard, a few of the mis-configurations should have gone.
 
 ![polaris6](https://github.com/milindchawre/civo-k8s/raw/master/blog/polaris/images/polaris6.png)
 
-Fixing such mis-configuration for all the workloads will improve the `grade` and `score` of your cluster that can be seen at the top of polaris dashboard. This will make your cluster more secure, stable, scalable, and resilient.
+Fixing such mis-configuration for all workloads will improve the `grade` and `score` of your cluster that can be seen at the top of the polaris dashboard. This will make your cluster more secure, stable, scalable, and resilient.
 
 #### Polaris Cli 
-If you don't want to deploy polaris in your kubernetes cluster as an another application running along with the other workloads, then make use of polaris cli. With the cli you can audit the k8s yaml and also view the polaris dashboard locally.
+If you don't want to deploy polaris in your kubernetes cluster as an another application running along with other workloads, you can make use of [polaris cli](https://github.com/FairwindsOps/polaris#cli). With the CLI tool you can audit the k8s yaml and also view the polaris dashboard locally, or configure it to run as part of your CI/CD run, as detailed below.
 
 #### Polaris Webhook
-The polaris webhook provides a way to enforce some standards in all the kubernetes deployments. Once you have addressed all the misconfigurations identified in polaris dashboard, you can now deploy the polaris webhook to ensure that the configuration never slips below the configured standard. Once you deploy it in the cluster, the webhook will prevent any further kubernetes deployment that doesn't meet the configuration standard.
+The [polaris webhook](https://github.com/FairwindsOps/polaris/blob/master/docs/usage.md#webhook) provides a way to enforce some standards in all of your kubernetes deployments. Once you have addressed all the misconfigurations identified in the polaris dashboard, you can deploy the webhook to ensure that the configuration never slips below the configured standard. Once you deploy it in the cluster, the webhook will prevent any further kubernetes deployment that doesn't meet the configuration standard.
 
 #### Polaris in CI/CD pipelines
-Polaris can be integrated in your CI/CD pipelines.
+Polaris can be integrated in your CI/CD pipelines. You could set it to run on each deployment with something like the following added as a command in your pipeline, customised to your set requirements.
 ```
 polaris audit --audit-path path/to/my/deployment/yaml --set-exit-code-on-error --set-exit-code-below-score 90
 ```
