@@ -6,15 +6,24 @@
     <description>Recent content in Tags on Milind&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 27 Apr 2020 18:01:10 +0530</lastBuildDate>
+    <lastBuildDate>Thu, 14 May 2020 20:45:09 +0530</lastBuildDate>
     
 	<atom:link href="https://milindchawre.github.io/site/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>goldilocks</title>
+      <link>https://milindchawre.github.io/site/tags/goldilocks/</link>
+      <pubDate>Thu, 14 May 2020 20:45:09 +0530</pubDate>
+      
+      <guid>https://milindchawre.github.io/site/tags/goldilocks/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>kubernetes</title>
       <link>https://milindchawre.github.io/site/tags/kubernetes/</link>
-      <pubDate>Mon, 27 Apr 2020 18:01:10 +0530</pubDate>
+      <pubDate>Thu, 14 May 2020 20:45:09 +0530</pubDate>
       
       <guid>https://milindchawre.github.io/site/tags/kubernetes/</guid>
       <description></description>

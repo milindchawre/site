@@ -6,10 +6,21 @@
     <description>Recent content in Blogs on Milind&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 27 Apr 2020 18:01:10 +0530</lastBuildDate>
+    <lastBuildDate>Thu, 14 May 2020 20:45:09 +0530</lastBuildDate>
     
 	<atom:link href="https://milindchawre.github.io/site/blog/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Fairwinds Goldilocks : Kubernetes Resource Recommendation Tool</title>
+      <link>https://milindchawre.github.io/site/blog/fairwinds-goldilocks-kubernetes-resource-recommendation-tool/</link>
+      <pubDate>Thu, 14 May 2020 20:45:09 +0530</pubDate>
+      
+      <guid>https://milindchawre.github.io/site/blog/fairwinds-goldilocks-kubernetes-resource-recommendation-tool/</guid>
+      <description>This blog was originally featured as a guide in civo cloud community.
+Fairwinds Goldilocks is an open source tool that recommends the right settings for resource requests and limits on kubernetes workloads. It was built by Fairwinds (formerly ReactiveOps).
+Problem It is said that good fences make good neighbors, it&amp;rsquo;s true for applications too. Applications were typically designed to run standalone in a machine and use all of the resources at hand.</description>
+    </item>
     
     <item>
       <title>Setting Up Polaris on Kubernetes</title>

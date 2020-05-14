@@ -1,0 +1,304 @@
+
+<!doctype html>
+
+<html xmlns="http://www.w3.org/1999/xhtml"  lang="en">
+
+    <head>
+
+        
+        <meta charset="UTF-8" />
+
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+                
+        <title> 
+             Fairwinds Goldilocks : Kubernetes Resource Recommendation Tool  
+        </title>
+        
+        
+            <link href="https://milindchawre.github.io/site/index.xml" rel="alternate" type="application/rss+xml" title="Milind&#39;s Blog" />
+        
+
+        
+        <link rel="stylesheet" href="/site/css/style.css"/>
+
+        
+        
+            <link rel='stylesheet' href='https://milindchawre.github.io/site/css/custom.css'>
+        
+        
+    </head>
+
+    <body>
+
+
+
+<section class="section">
+  <div class="container">
+    <nav id="nav-main" class="nav">
+      <div id="nav-name" class="nav-left">
+        <a id="nav-anchor" class="nav-item" href="https://milindchawre.github.io/site/">
+          <h1 id="nav-heading" class="title is-4">Milind&#39;s Blog</h1>
+        </a>
+      </div>
+      <div class="nav-right">
+        
+        
+        <nav id="nav-items" class="nav-item level is-mobile">
+          <a class="level-item" aria-label="about" href='/site/about'
+           rel='noopener'>
+            <span class="icon">
+              <i class>
+
+<svg viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+    
+    <circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12" y2="8"></line>
+    
+  </svg>
+</i>
+            </span>
+          </a>
+          <a class="level-item" aria-label="resume" href='https://milindchawre.github.io'
+           target='_blank'  rel='noopener'>
+            <span class="icon">
+              <i class>
+
+<svg viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+    
+    <path d="M22.125 2.25H1.875A1.127 1.127 0 0 0 .75 3.375v17.25a1.127 1.127 0 0 0 1.125 1.125H6v-2.757c0-.351.192-.656.477-.817l.005-.002l4.311-2.396l-1.419-3.546V9.376a2.625 2.625 0 1 1 5.25 0v2.856l-1.419 3.546l4.312 2.396c.29.163.482.469.482.819v2.757h4.125a1.127 1.127 0 0 0 1.125-1.125V3.375a1.127 1.127 0 0 0-1.125-1.125zm-.375 18H19.5v-1.257c0-.911-.5-1.706-1.241-2.124l-.012-.006l-3.157-1.755l1.035-2.588V9.376a4.125 4.125 0 0 0-8.25 0v3.144l1.035 2.588l-3.157 1.755a2.441 2.441 0 0 0-1.253 2.13v1.257H2.25V3.75h19.5z" fill="black"/>
+    
+  </svg>
+</i>
+            </span>
+          </a>
+          <a class="level-item" aria-label="email" href='mailto:milindchawre@outlook.com'
+           target='_blank'  rel='noopener'>
+            <span class="icon">
+              <i class>
+
+<svg viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+    
+    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+    <polyline points="22,6 12,13 2,6"/>
+    
+  </svg>
+</i>
+            </span>
+          </a>
+          <a class="level-item" aria-label="github" href='https://github.com/milindchawre'
+           target='_blank'  rel='noopener'>
+            <span class="icon">
+              <i class>
+
+<svg viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+    
+    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+    
+  </svg>
+</i>
+            </span>
+          </a>
+          <a class="level-item" aria-label="linkedin" href='https://linkedin.com/in/milind-chawre'
+           target='_blank'  rel='noopener'>
+            <span class="icon">
+              <i class>
+
+<svg viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+    
+    <path stroke-width="1.8" d="m5.839218,4.101561c0,1.211972 -0.974141,2.194011 -2.176459,2.194011s-2.176459,-0.982039 -2.176459,-2.194011c0,-1.211094 0.974141,-2.194011 2.176459,-2.194011s2.176459,0.982917 2.176459,2.194011zm0.017552,3.94922l-4.388022,0l0,14.04167l4.388022,0l0,-14.04167zm7.005038,0l-4.359939,0l0,14.04167l4.360816,0l0,-7.370999c0,-4.098413 5.291077,-4.433657 5.291077,0l0,7.370999l4.377491,0l0,-8.89101c0,-6.915523 -7.829986,-6.66365 -9.669445,-3.259423l0,-1.891237z"/>
+    
+  </svg>
+</i>
+            </span>
+          </a>
+          <a class="level-item" aria-label="stackoverflow" href='https://stackoverflow.com/users/6790948/mchawre?tab=profile'
+           target='_blank'  rel='noopener'>
+            <span class="icon">
+              <i class>
+
+<svg viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+    
+    <path d="M18.986 21.865v-6.404h2.134V24H1.844v-8.539h2.13v6.404h15.012zM6.111 19.731H16.85v-2.137H6.111v2.137zm.259-4.852l10.48 2.189l.451-2.07l-10.478-2.187l-.453 2.068zm1.359-5.056l9.705 4.53l.903-1.95l-9.706-4.53l-.902 1.936v.014zm2.715-4.785l8.217 6.855l1.359-1.62l-8.216-6.853l-1.35 1.617l-.01.001zM15.751 0l-1.746 1.294l6.405 8.604l1.746-1.294L15.749 0h.002z" fill="white"/>
+    
+  </svg>
+</i>
+            </span>
+          </a>
+          <a class="level-item" aria-label="facebook" href='https://facebook.com/milind.chawre'
+           target='_blank'  rel='noopener'>
+            <span class="icon">
+              <i class>
+
+<svg viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+    
+    <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+    
+  </svg>
+</i>
+            </span>
+          </a>
+          <a class="level-item" aria-label="rss" href='/site/index.xml'
+           target='_blank'  rel='noopener'>
+            <span class="icon">
+              <i class>
+
+<svg viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+    
+    <path d="M4 11a9 9 0 0 1 9 9"></path><path d="M4 4a16 16 0 0 1 16 16"></path><circle cx="5" cy="19" r="1"></circle>
+    
+  </svg>
+</i>
+            </span>
+          </a></nav>
+        
+      
+      </div>
+    </nav>
+
+    <nav class="nav">
+      
+
+      
+    </nav>
+
+  </div>
+</section>
+
+<section class="section">
+    
+    <div class="container">
+    
+        
+            
+<div class="subtitle tags is-6 is-pulled-right">
+    
+        
+<a class="subtitle is-6" href="/site/tags/kubernetes/">#kubernetes</a>
+
+
+
+  
+  | <a class="subtitle is-6" href="/site/tags/goldilocks/">#goldilocks</a>
+  
+
+
+    
+</div>
+
+
+
+<h2 class="subtitle is-6">
+    
+    
+        May 14, 2020 | 20:45
+    
+</h2>
+
+
+
+<h1 class="title">Fairwinds Goldilocks : Kubernetes Resource Recommendation Tool</h1>
+
+<div class="content">
+
+    
+    <p><em>This blog was originally featured as a <a href="https://www.civo.com/learn/fairwinds-goldilocks-kubernetes-resource-recommendation-tool">guide</a> in civo cloud community.</em></p>
+<p><a href="https://github.com/FairwindsOps/goldilocks">Fairwinds Goldilocks</a> is an open source tool that recommends the right settings for <a href="https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/#requests-and-limits">resource requests and limits</a> on kubernetes workloads. It was built by <a href="https://www.fairwinds.com/">Fairwinds (formerly ReactiveOps)</a>.</p>
+<h4 id="problem">Problem</h4>
+<p>It is said that good fences make good neighbors, it&rsquo;s true for applications too. Applications were typically designed to run standalone in a machine and use all of the resources at hand. But that&rsquo;s not the case with distributed system (like kubernetes) where resources (CPU/Memory, etc) are shared between applications. Every time you create a workload in Kubernetes, its very important to specify how much memory and CPU that workload is going to use. There are two ways to specify the resources and both have some drawbacks:</p>
+<ul>
+<li><code>set the resource requests too low</code>, which has the risk of making a normal application looks like it’s using too much memory, too much CPU and kubernetes will kill it. Needless to say, this will make your application unreliable and cause downtime.</li>
+<li><code>set the resource requests too high</code>, where you allocate more compute than necessary and your cloud bill can get to be much higher than it needs to.</li>
+</ul>
+<p>So setting optimal values for <a href="https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/#requests-and-limits">resource requests and limits</a> on kubernetes workloads is very important. This is where Fairwind&rsquo;s Goldilocks helps - it will suggest resource request values that are just right.</p>
+<h4 id="goldilocks-features">Goldilocks Features</h4>
+<ul>
+<li>Recommends values for resource requests and limits on kubernetes workloads.</li>
+<li>Dashboard that shows recommended values for kubernetes resources based on QoS(Quality of Service).</li>
+<li>Helps in optimizing kubernetes resource utilization.</li>
+<li>CLI utility for analysis of kubernetes deployment resource usage.</li>
+</ul>
+<h4 id="installation">Installation</h4>
+<p>The goldilocks can be <a href="https://github.com/FairwindsOps/goldilocks#installation">installed</a> using <code>kubectl</code>, <code>helm</code> or a local binary.</p>
+<p>All methods will require you to have a cluster running, and the <code>KUBECONFIG</code> environment variable set up.</p>
+<ul>
+<li><code>kubectl</code> to be able to manually install Goldilocks, you would have to <a href="https://github.com/FairwindsOps/goldilocks">clone the repository</a> and from its root directory run the following:</li>
+</ul>
+<pre><code>kubectl create namespace goldilocks
+kubectl -n goldilocks apply -f hack/manifests/controller
+kubectl -n goldilocks apply -f hack/manifests/dashboard
+</code></pre><ul>
+<li>helm</li>
+</ul>
+<pre><code>helm repo add fairwinds-stable https://charts.fairwinds.com/stable
+helm install --name goldilocks --namespace goldilocks --set installVPA=true fairwinds-stable/goldilocks
+</code></pre><ul>
+<li>binary : download the binary from <a href="https://github.com/FairwindsOps/goldilocks/releases">release page</a></li>
+</ul>
+<p>then use kubectl&rsquo;s port-forward function to access the dashboard:</p>
+<pre><code>kubectl -n goldilocks port-forward svc/goldilocks-dashboard 8080:80
+</code></pre><p>and visit <code>http://localhost:8080/</code> to view the dashboard.</p>
+<p><img src="https://github.com/milindchawre/civo-k8s/raw/master/blog/goldilocks/images/g1.png" alt="goldilocks1"></p>
+<p>As shown in the dashboard, there are no initial recommendations for any deployment. This is because Goldilocks only provides
+recommendations for deployments in those namespace which have the label <code>goldilocks.fairwinds.com/enabled=true</code> set.</p>
+<p>Let&rsquo;s assign this label to our Goldilocks namespace: <code>kubectl label ns goldilocks goldilocks.fairwinds.com/enabled=true</code>.</p>
+<p>Now you should see some recommendations for every deployments in the goldilocks namespace.</p>
+<p><img src="https://github.com/milindchawre/civo-k8s/raw/master/blog/goldilocks/images/g2.png" alt="goldilocks2"></p>
+<p>As shown in the image above, Goldilocks provides two types of recommendations, depending on what <a href="https://kubernetes.io/docs/tasks/configure-pod-container/quality-service-pod/">QoS Class</a> you desire for your deployments.</p>
+<h4 id="how-goldilocks-provides-resource-recommendation">How goldilocks provides resource recommendation?</h4>
+<p>Behind the scenes, goldilocks makes use of <a href="https://github.com/kubernetes/autoscaler/tree/master/vertical-pod-autoscaler">Vertical Pod Autoscaler (VPA)</a>, which contains recommendation engine that takes into account the current resource usage of your deployments in order to provide a guideline.</p>
+<p>The primary goal of VPA is to actually set those for you, but the company isn’t comfortable with the way it does this and
+prefers to use it primarily for recommendations, Goldilocks’s creator <a href="https://www.linkedin.com/in/sudermanjr/">Andy Suderman</a> writes in a <a href="https://www.fairwinds.com/news/introducing-goldilocks-a-tool-for-recommending-resource-requests">blog post</a>.</p>
+<blockquote>
+<p><em>&ldquo;The way we utilize the VPA recommendation engine is simple. We run a controller in the cluster that watches for namespaces that are labelled with <code>goldilocks.fairwinds.com/enabled=true</code>. Within those enabled namespaces, we look at every deployment object and create a corresponding VPA object. That VPA is set with <code>Mode: Off </code> and doesn’t actually modify your resource requests and limits; it just sits there and provides a recommendation. To view these recommendations, you would have to use kubectl to query each and every VPA object. For medium to large deployments, this can get very tedious. That’s where we introduced Goldilocks dashboard which provides a visualization of the VPA recommendations.&quot;</em></p>
+</blockquote>
+<h4 id="excluding-recommendations-for-containers">Excluding Recommendations for Containers</h4>
+<p>Often we see clusters where every pod gets a sidecar, such as the Istio or Linkerd2 sidecars. You may not want to see resource recommendations for those containers because we may or may not have control over those values. There are two ways to exclude these containers.</p>
+<p>The first method is global and can be set by running the dashboard with the flag <code>--exclude-containers &quot;istio-proxy,linkerd-proxy&quot;</code>. This is set by default in the Helm chart installation.</p>
+<p>The second method is to exclude containers per deployment using a label on the deployment itself: <code>goldilocks.fairwinds.com/exclude-containers=linkerd-proxy,istio-proxy</code>.</p>
+<p>If you are running any other containers you wish to exclude, you can just substitute them in for the values in the examples above, or add to the list.</p>
+<h4 id="goldilocks-cli">Goldilocks CLI</h4>
+<p>If you don&rsquo;t want to deploy Goldilocks in your Kubernetes cluster as an application running along with other workloads, you can make use of <a href="https://github.com/FairwindsOps/goldilocks#cli-usage-not-recommended">Goldilocks CLI</a>. You can do everything described above with the CLI tool, but do note that Fairwinds primarily recommends the use of the Dashboard.</p>
+<p>For more information, check out the <a href="https://github.com/FairwindsOps/goldilocks">Goldilocks project on GitHub</a> and this introduction <a href="https://www.youtube.com/watch?v=WwiRDJ9THMc">video</a> for Goldilocks.</p>
+
+
+    
+    
+        <div class="related">
+
+
+<h3>Similar articles</h3>
+
+<ul>
+	
+	<li><a href="/site/blog/setting-up-polaris-on-kubernetes/">Setting Up Polaris on Kubernetes</a></li>
+	
+</ul>
+
+
+</div>
+    
+
+</div>
+
+
+        
+
+    </div>
+
+</section>
+
+
+
+<section class="section">
+  <div class="container has-text-centered">
+    <p>© <a href="https://github.com/milindchawre">Milind Chawre</a> 2020</p>
+    
+      <p>Powered by <a href="https://gohugo.io/">Hugo</a> &amp; <a href="https://github.com/pavel-pi/kiss-em">Kiss'Em</a>.</p>
+    
+  </div>
+</section>
+
+</body>
+</html>
+

@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>kubernetes on Milind&#39;s Blog</title>
-    <link>https://milindchawre.github.io/site/tags/kubernetes/</link>
-    <description>Recent content in kubernetes on Milind&#39;s Blog</description>
+    <title>goldilocks on Milind&#39;s Blog</title>
+    <link>https://milindchawre.github.io/site/tags/goldilocks/</link>
+    <description>Recent content in goldilocks on Milind&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Thu, 14 May 2020 20:45:09 +0530</lastBuildDate>
     
-	<atom:link href="https://milindchawre.github.io/site/tags/kubernetes/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://milindchawre.github.io/site/tags/goldilocks/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -20,17 +20,6 @@
       <description>This blog was originally featured as a guide in civo cloud community.
 Fairwinds Goldilocks is an open source tool that recommends the right settings for resource requests and limits on kubernetes workloads. It was built by Fairwinds (formerly ReactiveOps).
 Problem It is said that good fences make good neighbors, it&amp;rsquo;s true for applications too. Applications were typically designed to run standalone in a machine and use all of the resources at hand.</description>
-    </item>
-    
-    <item>
-      <title>Setting Up Polaris on Kubernetes</title>
-      <link>https://milindchawre.github.io/site/blog/setting-up-polaris-on-kubernetes/</link>
-      <pubDate>Mon, 27 Apr 2020 18:01:10 +0530</pubDate>
-      
-      <guid>https://milindchawre.github.io/site/blog/setting-up-polaris-on-kubernetes/</guid>
-      <description>This blog was originally featured as a guide in civo cloud community.
-Polaris is an open-source project that looks for configuration issues in kubernetes that can affect stability, reliability, scalability, and security. It was built by Fairwinds (formerly ReactiveOps).
-Problem Creating cluster is easy, but running it at scale with stability and security is hard. We have seen this often: a small mistake in deployment configuration can later result in bigger issues.</description>
     </item>
     
   </channel>
