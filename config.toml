@@ -33,7 +33,7 @@ copyright = "© <a href=\"https://github.com/milindchawre\">Milind Chawre</a> 20
 
 [params.social]
 about = "about"
-twitter = "@_pavel_pi_"
+twitter = "@milindchawre"
 github = "milindchawre"
 email = "milindchawre@outlook.com"
 linkedin = "milind-chawre"
@@ -44,7 +44,7 @@ rss = "index.xml"
 
 # Define the order of the icons:
 [params.social.config]
-platforms = ["about", "resume", "email", "github", "linkedin", "stackoverflow", "facebook", "rss"]
+platforms = ["about", "resume", "email", "github", "linkedin", "stackoverflow", "twitter", "facebook", "rss"]
 
 [taxonomies]
 tag ="tags"
