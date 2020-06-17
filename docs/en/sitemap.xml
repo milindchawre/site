@@ -4,27 +4,37 @@
   
   <url>
     <loc>https://milindchawre.github.io/site/blog/</loc>
-    <lastmod>2020-05-14T20:45:09+05:30</lastmod>
+    <lastmod>2020-06-17T23:54:09+05:30</lastmod>
   </url>
   
   <url>
-    <loc>https://milindchawre.github.io/site/blog/fairwinds-goldilocks-kubernetes-resource-recommendation-tool/</loc>
-    <lastmod>2020-05-14T20:45:09+05:30</lastmod>
+    <loc>https://milindchawre.github.io/site/tags/cloud-native-development/</loc>
+    <lastmod>2020-06-17T23:54:09+05:30</lastmod>
   </url>
   
   <url>
-    <loc>https://milindchawre.github.io/site/tags/goldilocks/</loc>
-    <lastmod>2020-05-14T20:45:09+05:30</lastmod>
+    <loc>https://milindchawre.github.io/site/blog/develop-and-test-your-code-directly-in-kubernetes-using-okteto/</loc>
+    <lastmod>2020-06-17T23:54:09+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://milindchawre.github.io/site/tags/java/</loc>
+    <lastmod>2020-06-17T23:54:09+05:30</lastmod>
   </url>
   
   <url>
     <loc>https://milindchawre.github.io/site/tags/kubernetes/</loc>
-    <lastmod>2020-05-14T20:45:09+05:30</lastmod>
+    <lastmod>2020-06-17T23:54:09+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://milindchawre.github.io/site/tags/okteto/</loc>
+    <lastmod>2020-06-17T23:54:09+05:30</lastmod>
   </url>
   
   <url>
     <loc>https://milindchawre.github.io/site/tags/</loc>
-    <lastmod>2020-05-14T20:45:09+05:30</lastmod>
+    <lastmod>2020-06-17T23:54:09+05:30</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="de"
@@ -35,6 +45,21 @@
                 hreflang="en"
                 href="https://milindchawre.github.io/site/tags/"
                 />
+  </url>
+  
+  <url>
+    <loc>https://milindchawre.github.io/site/tags/vscode/</loc>
+    <lastmod>2020-06-17T23:54:09+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://milindchawre.github.io/site/blog/fairwinds-goldilocks-kubernetes-resource-recommendation-tool/</loc>
+    <lastmod>2020-05-14T20:45:09+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://milindchawre.github.io/site/tags/goldilocks/</loc>
+    <lastmod>2020-05-14T20:45:09+05:30</lastmod>
   </url>
   
   <url>

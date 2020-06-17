@@ -6,10 +6,21 @@
     <description>Recent content in Blogs on Milind&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 14 May 2020 20:45:09 +0530</lastBuildDate>
+    <lastBuildDate>Wed, 17 Jun 2020 23:54:09 +0530</lastBuildDate>
     
 	<atom:link href="https://milindchawre.github.io/site/blog/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Develop and Test Your Code Directly in Kubernetes Using Okteto</title>
+      <link>https://milindchawre.github.io/site/blog/develop-and-test-your-code-directly-in-kubernetes-using-okteto/</link>
+      <pubDate>Wed, 17 Jun 2020 23:54:09 +0530</pubDate>
+      
+      <guid>https://milindchawre.github.io/site/blog/develop-and-test-your-code-directly-in-kubernetes-using-okteto/</guid>
+      <description>This blog was originally featured as a guide in civo cloud community.
+Introduction Okteto is an open source tool to develop and test your code directly in Kubernetes. In this guide will walk you through how to develop Java application on a Kubernetes cluster using Okteto.
+Defining the Problem Systems based on microservice architecture have many advantages like scalability, resilience, fault tolerance and so on. But they are also harder to setup locally as a development environment due to their very nature.</description>
+    </item>
     
     <item>
       <title>Fairwinds Goldilocks : Kubernetes Resource Recommendation Tool</title>
