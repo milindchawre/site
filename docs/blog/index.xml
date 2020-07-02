@@ -6,10 +6,20 @@
     <description>Recent content in Blogs on Milind&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 17 Jun 2020 23:54:09 +0530</lastBuildDate>
+    <lastBuildDate>Thu, 02 Jul 2020 23:03:25 +0530</lastBuildDate>
     
 	<atom:link href="https://milindchawre.github.io/site/blog/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>K3s Upgrade: A Simplified Guide</title>
+      <link>https://milindchawre.github.io/site/blog/k3s-upgrade-a-simplified-guide/</link>
+      <pubDate>Thu, 02 Jul 2020 23:03:25 +0530</pubDate>
+      
+      <guid>https://milindchawre.github.io/site/blog/k3s-upgrade-a-simplified-guide/</guid>
+      <description>This blog was originally featured as a guide in kubezilla community.
+Introduction K3s is a lightweight Kubernetes distribution which runs with a very small footprint and is a suitable candidate for edge computing. K3s is capable of nearly everything k8s can do. It is just a more lightweight version. It is the ONLY certified Kubernetes distribution built for IoT &amp;amp; Edge computing. It is a highly available, certified Kubernetes distribution designed for production workloads in unattended, resource-constrained, remote locations or inside IoT appliances.</description>
+    </item>
     
     <item>
       <title>Develop and Test Your Code Directly in Kubernetes Using Okteto</title>

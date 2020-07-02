@@ -6,10 +6,28 @@
     <description>Recent content in Tags on Milind&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 17 Jun 2020 23:54:09 +0530</lastBuildDate>
+    <lastBuildDate>Thu, 02 Jul 2020 23:03:25 +0530</lastBuildDate>
     
 	<atom:link href="https://milindchawre.github.io/site/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>k3s</title>
+      <link>https://milindchawre.github.io/site/tags/k3s/</link>
+      <pubDate>Thu, 02 Jul 2020 23:03:25 +0530</pubDate>
+      
+      <guid>https://milindchawre.github.io/site/tags/k3s/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>kubernetes</title>
+      <link>https://milindchawre.github.io/site/tags/kubernetes/</link>
+      <pubDate>Thu, 02 Jul 2020 23:03:25 +0530</pubDate>
+      
+      <guid>https://milindchawre.github.io/site/tags/kubernetes/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>cloud-native-development</title>
@@ -26,15 +44,6 @@
       <pubDate>Wed, 17 Jun 2020 23:54:09 +0530</pubDate>
       
       <guid>https://milindchawre.github.io/site/tags/java/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>kubernetes</title>
-      <link>https://milindchawre.github.io/site/tags/kubernetes/</link>
-      <pubDate>Wed, 17 Jun 2020 23:54:09 +0530</pubDate>
-      
-      <guid>https://milindchawre.github.io/site/tags/kubernetes/</guid>
       <description></description>
     </item>
     
