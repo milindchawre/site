@@ -4,27 +4,32 @@
   
   <url>
     <loc>https://milindchawre.github.io/site/blog/</loc>
-    <lastmod>2020-07-02T23:03:25+05:30</lastmod>
+    <lastmod>2020-11-03T16:00:42+05:30</lastmod>
   </url>
   
   <url>
     <loc>https://milindchawre.github.io/site/tags/k3s/</loc>
-    <lastmod>2020-07-02T23:03:25+05:30</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://milindchawre.github.io/site/blog/k3s-upgrade-a-simplified-guide/</loc>
-    <lastmod>2020-07-02T23:03:25+05:30</lastmod>
+    <lastmod>2020-11-03T16:00:42+05:30</lastmod>
   </url>
   
   <url>
     <loc>https://milindchawre.github.io/site/tags/kubernetes/</loc>
-    <lastmod>2020-07-02T23:03:25+05:30</lastmod>
+    <lastmod>2020-11-03T16:00:42+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://milindchawre.github.io/site/tags/sloop/</loc>
+    <lastmod>2020-11-03T16:00:42+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://milindchawre.github.io/site/blog/sloop-a-tool-to-visualize-the-history-of-kubernetes-resources/</loc>
+    <lastmod>2020-11-03T16:00:42+05:30</lastmod>
   </url>
   
   <url>
     <loc>https://milindchawre.github.io/site/tags/</loc>
-    <lastmod>2020-07-02T23:03:25+05:30</lastmod>
+    <lastmod>2020-11-03T16:00:42+05:30</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="de"
@@ -35,6 +40,11 @@
                 hreflang="en"
                 href="https://milindchawre.github.io/site/tags/"
                 />
+  </url>
+  
+  <url>
+    <loc>https://milindchawre.github.io/site/blog/k3s-upgrade-a-simplified-guide/</loc>
+    <lastmod>2020-07-02T23:03:25+05:30</lastmod>
   </url>
   
   <url>

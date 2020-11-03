@@ -6,10 +6,21 @@
     <description>Recent content in Blogs on Milind&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 02 Jul 2020 23:03:25 +0530</lastBuildDate>
+    <lastBuildDate>Tue, 03 Nov 2020 16:00:42 +0530</lastBuildDate>
     
 	<atom:link href="https://milindchawre.github.io/site/blog/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Sloop: a Tool to Visualize the History of Kubernetes Resources</title>
+      <link>https://milindchawre.github.io/site/blog/sloop-a-tool-to-visualize-the-history-of-kubernetes-resources/</link>
+      <pubDate>Tue, 03 Nov 2020 16:00:42 +0530</pubDate>
+      
+      <guid>https://milindchawre.github.io/site/blog/sloop-a-tool-to-visualize-the-history-of-kubernetes-resources/</guid>
+      <description>This blog was originally featured as a guide in civo cloud community.
+Introducing Sloop Sloop is an open source tool to visualize history of all resources in your kubernetes cluster. It was built by salesforce.
+Problem: Keeping track of events in your clusters Workloads running in Kubernetes cluster are dynamic in nature. The pods, replicas, deployments in your cluster keeps going on and off over the period of time due to their ephemeral nature.</description>
+    </item>
     
     <item>
       <title>K3s Upgrade: A Simplified Guide</title>
