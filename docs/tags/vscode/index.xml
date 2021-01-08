@@ -6,11 +6,7 @@
     <description>Recent content in vscode on Milind&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 17 Jun 2020 23:54:09 +0530</lastBuildDate>
-    
-	<atom:link href="https://milindchawre.github.io/site/tags/vscode/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Wed, 17 Jun 2020 23:54:09 +0530</lastBuildDate><atom:link href="https://milindchawre.github.io/site/tags/vscode/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Develop and Test Your Code Directly in Kubernetes Using Okteto</title>
       <link>https://milindchawre.github.io/site/blog/develop-and-test-your-code-directly-in-kubernetes-using-okteto/</link>

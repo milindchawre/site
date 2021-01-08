@@ -4,16 +4,66 @@
   
   <url>
     <loc>https://milindchawre.github.io/site/blog/</loc>
-    <lastmod>2020-11-03T16:00:42+05:30</lastmod>
+    <lastmod>2021-01-08T14:00:13+05:30</lastmod>
   </url>
   
   <url>
-    <loc>https://milindchawre.github.io/site/tags/k3s/</loc>
-    <lastmod>2020-11-03T16:00:42+05:30</lastmod>
+    <loc>https://milindchawre.github.io/site/tags/certification/</loc>
+    <lastmod>2021-01-08T14:00:13+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://milindchawre.github.io/site/tags/cka/</loc>
+    <lastmod>2021-01-08T14:00:13+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://milindchawre.github.io/site/tags/ckad/</loc>
+    <lastmod>2021-01-08T14:00:13+05:30</lastmod>
   </url>
   
   <url>
     <loc>https://milindchawre.github.io/site/tags/kubernetes/</loc>
+    <lastmod>2021-01-08T14:00:13+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://milindchawre.github.io/site/</loc>
+    <lastmod>2021-01-08T14:00:13+05:30</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="de"
+                href="https://milindchawre.github.io/site/de/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://milindchawre.github.io/site/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://milindchawre.github.io/site/tags/</loc>
+    <lastmod>2021-01-08T14:00:13+05:30</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="de"
+                href="https://milindchawre.github.io/site/de/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://milindchawre.github.io/site/tags/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://milindchawre.github.io/site/blog/tips-to-ace-in-cka-and-ckad-exam/</loc>
+    <lastmod>2021-01-08T14:00:13+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://milindchawre.github.io/site/tags/k3s/</loc>
     <lastmod>2020-11-03T16:00:42+05:30</lastmod>
   </url>
   
@@ -25,21 +75,6 @@
   <url>
     <loc>https://milindchawre.github.io/site/blog/sloop-a-tool-to-visualize-the-history-of-kubernetes-resources/</loc>
     <lastmod>2020-11-03T16:00:42+05:30</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://milindchawre.github.io/site/tags/</loc>
-    <lastmod>2020-11-03T16:00:42+05:30</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="de"
-                href="https://milindchawre.github.io/site/de/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://milindchawre.github.io/site/tags/"
-                />
   </url>
   
   <url>
@@ -95,21 +130,6 @@
   <url>
     <loc>https://milindchawre.github.io/site/about/</loc>
     <lastmod>2020-04-26T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://milindchawre.github.io/site/</loc>
-    <lastmod>2020-04-26T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="de"
-                href="https://milindchawre.github.io/site/de/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://milindchawre.github.io/site/"
-                />
   </url>
   
 </urlset>

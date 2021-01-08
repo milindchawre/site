@@ -6,10 +6,42 @@
     <description>Recent content in Tags on Milind&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 03 Nov 2020 16:00:42 +0530</lastBuildDate>
+    <lastBuildDate>Fri, 08 Jan 2021 14:00:13 +0530</lastBuildDate><atom:link href="https://milindchawre.github.io/site/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>certification</title>
+      <link>https://milindchawre.github.io/site/tags/certification/</link>
+      <pubDate>Fri, 08 Jan 2021 14:00:13 +0530</pubDate>
+      
+      <guid>https://milindchawre.github.io/site/tags/certification/</guid>
+      <description></description>
+    </item>
     
-	<atom:link href="https://milindchawre.github.io/site/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>cka</title>
+      <link>https://milindchawre.github.io/site/tags/cka/</link>
+      <pubDate>Fri, 08 Jan 2021 14:00:13 +0530</pubDate>
+      
+      <guid>https://milindchawre.github.io/site/tags/cka/</guid>
+      <description></description>
+    </item>
     
+    <item>
+      <title>ckad</title>
+      <link>https://milindchawre.github.io/site/tags/ckad/</link>
+      <pubDate>Fri, 08 Jan 2021 14:00:13 +0530</pubDate>
+      
+      <guid>https://milindchawre.github.io/site/tags/ckad/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>kubernetes</title>
+      <link>https://milindchawre.github.io/site/tags/kubernetes/</link>
+      <pubDate>Fri, 08 Jan 2021 14:00:13 +0530</pubDate>
+      
+      <guid>https://milindchawre.github.io/site/tags/kubernetes/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>k3s</title>
@@ -17,15 +49,6 @@
       <pubDate>Tue, 03 Nov 2020 16:00:42 +0530</pubDate>
       
       <guid>https://milindchawre.github.io/site/tags/k3s/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>kubernetes</title>
-      <link>https://milindchawre.github.io/site/tags/kubernetes/</link>
-      <pubDate>Tue, 03 Nov 2020 16:00:42 +0530</pubDate>
-      
-      <guid>https://milindchawre.github.io/site/tags/kubernetes/</guid>
       <description></description>
     </item>
     

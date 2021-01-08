@@ -1,0 +1,458 @@
+
+<!doctype html>
+
+<html xmlns="http://www.w3.org/1999/xhtml"  lang="en">
+
+    <head>
+
+        
+        <meta charset="UTF-8" />
+
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+                
+        <title> 
+             Tips to ace in CKA and CKAD exam  
+        </title>
+        
+        
+            <link href="https://milindchawre.github.io/site/index.xml" rel="alternate" type="application/rss+xml" title="Milind&#39;s Blog" />
+        
+
+        
+        <link rel="stylesheet" href="/site/css/style.css"/>
+
+        
+        
+            <link rel='stylesheet' href='https://milindchawre.github.io/site/css/custom.css'>
+        
+        
+    </head>
+
+    <body>
+
+
+
+<section class="section">
+  <div class="container">
+    <nav id="nav-main" class="nav">
+      <div id="nav-name" class="nav-left">
+        <a id="nav-anchor" class="nav-item" href="https://milindchawre.github.io/site/">
+          <h1 id="nav-heading" class="title is-4">Milind&#39;s Blog</h1>
+        </a>
+      </div>
+      <div class="nav-right">
+        
+        
+        <nav id="nav-items" class="nav-item level is-mobile">
+          <a class="level-item" aria-label="about" href='/site/about'
+           rel='noopener'>
+            <span class="icon">
+              <i class>
+
+<svg viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+    
+    <circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12" y2="8"></line>
+    
+  </svg>
+</i>
+            </span>
+          </a>
+          <a class="level-item" aria-label="resume" href='https://milindchawre.github.io'
+           target='_blank'  rel='noopener'>
+            <span class="icon">
+              <i class>
+
+<svg viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+    
+    <path d="M22.125 2.25H1.875A1.127 1.127 0 0 0 .75 3.375v17.25a1.127 1.127 0 0 0 1.125 1.125H6v-2.757c0-.351.192-.656.477-.817l.005-.002l4.311-2.396l-1.419-3.546V9.376a2.625 2.625 0 1 1 5.25 0v2.856l-1.419 3.546l4.312 2.396c.29.163.482.469.482.819v2.757h4.125a1.127 1.127 0 0 0 1.125-1.125V3.375a1.127 1.127 0 0 0-1.125-1.125zm-.375 18H19.5v-1.257c0-.911-.5-1.706-1.241-2.124l-.012-.006l-3.157-1.755l1.035-2.588V9.376a4.125 4.125 0 0 0-8.25 0v3.144l1.035 2.588l-3.157 1.755a2.441 2.441 0 0 0-1.253 2.13v1.257H2.25V3.75h19.5z" fill="black"/>
+    
+  </svg>
+</i>
+            </span>
+          </a>
+          <a class="level-item" aria-label="email" href='mailto:milindchawre@outlook.com'
+           target='_blank'  rel='noopener'>
+            <span class="icon">
+              <i class>
+
+<svg viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+    
+    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+    <polyline points="22,6 12,13 2,6"/>
+    
+  </svg>
+</i>
+            </span>
+          </a>
+          <a class="level-item" aria-label="github" href='https://github.com/milindchawre'
+           target='_blank'  rel='noopener'>
+            <span class="icon">
+              <i class>
+
+<svg viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+    
+    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+    
+  </svg>
+</i>
+            </span>
+          </a>
+          <a class="level-item" aria-label="linkedin" href='https://linkedin.com/in/milind-chawre'
+           target='_blank'  rel='noopener'>
+            <span class="icon">
+              <i class>
+
+<svg viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+    
+    <path stroke-width="1.8" d="m5.839218,4.101561c0,1.211972 -0.974141,2.194011 -2.176459,2.194011s-2.176459,-0.982039 -2.176459,-2.194011c0,-1.211094 0.974141,-2.194011 2.176459,-2.194011s2.176459,0.982917 2.176459,2.194011zm0.017552,3.94922l-4.388022,0l0,14.04167l4.388022,0l0,-14.04167zm7.005038,0l-4.359939,0l0,14.04167l4.360816,0l0,-7.370999c0,-4.098413 5.291077,-4.433657 5.291077,0l0,7.370999l4.377491,0l0,-8.89101c0,-6.915523 -7.829986,-6.66365 -9.669445,-3.259423l0,-1.891237z"/>
+    
+  </svg>
+</i>
+            </span>
+          </a>
+          <a class="level-item" aria-label="stackoverflow" href='https://stackoverflow.com/users/6790948/mchawre?tab=profile'
+           target='_blank'  rel='noopener'>
+            <span class="icon">
+              <i class>
+
+<svg viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+    
+    <path d="M18.986 21.865v-6.404h2.134V24H1.844v-8.539h2.13v6.404h15.012zM6.111 19.731H16.85v-2.137H6.111v2.137zm.259-4.852l10.48 2.189l.451-2.07l-10.478-2.187l-.453 2.068zm1.359-5.056l9.705 4.53l.903-1.95l-9.706-4.53l-.902 1.936v.014zm2.715-4.785l8.217 6.855l1.359-1.62l-8.216-6.853l-1.35 1.617l-.01.001zM15.751 0l-1.746 1.294l6.405 8.604l1.746-1.294L15.749 0h.002z" fill="white"/>
+    
+  </svg>
+</i>
+            </span>
+          </a>
+          <a class="level-item" aria-label="twitter" href='https://twitter.com/@milindchawre'
+           target='_blank'  rel='noopener'>
+            <span class="icon">
+              <i class>
+
+<svg viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+    
+    <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/>
+    
+  </svg>
+</i>
+            </span>
+          </a>
+          <a class="level-item" aria-label="facebook" href='https://facebook.com/milind.chawre'
+           target='_blank'  rel='noopener'>
+            <span class="icon">
+              <i class>
+
+<svg viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+    
+    <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+    
+  </svg>
+</i>
+            </span>
+          </a>
+          <a class="level-item" aria-label="rss" href='/site/index.xml'
+           target='_blank'  rel='noopener'>
+            <span class="icon">
+              <i class>
+
+<svg viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+    
+    <path d="M4 11a9 9 0 0 1 9 9"></path><path d="M4 4a16 16 0 0 1 16 16"></path><circle cx="5" cy="19" r="1"></circle>
+    
+  </svg>
+</i>
+            </span>
+          </a></nav>
+        
+      
+      </div>
+    </nav>
+
+    <nav class="nav">
+      
+
+      
+    </nav>
+
+  </div>
+</section>
+
+<section class="section">
+    
+    <div class="container">
+    
+        
+            
+<div class="subtitle tags is-6 is-pulled-right">
+    
+        
+<a class="subtitle is-6" href="/site/tags/kubernetes/">#kubernetes</a>
+
+
+
+  
+  | <a class="subtitle is-6" href="/site/tags/certification/">#certification</a>
+  
+  | <a class="subtitle is-6" href="/site/tags/cka/">#cka</a>
+  
+  | <a class="subtitle is-6" href="/site/tags/ckad/">#ckad</a>
+  
+
+
+    
+</div>
+
+
+
+<h2 class="subtitle is-6">
+    
+    
+        January 8, 2021 | 14:00
+    
+</h2>
+
+
+
+<h1 class="title">Tips to ace in CKA and CKAD exam</h1>
+
+<div class="content">
+
+    
+    <p><em>This blog was originally featured as a <a href="https://www.civo.com/learn/tips-to-ace-cka-and-ckad-exams">guide</a> in civo cloud community.</em></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center"><img src="https://github.com/milindchawre/civo-k8s/raw/master/blog/cka-ckad/images/cka-ckad.png" alt="cka-ckad"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><em>CKAD and CKA Certificate</em></td>
+</tr>
+</tbody>
+</table>
+<p>I recently passed both CKA and CKAD exams, scoring 98% and 96% respectively. In this blog, I want to share my overall experience and tips to crack these exams.</p>
+<h4 id="what-is-cka">What is CKA?</h4>
+<p>CKA is the <a href="https://www.cncf.io/certification/cka/">Certified Kubernetes Administrator</a> certification, which focuses on administrative skills of managing, troubleshooting and operating a kubernetes cluster. The CKA exam certifies that users can design, build, configure, and expose native cloud applications for Kubernetes.</p>
+<h4 id="what-is-ckad">What is CKAD?</h4>
+<p>CKAD is the <a href="https://www.cncf.io/certification/ckad/">Certified Kubernetes Application Developer</a> certification which focuses on developer skills for kubernetes cluster. The CKAD exam aims to guarantee that certification holders have the knowledge, skills, and capability to design, configure, and expose cloud-native applications for Kubernetes and also perform the responsibilities of Kubernetes application developers.</p>
+<p>These certification are valid for a duration of 3 years (36 months).</p>
+<h4 id="should-i-choose-cka-or-ckad">Should I choose CKA or CKAD?</h4>
+<p>You can attempt both the exams, but CKA is more suitable for administrators while CKAD is more inclined towards developers. It&rsquo;s up to you to decide and attempt the exam you think would benefit you more. Nothing is stopping you from trying both, of course!</p>
+<h4 id="exam-curriculum-as-of-kubernetes-v119">Exam Curriculum (as of kubernetes v1.19):</h4>
+<p>Both the exams are delivered online and consist of 15-20 performance-based tasks with a 2hrs duration. The content is as follows:</p>
+<hr>
+<blockquote>
+<p><strong><em>CKA (~ 17 questions)</em></strong></p>
+</blockquote>
+<pre><code>25% - Cluster Architecture, Installation &amp; Configuration
+
+15% - Workloads &amp; Scheduling
+
+20% - Services &amp; Networking
+
+10% - Storage
+
+30% - Troubleshooting
+</code></pre><hr>
+<blockquote>
+<p><strong><em>CKAD (~ 19 questions)</em></strong></p>
+</blockquote>
+<pre><code>13% – Core Concepts
+
+18% – Configuration
+
+10% – Multi-Container Pods
+
+18% – Observability
+
+20% – Pod Design
+
+13% – Services &amp; Networking
+
+8% – State Persistence
+</code></pre><hr>
+<p>To know more, check out the <a href="https://github.com/cncf/curriculum">official site</a> for the exam curriculum and what the sections contain.</p>
+<h4 id="exam-pre-requisite">Exam Pre-requisite:</h4>
+<ul>
+<li><a href="https://www.cncf.io/">Register</a> for the exam. Once you register, it is valid for 1 year. So you have one whole year to schedule the exam. Also included is one free retake in case you fail the exam on your first attempt.</li>
+<li>Linux administration basics</li>
+<li>Basics of the vi editor</li>
+<li>Chromium based browser. Make sure your browser passes the <a href="https://www.examslocal.com/ScheduleExam/Home/CompatibilityCheck">compatibility check</a>.</li>
+</ul>
+<h5 id="exam-preparation">Exam Preparation:</h5>
+<p>There are <a href="https://www.google.com/search?q=cka+ckad+exam+tips">lot of resources</a> available out there to prepare for the exam. I am listing those which I followed and found useful:</p>
+<ul>
+<li>Enroll in the kodekloud udemy course the exam you wish to prepare for. The course links are below. These courses cover all the concepts and have lots of practice labs to prepare you for the exam. Also they are very cheap at less than $5.</li>
+<li>After enrolling in the course, you also gets access to the kodekloud slack community, where you can ask any questions, and learn from others.</li>
+<li>Once you complete these courses, practice all the labs and mock tests multiple times. I would recommend going through them at least 3-4 times, until you get to the speed required in the exam (completing the tests within half the time allowed), and scoring 100%.</li>
+<li>Practice more questions, mentioned in the link below.</li>
+</ul>
+<p>Following these steps should be more than sufficient to pass the exam with a very good score.</p>
+<hr>
+<blockquote>
+<p><strong><em>Course Link</em></strong></p>
+</blockquote>
+<p><strong>CKA:</strong> <a href="https://www.udemy.com/course/certified-kubernetes-administrator-with-practice-tests/">https://www.udemy.com/course/certified-kubernetes-administrator-with-practice-tests/</a></p>
+<p><strong>CKAD:</strong> <a href="https://www.udemy.com/course/certified-kubernetes-application-developer/">https://www.udemy.com/course/certified-kubernetes-application-developer/</a></p>
+<hr>
+<blockquote>
+<p><strong><em>Practice Questions</em></strong></p>
+</blockquote>
+<p><strong>CKA</strong></p>
+<p><a href="https://github.com/alijahnas/CKA-practice-exercises">https://github.com/alijahnas/CKA-practice-exercises</a></p>
+<p><a href="https://levelup.gitconnected.com/kubernetes-cka-example-questions-practical-challenge-86318d85b4d">https://levelup.gitconnected.com/kubernetes-cka-example-questions-practical-challenge-86318d85b4d</a></p>
+<p><strong>CKAD</strong></p>
+<p><a href="https://github.com/dgkanatsios/CKAD-exercises">https://github.com/dgkanatsios/CKAD-exercises</a></p>
+<p><a href="https://github.com/bbachi/CKAD-Practice-Questions">https://github.com/bbachi/CKAD-Practice-Questions</a></p>
+<p><a href="https://codeburst.io/kubernetes-ckad-weekly-challenges-overview-and-tips-7282b36a2681">https://codeburst.io/kubernetes-ckad-weekly-challenges-overview-and-tips-7282b36a2681</a></p>
+<hr>
+<p>By dedicating a few hours every day, it&rsquo;s possible to get fully prepared within 6 weeks. Remember <strong>PRACTICE PRACTICE PRACTICE</strong>.</p>
+<h4 id="exam-tips">Exam Tips:</h4>
+<ul>
+<li>Make most out of imperative commands. The <a href="https://kubernetes.io/docs/reference/kubectl/cheatsheet/">kubectl cheatsheet</a> is your saviour.</li>
+<li>At the beginning of exam, remember to <a href="https://kubernetes.io/docs/reference/kubectl/cheatsheet/#kubectl-autocomplete">set auto-completions and kubectl alias</a>, it will save a lot of time.</li>
+<li>Make use of bookmarks. <a href="https://gist.github.com/milindchawre/3558fabd7ee9ed72123d4be5b23f338c">This is the list</a> that I used.</li>
+<li>Whenever you delete any kubernetes resources, make use of <code>--force</code> flag to delete them faster without wait.</li>
+<li>During the exam, make sure to switch to correct cluster context using the command given at the top of every question. Make sure to run it before attempting every question.</li>
+<li>If you are not familiar with any question or problem, just flag it and come back later. Aim to complete ones you can do quickly and return to questions with time you have left.</li>
+<li>Get familiar with official <a href="https://kubernetes.io/docs/home/">kubernetes documentation</a>, especially practice all the questions using your own <a href="https://gist.github.com/milindchawre/3558fabd7ee9ed72123d4be5b23f338c">bookmarks</a>. This will speed you up during exam, since you will know where to look for particular information.</li>
+<li>Spend time depending on the weightage of the question. There is no point in spending 15 mins on a question with 2% weight. Skip those and come back later.</li>
+<li>During the exam, sometimes you need to ssh to another node or change to root user. Beware of where you are shelled to all the time on the bash terminal.</li>
+<li>Time management is very crucial, refer the section below on how to manage time wisely.</li>
+</ul>
+<h4 id="exam-terminal">Exam terminal:</h4>
+<p>You will be entering your examination commands on a terminal. Its always good to know how your exam terminal will looks like. Go through <a href="https://docs.linuxfoundation.org/tc-docs/certification/lf-candidate-handbook/exam-user-interface">this official document</a>.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center"><img src="https://github.com/milindchawre/civo-k8s/raw/master/blog/cka-ckad/images/exam-terminal.png" alt="exam-terminal"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><em>exam terminal snaphot, originally taken from the <a href="https://docs.linuxfoundation.org/tc-docs/certification/lf-candidate-handbook/exam-user-interface">Linux foundation site</a></em></td>
+</tr>
+</tbody>
+</table>
+<h4 id="bookmarks">Bookmarks</h4>
+<p>You can use <a href="https://gist.github.com/milindchawre/3558fabd7ee9ed72123d4be5b23f338c">bookmarks</a> during the exam, rather than searching in the kubernetes docs. Trust me, it saves lot of crucial exam time.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center"><img src="https://github.com/milindchawre/civo-k8s/raw/master/blog/cka-ckad/images/cka-ckad-bookmarks.png" alt="cka-ckad-bookmarks"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><em>bookmarks</em></td>
+</tr>
+</tbody>
+</table>
+<h4 id="choose-a-fast-and-optimal-way-to-solve-the-question">Choose a fast and optimal way to solve the question</h4>
+<p>There can be more than one way to accomplish a task in the exam. Use the one which is faster. For example, to create a pod, make use of <code>kubectl run</code> command rather than writing kubernetes YAML manually. You will get scored irrespective of the way you used to accomplish this task.</p>
+<p>Note that there is no constraint to use a specific method to solve a problem: if you’re comfortable editing YAML in vim, go for it. Likewise, you can use <code>kubectl</code> generators, copy/paste from the <a href="https://kubernetes.io/docs/home/">kubernetes docs</a>, or even edit a resource manually using <code>kubectl edit</code>. Refer to the <a href="https://kubernetes.io/docs/reference/kubectl/cheatsheet/">kubectl cheatsheet</a>, it&rsquo;s very handy during the exam.</p>
+<h4 id="time-management">Time management</h4>
+<p>You have 2hrs to solve 15-20 questions, so roughly 6-7mins per question. So time management is very crucial. The order in which you solve the question is very important. This is the process I followed while attempting every question:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center"><img src="https://github.com/milindchawre/civo-k8s/raw/master/blog/cka-ckad/images/cka-ckad-flowchart.png" alt="cka-ckad-flowchart"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><em>Exam Flow</em></td>
+</tr>
+</tbody>
+</table>
+<p>This boiled down to:</p>
+<ul>
+<li>Read the question carefully. Try to understand what exactly needs to be done to get the result they ask for. Don&rsquo;t make any assumptions: follow the facts mentioned in the question.</li>
+<li>If you decide to attempt the question, run the <code>kubectl</code> context command given at the top of the question before attempting it.</li>
+<li>If you think the question is very simple and can be done very quickly then just go for it, don&rsquo;t even look at the weightage of the question.</li>
+<li>If the question is too big to answer straight away, but a little tricky and time consuming to solve regardless of the weightage, then just flag the question and move on.</li>
+<li>While solving the question, if you get an error and get stuck (or it would take more time to fix it), then just leave that question, flag it and move on. Flagging the question is very important, so that you can easily find and attempt it later.</li>
+<li>Once you solve the question, just do a quick verification of your answer. Remember to verify it quickly, taking too much time for verifcation after attempting each question will slow you down. Remember that you should plan to have to save some time (at least 10-15 minutes) at the end of the exam to verify all the answers again in bulk.</li>
+<li>Try to solve as many questions as possible in first half of the exam.</li>
+<li>Once you have answered all the questions you could and reach the end, then attempt all the flagged questions.</li>
+</ul>
+<p>If you don&rsquo;t follow the above method and do this instead:</p>
+<ul>
+<li>Sequentially solving the questions.</li>
+<li>Getting stucked on a question (spending more than 6-8mins).</li>
+<li>Solving tricky, complex questions with less weightage at the beginning instead of breezing through the easier ones, consuming a lot of time.</li>
+</ul>
+<p>This will put you under pressure with less time and more un-answered questions in hand. This will impact your score and overall exam result.</p>
+<p>Everything here is the mind game, try to keep your calm.</p>
+<h4 id="links-to-refer-before-exam">Links to refer before exam</h4>
+<p><a href="https://docs.linuxfoundation.org/tc-docs/certification/lf-candidate-handbook">Candidate Handbook</a></p>
+<p><a href="https://github.com/cncf/curriculum">Curriculum Overview</a></p>
+<p><a href="https://docs.linuxfoundation.org/tc-docs/certification/tips-cka-and-ckad">Exam Tips</a></p>
+<p><a href="https://docs.linuxfoundation.org/tc-docs/certification/faq-cka-ckad-cks">FAQ</a></p>
+<p><a href="https://docs.linuxfoundation.org/tc-docs/certification/lf-cert-agreement/">Certification and Confidentiality Agreement</a></p>
+<h4 id="exam-day">Exam Day</h4>
+<ul>
+<li>Try to schedule your exam for the morning, when your mind is fresh and free of other work related stress.</li>
+<li>Keep your room and desk clean.</li>
+<li>The exam duration is two hours, so carry a water bottle with you but note that it should be clear without any label. See below for how you will be monitored during the exam.</li>
+<li>Make sure to join at least 15mins prior to the exam start time.</li>
+<li>Your exam is monitored online by a proctor, who is very strict about exam code of conduct.</li>
+<li>Exam begins with verification of identity and compliance with the rules. You need to activate your camera and share your screen. This process would take somewhere around 30mins.</li>
+<li>Don&rsquo;t cover your mouth, read out questions aloud, move away from your desk or center of your camera - it&rsquo;s not allowed.</li>
+<li>All other instructions will be provided by the proctor before the exam. Strictly follow all those instructions.</li>
+</ul>
+<h4 id="conclusion">Conclusion:</h4>
+<p>CKA and CKAD exams requires lot of hands on practice and skills. However, it is also one of the most rewarding experience. Even if you don&rsquo;t pass in first attempt, there is one free retake opportunity. Remember: <strong>PRACTICE PRACTICE PRACTICE</strong>.</p>
+<p>I hope this helps you. Good luck and feel free to ask any questions. Connect me on <a href="https://www.linkedin.com/in/milind-chawre">Linkedin</a> and <a href="https://twitter.com/milindchawre">Twitter</a>.</p>
+
+
+    
+    
+        <div class="related">
+
+
+<h3>Similar articles</h3>
+
+<ul>
+	
+	<li><a href="/site/blog/sloop-a-tool-to-visualize-the-history-of-kubernetes-resources/">Sloop: a Tool to Visualize the History of Kubernetes Resources</a></li>
+	
+	<li><a href="/site/blog/k3s-upgrade-a-simplified-guide/">K3s Upgrade: A Simplified Guide</a></li>
+	
+	<li><a href="/site/blog/develop-and-test-your-code-directly-in-kubernetes-using-okteto/">Develop and Test Your Code Directly in Kubernetes Using Okteto</a></li>
+	
+	<li><a href="/site/blog/fairwinds-goldilocks-kubernetes-resource-recommendation-tool/">Fairwinds Goldilocks : Kubernetes Resource Recommendation Tool</a></li>
+	
+	<li><a href="/site/blog/setting-up-polaris-on-kubernetes/">Setting Up Polaris on Kubernetes</a></li>
+	
+</ul>
+
+
+</div>
+    
+
+</div>
+
+
+        
+
+    </div>
+
+</section>
+
+
+
+<section class="section">
+  <div class="container has-text-centered">
+    <p>© 2020</p>
+    
+      <p>Powered by <a href="https://gohugo.io/">Hugo</a> &amp; <a href="https://github.com/pavel-pi/kiss-em">Kiss'Em</a>.</p>
+    
+  </div>
+</section>
+
+</body>
+</html>
+
