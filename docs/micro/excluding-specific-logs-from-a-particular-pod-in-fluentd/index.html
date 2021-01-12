@@ -13,7 +13,7 @@
 
                 
         <title> 
-             Tags  
+             Excluding Specific Logs From a Particular Pod in Fluentd  
         </title>
         
         
@@ -178,26 +178,15 @@
   </div>
 </section>
 
-
-
-
-
-
-
-
-<section class="section-highlight">
+<section class="section">
     
-    <div  class ="container">
+    <div class="container">
+    
         
-        <a href="/site/micro"><h2 class="areatitle">Microblog</h2></a>
-
-        
-        
-
             
-            <div class="subtitle tags is-6 is-pulled-right">
-                
-                
+<div class="subtitle tags is-6 is-pulled-right">
+    
+        
 <a class="subtitle is-6" href="/site/tags/kubernetes/">#kubernetes</a>
 
 
@@ -209,138 +198,96 @@
   
 
 
-                
-                </div>
-
-            
-            
-                <h2 class="subtitle is-6">
-                    
-                    
-                        January 12, 2021 | 18:09
-                    
-                </h2>
-            
-
-            
-            <h1 class="title">
-                <a href="https://milindchawre.github.io/site/micro/excluding-specific-logs-from-a-particular-pod-in-fluentd/">Excluding Specific Logs From a Particular Pod in Fluentd</a>
-            </h1>
-
-        
-        
     
-    </div>
-</section>
+</div>
 
 
 
+<h2 class="subtitle is-6">
+    
+    
+        January 12, 2021 | 18:09
+    
+</h2>
 
 
 
+<h1 class="title">Excluding Specific Logs From a Particular Pod in Fluentd</h1>
+
+<div class="content">
+
+    
+    <h4 id="problem">Problem:</h4>
+<p>I want to exclude these noisy logs coming from activemq pod.</p>
+<pre><code>kubernetes-cluster-logging $ kubectl logs activemq-79bd55f9c-jdtqf --tail 10 -f
+ WARN | Transport Connection to: tcp://172.29.108.66:37302 failed: java.io.EOFException
+ WARN | Transport Connection to: tcp://172.29.108.66:37366 failed: java.io.EOFException
+ WARN | Transport Connection to: tcp://172.29.108.66:37518 failed: java.io.EOFException
+ WARN | Transport Connection to: tcp://172.29.108.66:37582 failed: java.io.EOFException
+</code></pre><h4 id="solution">Solution:</h4>
+<ul>
+<li>Create regex pattern for your log line that need to be excluded.</li>
+<li>Use <a href="https://github.com/fabric8io/fluent-plugin-kubernetes_metadata_filter">kubernetes_metadata filter</a> to enrich logs with kubernetes metadata.</li>
+<li>Use <code>kubernetes.container_name</code> tag to select a specific container. Also there are other tags to select specific pod, namespace and so on.</li>
+<li>Use <code>log</code> tag to capture a specific log line with the help of regex pattern.</li>
+<li>Use fluentd <code>exclude</code> filter with <code>and</code> operator to exclude particular log line from specific container.</li>
+</ul>
+<pre><code># Enrich logs with kubernetes metadata
+&lt;filter  cluster.**&gt;
+  @type  kubernetes_metadata
+&lt;/filter&gt;
+
+# Exclude noisy logs of activemq container
+&lt;filter kubernetes.**&gt;
+  @type grep
+  &lt;and&gt;
+    &lt;exclude&gt;
+      key $.kubernetes.container_name
+      pattern ^activemq$
+    &lt;/exclude&gt;
+    &lt;exclude&gt;
+      key $.log
+      pattern ^WARN | Transport Connection to: tcp:\/\/\b(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?):\d{1,5}\b failed: java.io.EOFException$
+    &lt;/exclude&gt;
+  &lt;/and&gt;
+&lt;/filter&gt;
+</code></pre><h4 id="references">References:</h4>
+<p><a href="https://github.com/fluent/fluentd/issues/1858">https://github.com/fluent/fluentd/issues/1858</a> (<code>regex</code> or <code>exclude</code> filter need additional <code>and</code> filter to assert multiple conditions of a specific log line in a specific container)</p>
 
 
-
-<section class="section">
-
-    <div class="container">
-
-        <a href="/site/blog"><h2 class="areatitle">Blog</h2></a>
-
-        
-        
-        
-
-            <article>
-
-                
-                <div class="subtitle tags is-6 is-pulled-right">
-                    
-                    
-<a class="subtitle is-6" href="/site/tags/kubernetes/">#kubernetes</a>
+    
+    
+        <div class="related">
 
 
+<h3>Similar articles</h3>
 
-  
-  | <a class="subtitle is-6" href="/site/tags/polaris/">#polaris</a>
-  
-
-
-                    
-                  </div>
-
-                
-                
-                    <h2 class="subtitle is-6">
-                        
-                        
-                            April 27, 2020 | 18:01
-                        
-                    </h2>
-                
+<ul>
+	
+	<li><a href="/site/blog/tips-to-ace-in-cka-and-ckad-exam/">Tips to ace in CKA and CKAD exam</a></li>
+	
+	<li><a href="/site/blog/sloop-a-tool-to-visualize-the-history-of-kubernetes-resources/">Sloop: a Tool to Visualize the History of Kubernetes Resources</a></li>
+	
+	<li><a href="/site/blog/k3s-upgrade-a-simplified-guide/">K3s Upgrade: A Simplified Guide</a></li>
+	
+	<li><a href="/site/blog/develop-and-test-your-code-directly-in-kubernetes-using-okteto/">Develop and Test Your Code Directly in Kubernetes Using Okteto</a></li>
+	
+	<li><a href="/site/blog/fairwinds-goldilocks-kubernetes-resource-recommendation-tool/">Fairwinds Goldilocks : Kubernetes Resource Recommendation Tool</a></li>
+	
+</ul>
 
 
-                
-                <h1 class="title">
-                    <a href="https://milindchawre.github.io/site/blog/setting-up-polaris-on-kubernetes/">Setting Up Polaris on Kubernetes</a>
-                </h1>
+</div>
+    
 
-                <div class="content">
-                    
-                    
-                    This blog was originally featured as a guide in civo cloud community.
-Polaris is an open-source project that looks for configuration issues in kubernetes that can affect stability, reliability, scalability, and security. It was built by Fairwinds (formerly ReactiveOps).
-Problem Creating cluster is easy, but running it at scale with stability and security is hard. We have seen this often: a small mistake in deployment configuration can later result in bigger issues.
-                
-                    
-                    <a class="button is-link" href="https://milindchawre.github.io/site/blog/setting-up-polaris-on-kubernetes/" style="height:28px">Read more</a>
+</div>
 
-                </div>
 
-            </article>
-
-        
         
 
     </div>
+
 </section>
-
-
-
-
-
-
-<section class="section">
-  <div class="container">
-    <nav class="level is-mobile">
-      <div class="level-left">
-        <div class="level-item">
-          
-          <a class="button" href="/site/tags/">
-            <span class="icon is-small is-marginless">
-              
-
-<svg viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
-    
-    <polyline points="15 18 9 12 15 6"/>
-    
-  </svg>
-
-            </span>
-            Newer
-          </a>
-          
-        </div>
-      </div>
-      <div class="level-right is-marginless">
-        <div class="level-item">
-          
-        </div>
-      </div>
-    </nav>
-  </div>
-</section>
-
 
 
 

@@ -6,7 +6,34 @@
     <description>Recent content in Tags on Milind&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 08 Jan 2021 14:00:13 +0530</lastBuildDate><atom:link href="https://milindchawre.github.io/site/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 12 Jan 2021 18:09:24 +0530</lastBuildDate><atom:link href="https://milindchawre.github.io/site/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>fluentd</title>
+      <link>https://milindchawre.github.io/site/tags/fluentd/</link>
+      <pubDate>Tue, 12 Jan 2021 18:09:24 +0530</pubDate>
+      
+      <guid>https://milindchawre.github.io/site/tags/fluentd/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>kubernetes</title>
+      <link>https://milindchawre.github.io/site/tags/kubernetes/</link>
+      <pubDate>Tue, 12 Jan 2021 18:09:24 +0530</pubDate>
+      
+      <guid>https://milindchawre.github.io/site/tags/kubernetes/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>logging</title>
+      <link>https://milindchawre.github.io/site/tags/logging/</link>
+      <pubDate>Tue, 12 Jan 2021 18:09:24 +0530</pubDate>
+      
+      <guid>https://milindchawre.github.io/site/tags/logging/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>certification</title>
       <link>https://milindchawre.github.io/site/tags/certification/</link>
@@ -31,15 +58,6 @@
       <pubDate>Fri, 08 Jan 2021 14:00:13 +0530</pubDate>
       
       <guid>https://milindchawre.github.io/site/tags/ckad/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>kubernetes</title>
-      <link>https://milindchawre.github.io/site/tags/kubernetes/</link>
-      <pubDate>Fri, 08 Jan 2021 14:00:13 +0530</pubDate>
-      
-      <guid>https://milindchawre.github.io/site/tags/kubernetes/</guid>
       <description></description>
     </item>
     

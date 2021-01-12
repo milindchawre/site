@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>logging on Milind&#39;s Blog</title>
+    <link>https://milindchawre.github.io/site/tags/logging/</link>
+    <description>Recent content in logging on Milind&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 12 Jan 2021 18:09:24 +0530</lastBuildDate><atom:link href="https://milindchawre.github.io/site/tags/logging/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Excluding Specific Logs From a Particular Pod in Fluentd</title>
+      <link>https://milindchawre.github.io/site/micro/excluding-specific-logs-from-a-particular-pod-in-fluentd/</link>
+      <pubDate>Tue, 12 Jan 2021 18:09:24 +0530</pubDate>
+      
+      <guid>https://milindchawre.github.io/site/micro/excluding-specific-logs-from-a-particular-pod-in-fluentd/</guid>
+      <description>Problem: I want to exclude these noisy logs coming from activemq pod.
+kubernetes-cluster-logging $ kubectl logs activemq-79bd55f9c-jdtqf --tail 10 -fWARN | Transport Connection to: tcp://172.29.108.66:37302 failed: java.io.EOFExceptionWARN | Transport Connection to: tcp://172.29.108.66:37366 failed: java.io.EOFExceptionWARN | Transport Connection to: tcp://172.29.108.66:37518 failed: java.io.EOFExceptionWARN | Transport Connection to: tcp://172.29.108.66:37582 failed: java.io.EOFExceptionSolution:  Create regex pattern for your log line that need to be excluded. Use kubernetes_metadata filter to enrich logs with kubernetes metadata.</description>
+    </item>
+    
+  </channel>
+</rss>
