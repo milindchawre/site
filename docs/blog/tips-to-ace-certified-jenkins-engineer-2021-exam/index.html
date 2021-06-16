@@ -1,0 +1,427 @@
+
+<!doctype html>
+
+<html xmlns="http://www.w3.org/1999/xhtml"  lang="en">
+
+    <head>
+
+        
+        <meta charset="UTF-8" />
+
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+                
+        <title> 
+             Tips to ace Certified Jenkins Engineer 2021 exam  
+        </title>
+        
+        
+            <link href="https://milindchawre.github.io/site/index.xml" rel="alternate" type="application/rss+xml" title="Milind&#39;s Blog" />
+        
+
+        
+        <link rel="stylesheet" href="/site/css/style.css"/>
+
+        
+        
+            <link rel='stylesheet' href='https://milindchawre.github.io/site/css/custom.css'>
+        
+        
+    </head>
+
+    <body>
+
+
+
+<section class="section">
+  <div class="container">
+    <nav id="nav-main" class="nav">
+      <div id="nav-name" class="nav-left">
+        <a id="nav-anchor" class="nav-item" href="https://milindchawre.github.io/site/">
+          <h1 id="nav-heading" class="title is-4">Milind&#39;s Blog</h1>
+        </a>
+      </div>
+      <div class="nav-right">
+        
+        
+        <nav id="nav-items" class="nav-item level is-mobile">
+          <a class="level-item" aria-label="about" href='/site/about'
+           rel='noopener'>
+            <span class="icon">
+              <i class>
+
+<svg viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+    
+    <circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12" y2="8"></line>
+    
+  </svg>
+</i>
+            </span>
+          </a>
+          <a class="level-item" aria-label="resume" href='https://milindchawre.github.io'
+           target='_blank'  rel='noopener'>
+            <span class="icon">
+              <i class>
+
+<svg viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+    
+    <path d="M22.125 2.25H1.875A1.127 1.127 0 0 0 .75 3.375v17.25a1.127 1.127 0 0 0 1.125 1.125H6v-2.757c0-.351.192-.656.477-.817l.005-.002l4.311-2.396l-1.419-3.546V9.376a2.625 2.625 0 1 1 5.25 0v2.856l-1.419 3.546l4.312 2.396c.29.163.482.469.482.819v2.757h4.125a1.127 1.127 0 0 0 1.125-1.125V3.375a1.127 1.127 0 0 0-1.125-1.125zm-.375 18H19.5v-1.257c0-.911-.5-1.706-1.241-2.124l-.012-.006l-3.157-1.755l1.035-2.588V9.376a4.125 4.125 0 0 0-8.25 0v3.144l1.035 2.588l-3.157 1.755a2.441 2.441 0 0 0-1.253 2.13v1.257H2.25V3.75h19.5z" fill="black"/>
+    
+  </svg>
+</i>
+            </span>
+          </a>
+          <a class="level-item" aria-label="email" href='mailto:milindchawre@outlook.com'
+           target='_blank'  rel='noopener'>
+            <span class="icon">
+              <i class>
+
+<svg viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+    
+    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+    <polyline points="22,6 12,13 2,6"/>
+    
+  </svg>
+</i>
+            </span>
+          </a>
+          <a class="level-item" aria-label="github" href='https://github.com/milindchawre'
+           target='_blank'  rel='noopener'>
+            <span class="icon">
+              <i class>
+
+<svg viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+    
+    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+    
+  </svg>
+</i>
+            </span>
+          </a>
+          <a class="level-item" aria-label="linkedin" href='https://linkedin.com/in/milind-chawre'
+           target='_blank'  rel='noopener'>
+            <span class="icon">
+              <i class>
+
+<svg viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+    
+    <path stroke-width="1.8" d="m5.839218,4.101561c0,1.211972 -0.974141,2.194011 -2.176459,2.194011s-2.176459,-0.982039 -2.176459,-2.194011c0,-1.211094 0.974141,-2.194011 2.176459,-2.194011s2.176459,0.982917 2.176459,2.194011zm0.017552,3.94922l-4.388022,0l0,14.04167l4.388022,0l0,-14.04167zm7.005038,0l-4.359939,0l0,14.04167l4.360816,0l0,-7.370999c0,-4.098413 5.291077,-4.433657 5.291077,0l0,7.370999l4.377491,0l0,-8.89101c0,-6.915523 -7.829986,-6.66365 -9.669445,-3.259423l0,-1.891237z"/>
+    
+  </svg>
+</i>
+            </span>
+          </a>
+          <a class="level-item" aria-label="stackoverflow" href='https://stackoverflow.com/users/6790948/mchawre?tab=profile'
+           target='_blank'  rel='noopener'>
+            <span class="icon">
+              <i class>
+
+<svg viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+    
+    <path d="M18.986 21.865v-6.404h2.134V24H1.844v-8.539h2.13v6.404h15.012zM6.111 19.731H16.85v-2.137H6.111v2.137zm.259-4.852l10.48 2.189l.451-2.07l-10.478-2.187l-.453 2.068zm1.359-5.056l9.705 4.53l.903-1.95l-9.706-4.53l-.902 1.936v.014zm2.715-4.785l8.217 6.855l1.359-1.62l-8.216-6.853l-1.35 1.617l-.01.001zM15.751 0l-1.746 1.294l6.405 8.604l1.746-1.294L15.749 0h.002z" fill="white"/>
+    
+  </svg>
+</i>
+            </span>
+          </a>
+          <a class="level-item" aria-label="twitter" href='https://twitter.com/@milindchawre'
+           target='_blank'  rel='noopener'>
+            <span class="icon">
+              <i class>
+
+<svg viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+    
+    <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/>
+    
+  </svg>
+</i>
+            </span>
+          </a>
+          <a class="level-item" aria-label="facebook" href='https://facebook.com/milind.chawre'
+           target='_blank'  rel='noopener'>
+            <span class="icon">
+              <i class>
+
+<svg viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+    
+    <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+    
+  </svg>
+</i>
+            </span>
+          </a>
+          <a class="level-item" aria-label="rss" href='/site/index.xml'
+           target='_blank'  rel='noopener'>
+            <span class="icon">
+              <i class>
+
+<svg viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+    
+    <path d="M4 11a9 9 0 0 1 9 9"></path><path d="M4 4a16 16 0 0 1 16 16"></path><circle cx="5" cy="19" r="1"></circle>
+    
+  </svg>
+</i>
+            </span>
+          </a></nav>
+        
+      
+      </div>
+    </nav>
+
+    <nav class="nav">
+      
+
+      
+    </nav>
+
+  </div>
+</section>
+
+<section class="section">
+    
+    <div class="container">
+    
+        
+            
+<div class="subtitle tags is-6 is-pulled-right">
+    
+        
+<a class="subtitle is-6" href="/site/tags/jenkins/">#jenkins</a>
+
+
+
+  
+  | <a class="subtitle is-6" href="/site/tags/certification/">#certification</a>
+  
+  | <a class="subtitle is-6" href="/site/tags/cje/">#cje</a>
+  
+  | <a class="subtitle is-6" href="/site/tags/ccje/">#ccje</a>
+  
+  | <a class="subtitle is-6" href="/site/tags/ci-cd/">#ci-cd</a>
+  
+
+
+    
+</div>
+
+
+
+<h2 class="subtitle is-6">
+    
+    
+        June 16, 2021 | 11:49
+    
+</h2>
+
+
+
+<h1 class="title">Tips to ace Certified Jenkins Engineer 2021 exam</h1>
+
+<div class="content">
+
+    
+    <p><em>This blog was originally featured as a <a href="https://www.civo.com/learn/tips-to-ace-certified-jenkins-engineer-2021-exam">guide</a> in civo cloud community.</em></p>
+<p>I recently passed the Certified Jenkins Engineer 2021 exam, scoring ~76%. This post talks about my overall exam experience and some tips.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center"><img src="https://github.com/milindchawre/civo-k8s/raw/master/blog/cje/images/cje-cert.png" alt="cje-cert"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><em>CJE Certificate</em></td>
+</tr>
+</tbody>
+</table>
+<p><em><strong>Note:</strong> This post is not about exam dumps, as it defeats the whole purpose of this exam which is for you to demonstrate your knowledge. Also due to the NDA I agreed to by signing up for the exam, I can&rsquo;t reveal any questions asked in this exam. Though I can provide some pointers to help you with the exam preparation and to give you overall idea about the nature of this exam.</em></p>
+<h3 id="jenkins-certification">Jenkins Certification</h3>
+<p><a href="https://www.cloudbees.com/jenkins/certification">Jenkins Certification</a> is a professional-grade certification that demostrates your understanding of CI/CD concepts and DevOps best practices as well as the major features of Jenkins and, optionally, CloudBees Core.</p>
+<p>Attaining certifies status means you possess the skills and hands-on experience necessary to implement and use <a href="https://www.jenkins.io/">Jenkins</a>, a leading continuous delivery automation server.</p>
+<p>There are two certifications available:</p>
+<ul>
+<li><strong>Certified Jenkins Engineer (CJE):</strong> This tests your proficiency with Jenkins and CloudBees Jenkins Distribution (CJD).</li>
+<li><strong>Certified CloudBees Jenkins Engineer (CCJE):</strong> This tests your knowledge about enterprise version of Jenkins - <a href="https://www.cloudbees.com/">Cloudbees Core</a>.</li>
+</ul>
+<h3 id="cje-or-ccje">CJE or CCJE?</h3>
+<p>The Certified Jenkins Engineer exam is more suitable if you mainly work with the open source version of Jenkins. If you use the cloud and enterprise version of Jenkins then go with the CCJE exam.</p>
+<h3 id="registering-for-the-exam">Registering for the exam</h3>
+<p>The exam can be taken onsite at the <a href="https://www.kryteriononline.com/Locate-Test-Center">test centers</a> or online from your home due to ongoing Covid situation. In case you opt for onsite test make sure that the <a href="https://www.kryteriononline.com/Locate-Test-Center">test center is available in your locality</a>.</p>
+<p>Once you decide, go and <a href="https://www.webassessor.com/wa.do?page=enterCatalog&amp;branding=CLOUDBEES&amp;tabs=111">register for the exam</a>.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center"><img src="https://github.com/milindchawre/civo-k8s/raw/master/blog/cje/images/jenkins-exam-registration.png" alt="jenkins-exam-registration"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><em>Jenkins exam registration</em></td>
+</tr>
+</tbody>
+</table>
+<p>While there is a cost to the exam, it is possible to get a free exam voucher from CloudBees by attending the <a href="https://www.cloudbees.com/devops-world">DevOps World event</a>.</p>
+<h3 id="exam-curriculum">Exam curriculum</h3>
+<p>To get overall idea, make sure to go through the <a href="https://standard.cbu.cloudbees.com/certification-guide-and-information">exam guide</a>. The structure and topics are outlined below:</p>
+<h4 id="--multiple-choice-questions">- Multiple-choice questions</h4>
+<p>The exam covers the current version of Jenkins, CloudBees Jenkins Distribution (and CloudBees Core only for CCJE exam) and have multiple-choice questions to solve.</p>
+<p><strong>CJE:</strong> 60 multiple-choice question about Jenkins and CloudBees Jenkins Distribution features in 90 minutes</p>
+<p><strong>CCJE:</strong> 90 multiple-choice questions (60 questions about Jenkins and CloudBees Jenkins Distribution features and 30 additional questions about CloudBees Core features) in 120 minutes</p>
+<h4 id="--exam-topics">- Exam topics</h4>
+<p>The exam mainly covers topics related to Jenkins Fundamentals, Jenkins Administration, Jenkins Build Technologies: Pipeline, Jenkins Build Technologies: Freestyle and  CloudBees Core Features (CCJE exam only).</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center"><img src="https://github.com/milindchawre/civo-k8s/raw/master/blog/cje/images/jenkins-curriculum.png" alt="jenkins-curriculum"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><em>Jenkins exam curriculum</em></td>
+</tr>
+</tbody>
+</table>
+<h4 id="--exam-scoring">- Exam scoring</h4>
+<p>To pass the exam you need to correctly answer at least 66% of the questions. Each question can have a single or multiple correct answers. Each correct answer worth a single point. The questions asked in the exam clearly mention if there are multiple or single responses to the question: you need to choose the correct radio button or tick the correct checkbox for a single-answer question, or the requisite number of checkboxes specified in the question.</p>
+<p>For more information, read the <a href="https://standard.cbu.cloudbees.com/certification-guide-and-information">official certification guide</a>.</p>
+<h3 id="exam-preparation">Exam Preparation:</h3>
+<p>This is what I referred to in preparation for my exam:</p>
+<ul>
+<li>Cloudbees university course: <a href="https://standard.cbu.cloudbees.com/series/exam-preparation-certified-jenkins-engineer-cje">https://standard.cbu.cloudbees.com/series/exam-preparation-certified-jenkins-engineer-cje</a></li>
+<li>Blogs:
+<ul>
+<li><a href="https://devopslearning.medium.com/my-road-to-certified-jenkins-engineer-807ae52409a0">https://devopslearning.medium.com/my-road-to-certified-jenkins-engineer-807ae52409a0</a></li>
+<li><a href="https://medium.com/@deepakr6242/top-ten-points-to-clear-certified-jenkins-engineer-in-a-month-for-free-a92d6d020a6e">https://medium.com/@deepakr6242/top-ten-points-to-clear-certified-jenkins-engineer-in-a-month-for-free-a92d6d020a6e</a></li>
+</ul>
+</li>
+</ul>
+<p>The <a href="https://standard.cbu.cloudbees.com/series/exam-preparation-certified-jenkins-engineer-cje">cloudbees university CJE course</a> covers almost every topic asked in the exam. It has many pointers with appropriate references to respective Jenkins documentation. The course also s hands-on labs to get acquainted with Jenkins.</p>
+<p>To follow the course: go through each concept, work through associated practice labs and thoroughly read through the relevant Jenkins documentation.</p>
+<p>The labs mentioned in the exam need Jenkins set up to work with. I found it difficult to setup the required Vagrant + Virtualbox on my windows workstation, so I quickly <a href="https://www.civo.com/learn/deploy-jenkins-from-the-civo-app-marketplace">set up jenkins on my civo kubernetes cluster</a>. I find it quite convenient to pratice Jenkins labs on my Civo cluster. If you haven&rsquo;t signed up for civo, <a href="https://www.civo.com/signup">do it now</a>.</p>
+<h3 id="is-theory-enough-or-do-i-need-hands-on">Is theory enough or do I need hands-on?</h3>
+<p>Many of us assume that multiple-choice question based exams can be cracked by just going through the theory, but in case of Jenkins you need to have some practical knowledge to ace this exam.</p>
+<p>Basically the exam questions are of three kinds:</p>
+<ol>
+<li>Straight forward question (you know the answer or not)</li>
+<li>Question which need memorization (better to get some hands-on experience to know what the issue is, rather than memorizing)</li>
+<li>In-depth question (you need more in-depth knowledge of a specific concept to answer it)</li>
+</ol>
+<p>Some hands-on practice helps in solving the 2nd and 3rd kind of questions.</p>
+<h3 id="exam-terminal">Exam Terminal</h3>
+<p>This is how your exam terminal looks like.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center"><img src="https://github.com/milindchawre/civo-k8s/raw/master/blog/cje/images/jenkins-terminal.png" alt="jenkins-terminal"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><em>Jenkins exam terminal</em></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><em><strong>Time Remaining:</strong></em> Shows how much time left to finish the exam.</li>
+<li><em><strong>Question:</strong></em> Describes the question in detail.</li>
+<li><em><strong>Review Question Checkbox:</strong></em> You can mark the question to review it later. If I&rsquo;m doubtful about my answer, I opt to review it later.</li>
+<li><em><strong>Answer / Options to Choose:</strong></em> This section contains multiple radio button or checkbox options which you need to choose, to answer the question correctly.</li>
+<li><em><strong>Test Aid:</strong></em> This section shows things that you can refer during the exam. For CJE exam none of these options are available.</li>
+<li><em><strong>Back:</strong></em> To move to the previous question.</li>
+<li><em><strong>Next:</strong></em> To move to the next question.</li>
+<li><em><strong>Review All:</strong></em> Select this to review all the questions, usually done once you are finish answering all the questions and want to review any you may have doubts about.</li>
+<li><em><strong>Submit Exam:</strong></em> Select this to finish the exam.</li>
+</ul>
+<h1 id="exam-flow">Exam flow</h1>
+<p>You have 90 minutes to solve 60 questions in the CJE exam and 120 minutes to solve 90 questions in the CCJE exam. This works out to roughly 1.5 mins per question, so time management is very crucial.</p>
+<p>This is the process I followed while attempting each question:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center"><img src="https://github.com/milindchawre/civo-k8s/raw/master/blog/cje/images/jenkins-exam-flow.png" alt="jenkins-exam-flow"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><em>Jenkins exam flow</em></td>
+</tr>
+</tbody>
+</table>
+<p>You may have seen a similar flow if you have seen my <a href="https://milindchawre.github.io/site/blog/tips-to-ace-in-cka-and-ckad-exam/">post on acing the CKA and CKAD exams</a>.</p>
+<h3 id="exam-day">Exam Day</h3>
+<p>This all is advice that assumes the exam is online proctored.</p>
+<p>Before the exam day:</p>
+<ul>
+<li>Refer to the <a href="https://kryterion.force.com/support/s/topic/0TO1W000000I5h3WAC/online-proctoring?language=en_US">kryterion guide</a> before attempting the exam.</li>
+<li>Go through the <a href="https://support.cloudbees.com/hc/en-us/articles/360046012631-CloudBees-Training-and-Certification-FAQ">exam FAQ page</a></li>
+<li>Make sure your machine passes the <a href="http://www.kryteriononline.com/systemcheck">system check</a>.</li>
+</ul>
+<p>On exam day:</p>
+<ul>
+<li>Make sure to appear at least 15 mins before the exam.</li>
+<li>Keep your personal documents handy, you might need it for ID verification. Though in my case, the system didn&rsquo;t ask for any ID, but its good to keep it handy.</li>
+<li>Make sure your room is quiet and your desk is clear.</li>
+<li>In online proctored exam, the exam launch button appears 10 minutes before the scheduled exam time. Make sure you are ready prior to that.</li>
+</ul>
+<h3 id="after-the-exam">After the exam</h3>
+<p>As soon as you finish the exam, the result is shown on your screen. It shows the overall percentage you got and your score in each section. If you fail the exam, the result helps in understanding which section you should focus on more for next time. Remember there is no free second attempt, you need to register and pay for the exam again.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center"><img src="https://github.com/milindchawre/civo-k8s/raw/master/blog/cje/images/cje-score.png" alt="cje-score"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><em>CJE exam score</em></td>
+</tr>
+</tbody>
+</table>
+<h3 id="conclusion">Conclusion</h3>
+<p>Both the CJE and CCJE exams require some basic knowledge about CI/CD concepts and some hands-on practice with Jenkins. I recommend you practice the hands-on labs to make sure you are familiar with the system. However, taking these exams is also one of the most rewarding experiences.</p>
+<p>I hope this guide helps you in preparing for the exam. Good luck and feel free to ask any questions. You can connect with me on the <a href="https://civo.io/slack">Civo community Slack</a>, <a href="https://www.linkedin.com/in/milind-chawre">Linkedin</a> and <a href="https://twitter.com/milindchawre">Twitter</a>.</p>
+
+
+    
+    
+        <div class="related">
+
+
+<h3>Similar articles</h3>
+
+<ul>
+	
+	<li><a href="/site/blog/ttl-sh-your-anonymous-and-ephemeral-docker-image-registry/">ttl.sh : Your Anonymous and Ephemeral Docker Image Registry</a></li>
+	
+	<li><a href="/site/blog/tips-to-ace-in-cka-and-ckad-exam/">Tips to ace in CKA and CKAD exam</a></li>
+	
+</ul>
+
+
+</div>
+    
+
+</div>
+
+
+        
+
+    </div>
+
+</section>
+
+
+
+<section class="section">
+  <div class="container has-text-centered">
+    <p>© 2020</p>
+    
+      <p>Powered by <a href="https://gohugo.io/">Hugo</a> &amp; <a href="https://github.com/pavel-pi/kiss-em">Kiss'Em</a>.</p>
+    
+  </div>
+</section>
+
+</body>
+</html>
+

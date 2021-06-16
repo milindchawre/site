@@ -6,7 +6,18 @@
     <description>Recent content in ci-cd on Milind&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 20 Feb 2021 16:49:35 +0530</lastBuildDate><atom:link href="https://milindchawre.github.io/site/tags/ci-cd/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 16 Jun 2021 11:49:26 +0530</lastBuildDate><atom:link href="https://milindchawre.github.io/site/tags/ci-cd/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Tips to ace Certified Jenkins Engineer 2021 exam</title>
+      <link>https://milindchawre.github.io/site/blog/tips-to-ace-certified-jenkins-engineer-2021-exam/</link>
+      <pubDate>Wed, 16 Jun 2021 11:49:26 +0530</pubDate>
+      
+      <guid>https://milindchawre.github.io/site/blog/tips-to-ace-certified-jenkins-engineer-2021-exam/</guid>
+      <description>This blog was originally featured as a guide in civo cloud community.
+I recently passed the Certified Jenkins Engineer 2021 exam, scoring ~76%. This post talks about my overall exam experience and some tips.
+        CJE Certificate    Note: This post is not about exam dumps, as it defeats the whole purpose of this exam which is for you to demonstrate your knowledge.</description>
+    </item>
+    
     <item>
       <title>ttl.sh : Your Anonymous and Ephemeral Docker Image Registry</title>
       <link>https://milindchawre.github.io/site/blog/ttl-sh-your-anonymous-and-ephemeral-docker-image-registry/</link>
