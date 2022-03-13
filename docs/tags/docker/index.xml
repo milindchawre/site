@@ -6,7 +6,11 @@
     <description>Recent content in docker on Milind&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 20 Feb 2021 16:49:35 +0530</lastBuildDate><atom:link href="https://milindchawre.github.io/site/tags/docker/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 20 Feb 2021 16:49:35 +0530</lastBuildDate>
+    
+	<atom:link href="https://milindchawre.github.io/site/tags/docker/index.xml" rel="self" type="application/rss+xml" />
+    
+    
     <item>
       <title>ttl.sh : Your Anonymous and Ephemeral Docker Image Registry</title>
       <link>https://milindchawre.github.io/site/blog/ttl-sh-your-anonymous-and-ephemeral-docker-image-registry/</link>

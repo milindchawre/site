@@ -1,0 +1,349 @@
+
+<!doctype html>
+
+<html xmlns="http://www.w3.org/1999/xhtml"  lang="en">
+
+    <head>
+
+        
+        <meta charset="UTF-8" />
+
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+                
+        <title> 
+             Pluto a Tool to Manage Deprecated Kubernetes Apis  
+        </title>
+        
+        
+            <link href="https://milindchawre.github.io/site/index.xml" rel="alternate" type="application/rss+xml" title="Milind&#39;s Blog" />
+        
+
+        
+        <link rel="stylesheet" href="/site/css/style.css"/>
+
+        
+        
+            <link rel='stylesheet' href='https://milindchawre.github.io/site/css/custom.css'>
+        
+        
+    </head>
+
+    <body>
+
+
+
+<section class="section">
+  <div class="container">
+    <nav id="nav-main" class="nav">
+      <div id="nav-name" class="nav-left">
+        <a id="nav-anchor" class="nav-item" href="https://milindchawre.github.io/site/">
+          <h1 id="nav-heading" class="title is-4">Milind&#39;s Blog</h1>
+        </a>
+      </div>
+      <div class="nav-right">
+        
+        
+        <nav id="nav-items" class="nav-item level is-mobile">
+          <a class="level-item" aria-label="about" href='/site/about'
+           rel='noopener'>
+            <span class="icon">
+              <i class>
+
+<svg viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+    
+    <circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12" y2="8"></line>
+    
+  </svg>
+</i>
+            </span>
+          </a>
+          <a class="level-item" aria-label="resume" href='https://milindchawre.github.io'
+           target='_blank'  rel='noopener'>
+            <span class="icon">
+              <i class>
+
+<svg viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+    
+    <path d="M22.125 2.25H1.875A1.127 1.127 0 0 0 .75 3.375v17.25a1.127 1.127 0 0 0 1.125 1.125H6v-2.757c0-.351.192-.656.477-.817l.005-.002l4.311-2.396l-1.419-3.546V9.376a2.625 2.625 0 1 1 5.25 0v2.856l-1.419 3.546l4.312 2.396c.29.163.482.469.482.819v2.757h4.125a1.127 1.127 0 0 0 1.125-1.125V3.375a1.127 1.127 0 0 0-1.125-1.125zm-.375 18H19.5v-1.257c0-.911-.5-1.706-1.241-2.124l-.012-.006l-3.157-1.755l1.035-2.588V9.376a4.125 4.125 0 0 0-8.25 0v3.144l1.035 2.588l-3.157 1.755a2.441 2.441 0 0 0-1.253 2.13v1.257H2.25V3.75h19.5z" fill="black"/>
+    
+  </svg>
+</i>
+            </span>
+          </a>
+          <a class="level-item" aria-label="email" href='mailto:milindchawre@outlook.com'
+           target='_blank'  rel='noopener'>
+            <span class="icon">
+              <i class>
+
+<svg viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+    
+    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+    <polyline points="22,6 12,13 2,6"/>
+    
+  </svg>
+</i>
+            </span>
+          </a>
+          <a class="level-item" aria-label="github" href='https://github.com/milindchawre'
+           target='_blank'  rel='noopener'>
+            <span class="icon">
+              <i class>
+
+<svg viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+    
+    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+    
+  </svg>
+</i>
+            </span>
+          </a>
+          <a class="level-item" aria-label="linkedin" href='https://linkedin.com/in/milind-chawre'
+           target='_blank'  rel='noopener'>
+            <span class="icon">
+              <i class>
+
+<svg viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+    
+    <path stroke-width="1.8" d="m5.839218,4.101561c0,1.211972 -0.974141,2.194011 -2.176459,2.194011s-2.176459,-0.982039 -2.176459,-2.194011c0,-1.211094 0.974141,-2.194011 2.176459,-2.194011s2.176459,0.982917 2.176459,2.194011zm0.017552,3.94922l-4.388022,0l0,14.04167l4.388022,0l0,-14.04167zm7.005038,0l-4.359939,0l0,14.04167l4.360816,0l0,-7.370999c0,-4.098413 5.291077,-4.433657 5.291077,0l0,7.370999l4.377491,0l0,-8.89101c0,-6.915523 -7.829986,-6.66365 -9.669445,-3.259423l0,-1.891237z"/>
+    
+  </svg>
+</i>
+            </span>
+          </a>
+          <a class="level-item" aria-label="stackoverflow" href='https://stackoverflow.com/users/6790948/mchawre?tab=profile'
+           target='_blank'  rel='noopener'>
+            <span class="icon">
+              <i class>
+
+<svg viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+    
+    <path d="M18.986 21.865v-6.404h2.134V24H1.844v-8.539h2.13v6.404h15.012zM6.111 19.731H16.85v-2.137H6.111v2.137zm.259-4.852l10.48 2.189l.451-2.07l-10.478-2.187l-.453 2.068zm1.359-5.056l9.705 4.53l.903-1.95l-9.706-4.53l-.902 1.936v.014zm2.715-4.785l8.217 6.855l1.359-1.62l-8.216-6.853l-1.35 1.617l-.01.001zM15.751 0l-1.746 1.294l6.405 8.604l1.746-1.294L15.749 0h.002z" fill="white"/>
+    
+  </svg>
+</i>
+            </span>
+          </a>
+          <a class="level-item" aria-label="twitter" href='https://twitter.com/@milindchawre'
+           target='_blank'  rel='noopener'>
+            <span class="icon">
+              <i class>
+
+<svg viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+    
+    <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/>
+    
+  </svg>
+</i>
+            </span>
+          </a>
+          <a class="level-item" aria-label="facebook" href='https://facebook.com/milind.chawre'
+           target='_blank'  rel='noopener'>
+            <span class="icon">
+              <i class>
+
+<svg viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+    
+    <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+    
+  </svg>
+</i>
+            </span>
+          </a>
+          <a class="level-item" aria-label="rss" href='/site/index.xml'
+           target='_blank'  rel='noopener'>
+            <span class="icon">
+              <i class>
+
+<svg viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+    
+    <path d="M4 11a9 9 0 0 1 9 9"></path><path d="M4 4a16 16 0 0 1 16 16"></path><circle cx="5" cy="19" r="1"></circle>
+    
+  </svg>
+</i>
+            </span>
+          </a></nav>
+        
+      
+      </div>
+    </nav>
+
+    <nav class="nav">
+      
+
+      
+    </nav>
+
+  </div>
+</section>
+
+<section class="section">
+    
+    <div class="container">
+    
+        
+            
+<div class="subtitle tags is-6 is-pulled-right">
+    
+        
+<a class="subtitle is-6" href="/site/tags/kubernetes/">#kubernetes</a>
+
+
+
+  
+  | <a class="subtitle is-6" href="/site/tags/pluto/">#pluto</a>
+  
+  | <a class="subtitle is-6" href="/site/tags/nova/">#nova</a>
+  
+
+
+    
+</div>
+
+
+
+<h2 class="subtitle is-6">
+    
+    
+        March 6, 2022 | 18:55
+    
+</h2>
+
+
+
+<h1 class="title">Pluto a Tool to Manage Deprecated Kubernetes Apis</h1>
+
+<div class="content">
+
+    
+    <p><em>This blog was originally featured as a <a href="https://www.civo.com/learn/pluto-a-tool-to-manage-deprecated-kubernetes-apis">guide</a> in civo cloud community.</em></p>
+<p><img src="https://github.com/milindchawre/civo-k8s/raw/master/blog/pluto/images/pluto-logo.png" alt="pluto-logo"></p>
+<h3 id="introduction">Introduction</h3>
+<p>This guide talks about two tools, Pluto and Nova. But before we dig deeper into the tools themselves, let&rsquo;s first understand why such things are required. For that, we should first understand what is meant by deprecated Kubernetes APIs and why and when we should be concerned about them.</p>
+<h3 id="kubernetes-apis">Kubernetes APIs</h3>
+<p>The <a href="https://kubernetes.io/docs/concepts/overview/kubernetes-api/">Kubernetes API</a> is the front-end of the Kubernetes control plane, through which a user interacts with their cluster. Using these APIs, one can query and manipulate <a href="https://kubernetes.io/docs/concepts/overview/working-with-objects/kubernetes-objects/">kubernetes objects</a> (for example: pods, namespaces, deployments, etc). You can access these Kubernetes APIs <a href="https://kubernetes.io/docs/tasks/administer-cluster/access-cluster-api/">using kubectl or directly through REST api or using client libraries</a>.</p>
+<h3 id="kubernetes-api-deprecations-or-removals">Kubernetes API deprecations or removals</h3>
+<p>Kubernetes is an API-driven system, whose APIs keep evolving with every new release. The vital part of any API-driven system is having a good API deprecation policy, which informs users if an API is going to be removed or changed. The same is the case with Kubernetes: it periodically reorganizes or upgrades APIs as it evolves. As a result, the old APIs are deprecated and eventually removed. Deprecation in this context means marking an API component for eventual removal. It works now, but it is slated to be removed in an upcoming version. You can read more about how Kubernetes deprecates its APIs in the <a href="https://kubernetes.io/docs/reference/using-api/deprecation-policy/">deprecation policy documentation</a>.</p>
+<h3 id="why-should-i-be-concerned-about-deprecated-apis">Why should I be concerned about deprecated APIs?</h3>
+<p>When you define an application configuration, you specify the API version of the Kubernetes object to be used. Whether a simple Kubernetes YAML manifest or Helm chart, the <code>apiVersion</code> field identifies the API version of the Kubernetes object. This means that the user or the maintainer of the application should be aware when Kubernetes API versions have been deprecated and in what Kubernetes version they will be removed.</p>
+<p>Also if you upgrade your Kubernetes cluster, there are chances that you might encounter deprecated Kubernetes APIs if the version you upgraded to doesn&rsquo;t support them. For example, suppose resources are running on your cluster, which uses an old API version. In that case, likely, your application using that resource might not work if the deprecated API has been removed in the new cluster version.</p>
+<p>A very good example would be APIVersion <code>extensions/v1beta1</code> of the Ingress Resource, which was removed in v1.22 version of Kubernetes. You would get an error when trying to use such a removed API version in your configuration:</p>
+<pre><code>Error: UPGRADE FAILED: current release manifest contains removed kubernetes api(s)
+for this kubernetes version and it is therefore unable to build the kubernetes
+objects for performing the diff. error from kubernetes: unable to recognize &quot;&quot;:
+no matches for kind &quot;Ingress&quot; in version &quot;extensions/v1beta1&quot;
+</code></pre><h3 id="where-and-how-kubernetes-apis-are-used">Where and how Kubernetes APIs are used</h3>
+<p>This is how you specify API version in your configuration.</p>
+<pre><code># Sample configuration taken from: https://kubernetes.io/docs/concepts/workloads/controllers/deployment/#creating-a-deployment
+---
+apiVersion: apps/v1     &lt;------ API Version of the kubernetes object
+kind: Deployment
+metadata:
+  name: nginx-deployment
+  labels:
+    app: nginx
+spec:
+  replicas: 3
+</code></pre><p>You can also check all supported API groups with its version by referring to <a href="https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.23/#-strong-api-groups-strong-">official documentation</a> or using <code>kubectl</code> command line tool command <code>api-versions</code>:</p>
+<pre><code>$ kubectl api-versions
+admissionregistration.k8s.io/v1
+admissionregistration.k8s.io/v1beta1
+apiextensions.k8s.io/v1
+apiextensions.k8s.io/v1beta1
+apiregistration.k8s.io/v1
+apiregistration.k8s.io/v1beta1
+apps/v1
+</code></pre><h3 id="challenges-in-detecting-deprecated-apis-in-your-cluster">Challenges in detecting deprecated APIs in your cluster</h3>
+<p>As mentioned above, there is official documentation from Kubernetes to check <a href="https://kubernetes.io/docs/reference/using-api/deprecation-guide/">all the deprecated/removed APIs</a>. But the real catch here is how to check which all deprecated APIs and which ones of all resources running in your Kubernetes cluster use them. Listing your Kubernetes resources using <a href="https://kubernetes.io/docs/reference/kubectl/cheatsheet/">kubectl commands</a> might not give you the correct version of API used, as explained in <a href="https://github.com/kubernetes/kubernetes/issues/58131#issuecomment-356823588">this issue</a>. The solution for this is to use a tool named <a href="https://github.com/FairwindsOps/pluto">Pluto</a>.</p>
+<h3 id="pluto">Pluto</h3>
+<p><a href="https://github.com/FairwindsOps/pluto">Pluto</a> is a tool developed by <a href="https://www.fairwinds.com/">FairwindsOps</a> which helps in detecting <a href="https://kubernetes.io/docs/reference/using-api/deprecation-guide/">deprecated kubernetes APIs</a> used in your code respositories and helm releases.</p>
+<ul>
+<li>
+<p><strong>Features:</strong></p>
+<ul>
+<li>It lists all APIs that are deprecated or removed, not only for Kubernetes itself, but also for other tools like Istio, Cert Manager, etc:</li>
+</ul>
+<p><img src="https://github.com/milindchawre/civo-k8s/raw/master/blog/pluto/images/list-apis.png" alt="list-apis"></p>
+<ul>
+<li>Detects deprecated APIs from your kubernetes configuration files.</li>
+</ul>
+<p><img src="https://github.com/milindchawre/civo-k8s/raw/master/blog/pluto/images/dep-yaml.png" alt="dep-yaml"></p>
+<ul>
+<li>Detects deprecated APIs in Helm charts installed on your cluster.</li>
+</ul>
+<p><img src="https://github.com/milindchawre/civo-k8s/raw/master/blog/pluto/images/dep-helm.png" alt="dep-helm"></p>
+<ul>
+<li>It can also be used in your <a href="https://github.com/FairwindsOps/pluto#github-action-usage">github workflows</a>, to continuously keep check of deprecated APIs.</li>
+</ul>
+</li>
+</ul>
+<h3 id="installation">Installation</h3>
+<p>You can install <code>Pluto</code> on your workstation, by downloading <a href="https://github.com/FairwindsOps/pluto/releases">appropriate release</a>. For example, on my Linux machine I used the following commands to download Pluto v5.4.0, extract the compressed file, mark it executable and move it into my /bin/ directory:</p>
+<pre><code>$ wget https://github.com/FairwindsOps/pluto/releases/download/v5.4.0/pluto_5.4.0_linux_amd64.tar.gz
+$ tar -zxvf pluto_5.4.0_linux_amd64.tar.gz
+$ chmod +x pluto
+$ cp pluto /bin/pluto
+</code></pre><h3 id="remediation-for-deprecated-apis---nova">Remediation for deprecated APIs - Nova</h3>
+<p>Let me take an example. In my case this is what got detected after running <code>pluto detect-helm</code> on my cluster.</p>
+<p><img src="https://github.com/milindchawre/civo-k8s/raw/master/blog/pluto/images/dep-helm.png" alt="dep-helm">
+So as per the first line of the output, my cluster is running a Rancher Helm chart which is using <code>Ingress</code> resource which is deprecated and also removed in some future Kubernetes release. I can make use of <code>pluto list-versions</code> command to check exactly in which kubernetes version the API is deprecated and removed:</p>
+<p><img src="https://github.com/milindchawre/civo-k8s/raw/master/blog/pluto/images/list-api-output.png" alt="list-api-output">
+As shown above in the output, the <code>extensions/v1beta1</code> is deprecated in version <code>v1.14.0</code> and was removed in <code>v1.22.0</code>. So if my cluster is running on version later or equal to <code>v1.22.0</code> then this helm chart will not work properly and I need to replace this deprecated API <code>extensions/v1beta1</code> with the new replacement API <code>networking.k8s.io/v1</code>.</p>
+<p>While replacing, I&rsquo;ll also need to <a href="https://kubernetes.io/docs/reference/using-api/deprecation-guide/#ingress-v122">accordingly make changes</a> in my deployment configuration. However, this Helm chart is not one I developed, so I would just need to check and upgrade the Helm chart if a newer version is available from the maintainers. Generally, latest Helm charts use stable APIs which are not deprecated. You can run <code>helm search repo</code> command which lists the latest available Helm chart with its version, so you can upgrade.</p>
+<p><img src="https://github.com/milindchawre/civo-k8s/raw/master/blog/pluto/images/helm-search.png" alt="helm-search">
+But if your cluster has lots of Helm charts installed, then doing so for each and every chart is a tedious task. The good thing is that there is a solution for this problem too: Another tool named <a href="https://github.com/FairwindsOps/nova">nova</a> which is again developed by <a href="https://www.fairwinds.com/">FairwindsOps</a>. Nova scans your cluster for installed Helm charts, then cross-checks them against all known Helm repositories. If it finds an updated version of the chart you&rsquo;re using, or notices your current version is deprecated, it will let you know. By running <code>nova find</code> you can get a report of any charts on your cluster:</p>
+<p><img src="https://github.com/milindchawre/civo-k8s/raw/master/blog/pluto/images/nova-find.png" alt="nova-find">
+Combining tools like Pluto and Nova will help you detect and remediate deprecated Kubernetes APIs before they pose issues to compatibility and function.</p>
+<h3 id="conclusion">Conclusion</h3>
+<p>I hope this guide will help you in dealing with deprecated Kubernetes APIs. If you found this guide useful, let me know on twitter at <a href="https://twitter.com/milindchawre">@milindchawre</a> or you can connect me on <a href="https://www.linkedin.com/in/milind-chawre">Linkedin</a>.</p>
+
+
+    
+    
+        <div class="related">
+
+
+<h3>Similar articles</h3>
+
+<ul>
+	
+	<li><a href="/site/micro/excluding-specific-logs-from-a-particular-pod-in-fluentd/">Excluding Specific Logs From a Particular Pod in Fluentd</a></li>
+	
+	<li><a href="/site/blog/tips-to-ace-in-cka-and-ckad-exam/">Tips to ace in CKA and CKAD exam</a></li>
+	
+	<li><a href="/site/blog/sloop-a-tool-to-visualize-the-history-of-kubernetes-resources/">Sloop: a Tool to Visualize the History of Kubernetes Resources</a></li>
+	
+	<li><a href="/site/blog/k3s-upgrade-a-simplified-guide/">K3s Upgrade: A Simplified Guide</a></li>
+	
+	<li><a href="/site/blog/develop-and-test-your-code-directly-in-kubernetes-using-okteto/">Develop and Test Your Code Directly in Kubernetes Using Okteto</a></li>
+	
+</ul>
+
+
+</div>
+    
+
+</div>
+
+
+        
+
+    </div>
+
+</section>
+
+
+
+<section class="section">
+  <div class="container has-text-centered">
+    <p>© 2020</p>
+    
+      <p>Powered by <a href="https://gohugo.io/">Hugo</a> &amp; <a href="https://github.com/pavel-pi/kiss-em">Kiss'Em</a>.</p>
+    
+  </div>
+</section>
+
+</body>
+</html>
+

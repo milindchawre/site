@@ -232,7 +232,7 @@
                     
                     
                     Problem: I want to exclude these noisy logs coming from activemq pod.
-kubernetes-cluster-logging $ kubectl logs activemq-79bd55f9c-jdtqf --tail 10 -fWARN | Transport Connection to: tcp://172.29.108.66:37302 failed: java.io.EOFExceptionWARN | Transport Connection to: tcp://172.29.108.66:37366 failed: java.io.EOFExceptionWARN | Transport Connection to: tcp://172.29.108.66:37518 failed: java.io.EOFExceptionWARN | Transport Connection to: tcp://172.29.108.66:37582 failed: java.io.EOFExceptionSolution:  Create regex pattern for your log line that need to be excluded. Use kubernetes_metadata filter to enrich logs with kubernetes metadata.
+kubernetes-cluster-logging $ kubectl logs activemq-79bd55f9c-jdtqf --tail 10 -f WARN | Transport Connection to: tcp://172.29.108.66:37302 failed: java.io.EOFException WARN | Transport Connection to: tcp://172.29.108.66:37366 failed: java.io.EOFException WARN | Transport Connection to: tcp://172.29.108.66:37518 failed: java.io.EOFException WARN | Transport Connection to: tcp://172.29.108.66:37582 failed: java.io.EOFException Solution:  Create regex pattern for your log line that need to be excluded. Use kubernetes_metadata filter to enrich logs with kubernetes metadata.
                 
                     
                     <a class="button is-link" href="https://milindchawre.github.io/site/micro/excluding-specific-logs-from-a-particular-pod-in-fluentd/" style="height:28px">Read more</a>
