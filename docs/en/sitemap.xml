@@ -3,6 +3,46 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://milindchawre.github.io/site/tags/az-104/</loc>
+    <lastmod>2022-06-01T13:25:05+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://milindchawre.github.io/site/tags/azure/</loc>
+    <lastmod>2022-06-01T13:25:05+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://milindchawre.github.io/site/tags/certification/</loc>
+    <lastmod>2022-06-01T13:25:05+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://milindchawre.github.io/site/micro/</loc>
+    <lastmod>2022-06-01T13:25:05+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://milindchawre.github.io/site/tags/</loc>
+    <lastmod>2022-06-01T13:25:05+05:30</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="de"
+                href="https://milindchawre.github.io/site/de/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://milindchawre.github.io/site/tags/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://milindchawre.github.io/site/micro/tips-for-az-104-exam-microsoft-certified-azure-administrator-associate/</loc>
+    <lastmod>2022-06-01T13:25:05+05:30</lastmod>
+  </url>
+  
+  <url>
     <loc>https://milindchawre.github.io/site/blog/</loc>
     <lastmod>2022-03-06T18:55:42+05:30</lastmod>
   </url>
@@ -28,27 +68,7 @@
   </url>
   
   <url>
-    <loc>https://milindchawre.github.io/site/tags/</loc>
-    <lastmod>2022-03-06T18:55:42+05:30</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="de"
-                href="https://milindchawre.github.io/site/de/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://milindchawre.github.io/site/tags/"
-                />
-  </url>
-  
-  <url>
     <loc>https://milindchawre.github.io/site/tags/ccje/</loc>
-    <lastmod>2021-06-16T11:49:26+05:30</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://milindchawre.github.io/site/tags/certification/</loc>
     <lastmod>2021-06-16T11:49:26+05:30</lastmod>
   </url>
   
@@ -99,11 +119,6 @@
   
   <url>
     <loc>https://milindchawre.github.io/site/tags/logging/</loc>
-    <lastmod>2021-01-12T18:09:24+05:30</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://milindchawre.github.io/site/micro/</loc>
     <lastmod>2021-01-12T18:09:24+05:30</lastmod>
   </url>
   

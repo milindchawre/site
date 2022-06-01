@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>az-104 on Milind&#39;s Blog</title>
+    <link>https://milindchawre.github.io/site/tags/az-104/</link>
+    <description>Recent content in az-104 on Milind&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 01 Jun 2022 13:25:05 +0530</lastBuildDate>
+    
+	<atom:link href="https://milindchawre.github.io/site/tags/az-104/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Tips for AZ-104 Exam - Microsoft Certified Azure Administrator Associate</title>
+      <link>https://milindchawre.github.io/site/micro/tips-for-az-104-exam-microsoft-certified-azure-administrator-associate/</link>
+      <pubDate>Wed, 01 Jun 2022 13:25:05 +0530</pubDate>
+      
+      <guid>https://milindchawre.github.io/site/micro/tips-for-az-104-exam-microsoft-certified-azure-administrator-associate/</guid>
+      <description>I passed the AZ-104 exam today (1st June 2022) with a score of 915/1000. This exam tests your skills to implement, manage and monitor an organization’s azure environment.
+I already had some experience with azure and have recently passed Azure fundamentals exam - AZ-900. Having hands on experience is better if you want to crack this exam.
+It took me around a week to get fully prepared. I referred following resources for preparation:</description>
+    </item>
+    
+  </channel>
+</rss>
