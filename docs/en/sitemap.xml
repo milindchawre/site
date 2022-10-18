@@ -3,28 +3,33 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://milindchawre.github.io/site/tags/az-104/</loc>
-    <lastmod>2022-06-01T13:25:05+05:30</lastmod>
+    <loc>https://milindchawre.github.io/site/tags/az-400/</loc>
+    <lastmod>2022-10-18T11:16:38+05:30</lastmod>
   </url>
   
   <url>
     <loc>https://milindchawre.github.io/site/tags/azure/</loc>
-    <lastmod>2022-06-01T13:25:05+05:30</lastmod>
+    <lastmod>2022-10-18T11:16:38+05:30</lastmod>
   </url>
   
   <url>
     <loc>https://milindchawre.github.io/site/tags/certification/</loc>
-    <lastmod>2022-06-01T13:25:05+05:30</lastmod>
+    <lastmod>2022-10-18T11:16:38+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://milindchawre.github.io/site/tags/devops/</loc>
+    <lastmod>2022-10-18T11:16:38+05:30</lastmod>
   </url>
   
   <url>
     <loc>https://milindchawre.github.io/site/micro/</loc>
-    <lastmod>2022-06-01T13:25:05+05:30</lastmod>
+    <lastmod>2022-10-18T11:16:38+05:30</lastmod>
   </url>
   
   <url>
     <loc>https://milindchawre.github.io/site/tags/</loc>
-    <lastmod>2022-06-01T13:25:05+05:30</lastmod>
+    <lastmod>2022-10-18T11:16:38+05:30</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="de"
@@ -35,6 +40,16 @@
                 hreflang="en"
                 href="https://milindchawre.github.io/site/tags/"
                 />
+  </url>
+  
+  <url>
+    <loc>https://milindchawre.github.io/site/micro/tips-for-az-400-exam-microsoft-certified-devops-engineer-expert/</loc>
+    <lastmod>2022-10-18T11:16:38+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://milindchawre.github.io/site/tags/az-104/</loc>
+    <lastmod>2022-06-01T13:25:05+05:30</lastmod>
   </url>
   
   <url>
