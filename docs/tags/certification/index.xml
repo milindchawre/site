@@ -6,11 +6,7 @@
     <description>Recent content in certification on Milind&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 18 Oct 2022 11:16:38 +0530</lastBuildDate>
-    
-	<atom:link href="https://milindchawre.github.io/site/tags/certification/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Tue, 18 Oct 2022 11:16:38 +0530</lastBuildDate><atom:link href="https://milindchawre.github.io/site/tags/certification/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Tips for Az 400 Exam Microsoft Certified Devops Engineer Expert</title>
       <link>https://milindchawre.github.io/site/micro/tips-for-az-400-exam-microsoft-certified-devops-engineer-expert/</link>
@@ -40,7 +36,7 @@ It took me around a week to get fully prepared. I referred following resources f
       <guid>https://milindchawre.github.io/site/blog/tips-to-ace-certified-jenkins-engineer-2021-exam/</guid>
       <description>This blog was originally featured as a guide in civo cloud community.
 I recently passed the Certified Jenkins Engineer 2021 exam, scoring ~76%. This post talks about my overall exam experience and some tips.
-        CJE Certificate    Note: This post is not about exam dumps, as it defeats the whole purpose of this exam which is for you to demonstrate your knowledge.</description>
+CJE Certificate Note: This post is not about exam dumps, as it defeats the whole purpose of this exam which is for you to demonstrate your knowledge. Also due to the NDA I agreed to by signing up for the exam, I can&amp;rsquo;t reveal any questions asked in this exam.</description>
     </item>
     
     <item>
@@ -50,8 +46,8 @@ I recently passed the Certified Jenkins Engineer 2021 exam, scoring ~76%. This p
       
       <guid>https://milindchawre.github.io/site/blog/tips-to-ace-in-cka-and-ckad-exam/</guid>
       <description>This blog was originally featured as a guide in civo cloud community.
-        CKAD and CKA Certificate    I recently passed both CKA and CKAD exams, scoring 98% and 96% respectively. In this blog, I want to share my overall experience and tips to crack these exams.
-What is CKA? CKA is the Certified Kubernetes Administrator certification, which focuses on administrative skills of managing, troubleshooting and operating a kubernetes cluster.</description>
+CKAD and CKA Certificate I recently passed both CKA and CKAD exams, scoring 98% and 96% respectively. In this blog, I want to share my overall experience and tips to crack these exams.
+What is CKA? CKA is the Certified Kubernetes Administrator certification, which focuses on administrative skills of managing, troubleshooting and operating a kubernetes cluster. The CKA exam certifies that users can design, build, configure, and expose native cloud applications for Kubernetes.</description>
     </item>
     
   </channel>

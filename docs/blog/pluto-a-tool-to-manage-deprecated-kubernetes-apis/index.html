@@ -187,14 +187,14 @@
 <div class="subtitle tags is-6 is-pulled-right">
     
         
-<a class="subtitle is-6" href="/site/tags/kubernetes/">#kubernetes</a>
+<a class="subtitle is-6" href="/tags/kubernetes/">#kubernetes</a>
 
 
 
   
-  | <a class="subtitle is-6" href="/site/tags/pluto/">#pluto</a>
+  | <a class="subtitle is-6" href="/tags/pluto/">#pluto</a>
   
-  | <a class="subtitle is-6" href="/site/tags/nova/">#nova</a>
+  | <a class="subtitle is-6" href="/tags/nova/">#nova</a>
   
 
 
@@ -229,13 +229,13 @@
 <p>When you define an application configuration, you specify the API version of the Kubernetes object to be used. Whether a simple Kubernetes YAML manifest or Helm chart, the <code>apiVersion</code> field identifies the API version of the Kubernetes object. This means that the user or the maintainer of the application should be aware when Kubernetes API versions have been deprecated and in what Kubernetes version they will be removed.</p>
 <p>Also if you upgrade your Kubernetes cluster, there are chances that you might encounter deprecated Kubernetes APIs if the version you upgraded to doesn&rsquo;t support them. For example, suppose resources are running on your cluster, which uses an old API version. In that case, likely, your application using that resource might not work if the deprecated API has been removed in the new cluster version.</p>
 <p>A very good example would be APIVersion <code>extensions/v1beta1</code> of the Ingress Resource, which was removed in v1.22 version of Kubernetes. You would get an error when trying to use such a removed API version in your configuration:</p>
-<pre><code>Error: UPGRADE FAILED: current release manifest contains removed kubernetes api(s)
+<pre tabindex="0"><code>Error: UPGRADE FAILED: current release manifest contains removed kubernetes api(s)
 for this kubernetes version and it is therefore unable to build the kubernetes
-objects for performing the diff. error from kubernetes: unable to recognize &quot;&quot;:
-no matches for kind &quot;Ingress&quot; in version &quot;extensions/v1beta1&quot;
+objects for performing the diff. error from kubernetes: unable to recognize &#34;&#34;:
+no matches for kind &#34;Ingress&#34; in version &#34;extensions/v1beta1&#34;
 </code></pre><h3 id="where-and-how-kubernetes-apis-are-used">Where and how Kubernetes APIs are used</h3>
 <p>This is how you specify API version in your configuration.</p>
-<pre><code># Sample configuration taken from: https://kubernetes.io/docs/concepts/workloads/controllers/deployment/#creating-a-deployment
+<pre tabindex="0"><code># Sample configuration taken from: https://kubernetes.io/docs/concepts/workloads/controllers/deployment/#creating-a-deployment
 ---
 apiVersion: apps/v1     &lt;------ API Version of the kubernetes object
 kind: Deployment
@@ -246,7 +246,7 @@ metadata:
 spec:
   replicas: 3
 </code></pre><p>You can also check all supported API groups with its version by referring to <a href="https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.23/#-strong-api-groups-strong-">official documentation</a> or using <code>kubectl</code> command line tool command <code>api-versions</code>:</p>
-<pre><code>$ kubectl api-versions
+<pre tabindex="0"><code>$ kubectl api-versions
 admissionregistration.k8s.io/v1
 admissionregistration.k8s.io/v1beta1
 apiextensions.k8s.io/v1
@@ -280,7 +280,7 @@ apps/v1
 </ul>
 <h3 id="installation">Installation</h3>
 <p>You can install <code>Pluto</code> on your workstation, by downloading <a href="https://github.com/FairwindsOps/pluto/releases">appropriate release</a>. For example, on my Linux machine I used the following commands to download Pluto v5.4.0, extract the compressed file, mark it executable and move it into my /bin/ directory:</p>
-<pre><code>$ wget https://github.com/FairwindsOps/pluto/releases/download/v5.4.0/pluto_5.4.0_linux_amd64.tar.gz
+<pre tabindex="0"><code>$ wget https://github.com/FairwindsOps/pluto/releases/download/v5.4.0/pluto_5.4.0_linux_amd64.tar.gz
 $ tar -zxvf pluto_5.4.0_linux_amd64.tar.gz
 $ chmod +x pluto
 $ cp pluto /bin/pluto

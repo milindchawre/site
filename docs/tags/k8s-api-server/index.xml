@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>k8s-api-server on Milind&#39;s Blog</title>
+    <link>https://milindchawre.github.io/site/tags/k8s-api-server/</link>
+    <description>Recent content in k8s-api-server on Milind&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Fri, 18 Aug 2023 16:51:23 +0530</lastBuildDate><atom:link href="https://milindchawre.github.io/site/tags/k8s-api-server/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Looking Under the Hood of a Kubernetes Cluster</title>
+      <link>https://milindchawre.github.io/site/blog/looking-under-the-hood-of-a-kubernetes-cluster/</link>
+      <pubDate>Fri, 18 Aug 2023 16:51:23 +0530</pubDate>
+      
+      <guid>https://milindchawre.github.io/site/blog/looking-under-the-hood-of-a-kubernetes-cluster/</guid>
+      <description>This blog was originally featured as a guide in civo cloud community.
+Introduction If you’re familiar with Kubernetes, you already know that Kubernetes is a Container Orchestrator. However, if we look closer at its core, one could argue that Kubernetes appears to be more of an API Server for your infrastructure.
+In Kubernetes, everything is treated as an API object. All the resources in a Kubernetes cluster, such as pods, services, deployments, and others are represented as API objects.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -187,12 +187,12 @@
 <div class="subtitle tags is-6 is-pulled-right">
     
         
-<a class="subtitle is-6" href="/site/tags/kubernetes/">#kubernetes</a>
+<a class="subtitle is-6" href="/tags/kubernetes/">#kubernetes</a>
 
 
 
   
-  | <a class="subtitle is-6" href="/site/tags/k3s/">#k3s</a>
+  | <a class="subtitle is-6" href="/tags/k3s/">#k3s</a>
   
 
 
@@ -230,7 +230,7 @@
 </ul>
 <h5 id="_connect-to-the-cluster_"><strong><em>Connect to the cluster</em></strong></h5>
 <p>First connect to your k3s cluster and list down all the k8s nodes.</p>
-<pre><code># Ensure KUBECONFIG env is pointing to your kubernetes config file
+<pre tabindex="0"><code># Ensure KUBECONFIG env is pointing to your kubernetes config file
 $ kubtctl get nodes
 NAME               STATUS   ROLES    AGE    VERSION
 kube-node-c982     Ready    &lt;none&gt;   130m   v1.16.3-k3s1
@@ -239,9 +239,9 @@ kube-node-4d85     Ready    &lt;none&gt;   130m   v1.16.3-k3s1
 </code></pre><p>As you can see all the nodes are running <code>v1.16.3-k3s1</code> of k3s.</p>
 <h5 id="_install-the-system-upgrade-controller_"><strong><em>Install the system-upgrade-controller</em></strong></h5>
 <p>The k3s cluster upgradation is handled by a controller named <a href="https://github.com/rancher/system-upgrade-controller">system-upgrade-controller</a> which leverages a <a href="https://kubernetes.io/docs/concepts/extend-kubernetes/api-extension/custom-resources/#custom-resources">custom resource definition (CRD)</a>, the <code>plan</code>, and a <a href="https://kubernetes.io/docs/concepts/architecture/controller/">controller</a> that schedules upgrades based on the configured plans. This <code>system-upgrade-controller</code> need to be installed as a deployment in your k3s cluster. To install it run following command:</p>
-<pre><code>kubectl apply -f https://raw.githubusercontent.com/rancher/system-upgrade-controller/master/manifests/system-upgrade-controller.yaml
+<pre tabindex="0"><code>kubectl apply -f https://raw.githubusercontent.com/rancher/system-upgrade-controller/master/manifests/system-upgrade-controller.yaml
 </code></pre><p>You should see the upgrade controller starting in <code>system-upgrade</code> namespace as shown below.</p>
-<pre><code>$ kubectl get all -n system-upgrade
+<pre tabindex="0"><code>$ kubectl get all -n system-upgrade
 NAME                                             READY   STATUS    RESTARTS   AGE
 pod/system-upgrade-controller-7fff98589f-8cjsv   1/1     Running   0          23s
 
@@ -252,7 +252,7 @@ NAME                                                   DESIRED   CURRENT   READY
 replicaset.apps/system-upgrade-controller-7fff98589f   1         1         1       24s
 </code></pre><h5 id="_configure-plans_"><strong><em>Configure Plans</em></strong></h5>
 <p>The Plan defines upgrade policies and requirements. The controller schedules upgrades by monitoring these plans and selecting nodes to run upgrade <a href="https://kubernetes.io/docs/concepts/workloads/controllers/jobs-run-to-completion/">jobs</a> on it. So lets create two plans: one for server (master) nodes and other one for agent (worker) nodes. The following two example plans will upgrade your cluster to k3s <code>v1.18.4+k3s1</code>.</p>
-<pre><code># Server plan
+<pre tabindex="0"><code># Server plan
 apiVersion: upgrade.cattle.io/v1
 kind: Plan
 metadata:
@@ -266,7 +266,7 @@ spec:
     - key: k3s-master-upgrade
       operator: In
       values:
-      - &quot;true&quot;
+      - &#34;true&#34;
   serviceAccountName: system-upgrade
   upgrade:
     image: rancher/k3s-upgrade
@@ -286,7 +286,7 @@ spec:
     - key: k3s-worker-upgrade
       operator: In
       values:
-      - &quot;true&quot;
+      - &#34;true&#34;
   prepare:
     args:
     - prepare
@@ -307,13 +307,13 @@ spec:
 </ul>
 <h5 id="_assign-labels-to-nodes_"><strong><em>Assign labels to nodes</em></strong></h5>
 <p>Label the nodes that you want to upgrade with the right label:</p>
-<pre><code># For master nodes
+<pre tabindex="0"><code># For master nodes
 kubectl label node &lt;node-name&gt; k3s-master-upgrade=true
                    OR
 # For worker nodes
 kubectl label node &lt;node-name&gt; k3s-worker-upgrade=true
 </code></pre><p>In our case its:</p>
-<pre><code>$ kubectl label node kube-master-ce86 k3s-master-upgrade=true
+<pre tabindex="0"><code>$ kubectl label node kube-master-ce86 k3s-master-upgrade=true
 node/kube-master-ce86 labeled
 $ kubectl label node kube-node-c982  k3s-worker-upgrade=true
 node/kube-node-c982 labeled
@@ -321,7 +321,7 @@ $ kubectl label node kube-node-4d85 k3s-worker-upgrade=true
 node/kube-node-4d85 labeled
 </code></pre><h5 id="_apply-plans_"><strong><em>Apply plans</em></strong></h5>
 <p>Now apply the plans defined above using kubectl apply command.</p>
-<pre><code>$ kubectl apply -f plans.yaml
+<pre tabindex="0"><code>$ kubectl apply -f plans.yaml
 plan.upgrade.cattle.io/server-plan created
 plan.upgrade.cattle.io/agent-plan created
 $ kubectl get plans -n system-upgrade
@@ -331,10 +331,10 @@ agent-plan    14s
 </code></pre><p>As soon as you apply the plan, the controller will detect it and will begin the upgrade process. On the other hand, if you update any existing plans the controller will re-evaluate the plan and will determine if another upgrade is needed.</p>
 <h5 id="_verify-the-upgrade_"><strong><em>Verify the upgrade</em></strong></h5>
 <p>You can monitor the progress of an upgrade by viewing the plan and jobs via kubectl:</p>
-<pre><code>kubectl -n system-upgrade get plans -o yaml
+<pre tabindex="0"><code>kubectl -n system-upgrade get plans -o yaml
 kubectl -n system-upgrade get jobs -o yaml
 </code></pre><p>Once the upgrade is done. Verify the new installed version on all the nodes using kubectl:</p>
-<pre><code>$ kubectl get nodes
+<pre tabindex="0"><code>$ kubectl get nodes
 NAME               STATUS   ROLES    AGE    VERSION
 kube-master-ce86   Ready    master   147m   v1.18.4+k3s1
 kube-node-c982     Ready    &lt;none&gt;   147m   v1.18.4+k3s1

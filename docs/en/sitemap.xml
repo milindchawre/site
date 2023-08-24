@@ -1,230 +1,21 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  
-  <url>
-    <loc>https://milindchawre.github.io/site/tags/az-400/</loc>
-    <lastmod>2022-10-18T11:16:38+05:30</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://milindchawre.github.io/site/tags/azure/</loc>
-    <lastmod>2022-10-18T11:16:38+05:30</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://milindchawre.github.io/site/tags/certification/</loc>
-    <lastmod>2022-10-18T11:16:38+05:30</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://milindchawre.github.io/site/tags/devops/</loc>
-    <lastmod>2022-10-18T11:16:38+05:30</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://milindchawre.github.io/site/micro/</loc>
-    <lastmod>2022-10-18T11:16:38+05:30</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://milindchawre.github.io/site/tags/</loc>
-    <lastmod>2022-10-18T11:16:38+05:30</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="de"
-                href="https://milindchawre.github.io/site/de/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://milindchawre.github.io/site/tags/"
-                />
-  </url>
-  
-  <url>
-    <loc>https://milindchawre.github.io/site/micro/tips-for-az-400-exam-microsoft-certified-devops-engineer-expert/</loc>
-    <lastmod>2022-10-18T11:16:38+05:30</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://milindchawre.github.io/site/tags/az-104/</loc>
-    <lastmod>2022-06-01T13:25:05+05:30</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://milindchawre.github.io/site/micro/tips-for-az-104-exam-microsoft-certified-azure-administrator-associate/</loc>
-    <lastmod>2022-06-01T13:25:05+05:30</lastmod>
-  </url>
-  
   <url>
     <loc>https://milindchawre.github.io/site/blog/</loc>
-    <lastmod>2022-03-06T18:55:42+05:30</lastmod>
-  </url>
-  
-  <url>
+    <lastmod>2023-08-18T16:51:23+05:30</lastmod>
+  </url><url>
+    <loc>https://milindchawre.github.io/site/tags/k8s-api-server/</loc>
+    <lastmod>2023-08-18T16:51:23+05:30</lastmod>
+  </url><url>
     <loc>https://milindchawre.github.io/site/tags/kubernetes/</loc>
-    <lastmod>2022-03-06T18:55:42+05:30</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://milindchawre.github.io/site/tags/nova/</loc>
-    <lastmod>2022-03-06T18:55:42+05:30</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://milindchawre.github.io/site/tags/pluto/</loc>
-    <lastmod>2022-03-06T18:55:42+05:30</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://milindchawre.github.io/site/blog/pluto-a-tool-to-manage-deprecated-kubernetes-apis/</loc>
-    <lastmod>2022-03-06T18:55:42+05:30</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://milindchawre.github.io/site/tags/ccje/</loc>
-    <lastmod>2021-06-16T11:49:26+05:30</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://milindchawre.github.io/site/tags/ci-cd/</loc>
-    <lastmod>2021-06-16T11:49:26+05:30</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://milindchawre.github.io/site/tags/cje/</loc>
-    <lastmod>2021-06-16T11:49:26+05:30</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://milindchawre.github.io/site/tags/jenkins/</loc>
-    <lastmod>2021-06-16T11:49:26+05:30</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://milindchawre.github.io/site/blog/tips-to-ace-certified-jenkins-engineer-2021-exam/</loc>
-    <lastmod>2021-06-16T11:49:26+05:30</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://milindchawre.github.io/site/tags/docker/</loc>
-    <lastmod>2021-02-20T16:49:35+05:30</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://milindchawre.github.io/site/tags/registry/</loc>
-    <lastmod>2021-02-20T16:49:35+05:30</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://milindchawre.github.io/site/blog/ttl-sh-your-anonymous-and-ephemeral-docker-image-registry/</loc>
-    <lastmod>2021-02-20T16:49:35+05:30</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://milindchawre.github.io/site/micro/excluding-specific-logs-from-a-particular-pod-in-fluentd/</loc>
-    <lastmod>2021-01-12T18:09:24+05:30</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://milindchawre.github.io/site/tags/fluentd/</loc>
-    <lastmod>2021-01-12T18:09:24+05:30</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://milindchawre.github.io/site/tags/logging/</loc>
-    <lastmod>2021-01-12T18:09:24+05:30</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://milindchawre.github.io/site/tags/cka/</loc>
-    <lastmod>2021-01-08T14:00:13+05:30</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://milindchawre.github.io/site/tags/ckad/</loc>
-    <lastmod>2021-01-08T14:00:13+05:30</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://milindchawre.github.io/site/blog/tips-to-ace-in-cka-and-ckad-exam/</loc>
-    <lastmod>2021-01-08T14:00:13+05:30</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://milindchawre.github.io/site/tags/k3s/</loc>
-    <lastmod>2020-11-03T16:00:42+05:30</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://milindchawre.github.io/site/tags/sloop/</loc>
-    <lastmod>2020-11-03T16:00:42+05:30</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://milindchawre.github.io/site/blog/sloop-a-tool-to-visualize-the-history-of-kubernetes-resources/</loc>
-    <lastmod>2020-11-03T16:00:42+05:30</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://milindchawre.github.io/site/blog/k3s-upgrade-a-simplified-guide/</loc>
-    <lastmod>2020-07-02T23:03:25+05:30</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://milindchawre.github.io/site/tags/cloud-native-development/</loc>
-    <lastmod>2020-06-17T23:54:09+05:30</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://milindchawre.github.io/site/blog/develop-and-test-your-code-directly-in-kubernetes-using-okteto/</loc>
-    <lastmod>2020-06-17T23:54:09+05:30</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://milindchawre.github.io/site/tags/java/</loc>
-    <lastmod>2020-06-17T23:54:09+05:30</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://milindchawre.github.io/site/tags/okteto/</loc>
-    <lastmod>2020-06-17T23:54:09+05:30</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://milindchawre.github.io/site/tags/vscode/</loc>
-    <lastmod>2020-06-17T23:54:09+05:30</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://milindchawre.github.io/site/blog/fairwinds-goldilocks-kubernetes-resource-recommendation-tool/</loc>
-    <lastmod>2020-05-14T20:45:09+05:30</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://milindchawre.github.io/site/tags/goldilocks/</loc>
-    <lastmod>2020-05-14T20:45:09+05:30</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://milindchawre.github.io/site/tags/polaris/</loc>
-    <lastmod>2020-04-27T18:01:10+05:30</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://milindchawre.github.io/site/blog/setting-up-polaris-on-kubernetes/</loc>
-    <lastmod>2020-04-27T18:01:10+05:30</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://milindchawre.github.io/site/about/</loc>
-    <lastmod>2020-04-26T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+    <lastmod>2023-08-18T16:51:23+05:30</lastmod>
+  </url><url>
+    <loc>https://milindchawre.github.io/site/blog/looking-under-the-hood-of-a-kubernetes-cluster/</loc>
+    <lastmod>2023-08-18T16:51:23+05:30</lastmod>
+  </url><url>
     <loc>https://milindchawre.github.io/site/</loc>
-    <lastmod>2020-04-26T00:00:00+00:00</lastmod>
+    <lastmod>2023-08-18T16:51:23+05:30</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="de"
@@ -235,6 +26,135 @@
                 hreflang="en"
                 href="https://milindchawre.github.io/site/"
                 />
+  </url><url>
+    <loc>https://milindchawre.github.io/site/tags/</loc>
+    <lastmod>2023-08-18T16:51:23+05:30</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="de"
+                href="https://milindchawre.github.io/site/de/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://milindchawre.github.io/site/tags/"
+                />
+  </url><url>
+    <loc>https://milindchawre.github.io/site/tags/az-400/</loc>
+    <lastmod>2022-10-18T11:16:38+05:30</lastmod>
+  </url><url>
+    <loc>https://milindchawre.github.io/site/tags/azure/</loc>
+    <lastmod>2022-10-18T11:16:38+05:30</lastmod>
+  </url><url>
+    <loc>https://milindchawre.github.io/site/tags/certification/</loc>
+    <lastmod>2022-10-18T11:16:38+05:30</lastmod>
+  </url><url>
+    <loc>https://milindchawre.github.io/site/tags/devops/</loc>
+    <lastmod>2022-10-18T11:16:38+05:30</lastmod>
+  </url><url>
+    <loc>https://milindchawre.github.io/site/micro/</loc>
+    <lastmod>2022-10-18T11:16:38+05:30</lastmod>
+  </url><url>
+    <loc>https://milindchawre.github.io/site/micro/tips-for-az-400-exam-microsoft-certified-devops-engineer-expert/</loc>
+    <lastmod>2022-10-18T11:16:38+05:30</lastmod>
+  </url><url>
+    <loc>https://milindchawre.github.io/site/tags/az-104/</loc>
+    <lastmod>2022-06-01T13:25:05+05:30</lastmod>
+  </url><url>
+    <loc>https://milindchawre.github.io/site/micro/tips-for-az-104-exam-microsoft-certified-azure-administrator-associate/</loc>
+    <lastmod>2022-06-01T13:25:05+05:30</lastmod>
+  </url><url>
+    <loc>https://milindchawre.github.io/site/tags/nova/</loc>
+    <lastmod>2022-03-06T18:55:42+05:30</lastmod>
+  </url><url>
+    <loc>https://milindchawre.github.io/site/tags/pluto/</loc>
+    <lastmod>2022-03-06T18:55:42+05:30</lastmod>
+  </url><url>
+    <loc>https://milindchawre.github.io/site/blog/pluto-a-tool-to-manage-deprecated-kubernetes-apis/</loc>
+    <lastmod>2022-03-06T18:55:42+05:30</lastmod>
+  </url><url>
+    <loc>https://milindchawre.github.io/site/tags/ccje/</loc>
+    <lastmod>2021-06-16T11:49:26+05:30</lastmod>
+  </url><url>
+    <loc>https://milindchawre.github.io/site/tags/ci-cd/</loc>
+    <lastmod>2021-06-16T11:49:26+05:30</lastmod>
+  </url><url>
+    <loc>https://milindchawre.github.io/site/tags/cje/</loc>
+    <lastmod>2021-06-16T11:49:26+05:30</lastmod>
+  </url><url>
+    <loc>https://milindchawre.github.io/site/tags/jenkins/</loc>
+    <lastmod>2021-06-16T11:49:26+05:30</lastmod>
+  </url><url>
+    <loc>https://milindchawre.github.io/site/blog/tips-to-ace-certified-jenkins-engineer-2021-exam/</loc>
+    <lastmod>2021-06-16T11:49:26+05:30</lastmod>
+  </url><url>
+    <loc>https://milindchawre.github.io/site/tags/docker/</loc>
+    <lastmod>2021-02-20T16:49:35+05:30</lastmod>
+  </url><url>
+    <loc>https://milindchawre.github.io/site/tags/registry/</loc>
+    <lastmod>2021-02-20T16:49:35+05:30</lastmod>
+  </url><url>
+    <loc>https://milindchawre.github.io/site/blog/ttl-sh-your-anonymous-and-ephemeral-docker-image-registry/</loc>
+    <lastmod>2021-02-20T16:49:35+05:30</lastmod>
+  </url><url>
+    <loc>https://milindchawre.github.io/site/micro/excluding-specific-logs-from-a-particular-pod-in-fluentd/</loc>
+    <lastmod>2021-01-12T18:09:24+05:30</lastmod>
+  </url><url>
+    <loc>https://milindchawre.github.io/site/tags/fluentd/</loc>
+    <lastmod>2021-01-12T18:09:24+05:30</lastmod>
+  </url><url>
+    <loc>https://milindchawre.github.io/site/tags/logging/</loc>
+    <lastmod>2021-01-12T18:09:24+05:30</lastmod>
+  </url><url>
+    <loc>https://milindchawre.github.io/site/tags/cka/</loc>
+    <lastmod>2021-01-08T14:00:13+05:30</lastmod>
+  </url><url>
+    <loc>https://milindchawre.github.io/site/tags/ckad/</loc>
+    <lastmod>2021-01-08T14:00:13+05:30</lastmod>
+  </url><url>
+    <loc>https://milindchawre.github.io/site/blog/tips-to-ace-in-cka-and-ckad-exam/</loc>
+    <lastmod>2021-01-08T14:00:13+05:30</lastmod>
+  </url><url>
+    <loc>https://milindchawre.github.io/site/tags/k3s/</loc>
+    <lastmod>2020-11-03T16:00:42+05:30</lastmod>
+  </url><url>
+    <loc>https://milindchawre.github.io/site/tags/sloop/</loc>
+    <lastmod>2020-11-03T16:00:42+05:30</lastmod>
+  </url><url>
+    <loc>https://milindchawre.github.io/site/blog/sloop-a-tool-to-visualize-the-history-of-kubernetes-resources/</loc>
+    <lastmod>2020-11-03T16:00:42+05:30</lastmod>
+  </url><url>
+    <loc>https://milindchawre.github.io/site/blog/k3s-upgrade-a-simplified-guide/</loc>
+    <lastmod>2020-07-02T23:03:25+05:30</lastmod>
+  </url><url>
+    <loc>https://milindchawre.github.io/site/tags/cloud-native-development/</loc>
+    <lastmod>2020-06-17T23:54:09+05:30</lastmod>
+  </url><url>
+    <loc>https://milindchawre.github.io/site/blog/develop-and-test-your-code-directly-in-kubernetes-using-okteto/</loc>
+    <lastmod>2020-06-17T23:54:09+05:30</lastmod>
+  </url><url>
+    <loc>https://milindchawre.github.io/site/tags/java/</loc>
+    <lastmod>2020-06-17T23:54:09+05:30</lastmod>
+  </url><url>
+    <loc>https://milindchawre.github.io/site/tags/okteto/</loc>
+    <lastmod>2020-06-17T23:54:09+05:30</lastmod>
+  </url><url>
+    <loc>https://milindchawre.github.io/site/tags/vscode/</loc>
+    <lastmod>2020-06-17T23:54:09+05:30</lastmod>
+  </url><url>
+    <loc>https://milindchawre.github.io/site/blog/fairwinds-goldilocks-kubernetes-resource-recommendation-tool/</loc>
+    <lastmod>2020-05-14T20:45:09+05:30</lastmod>
+  </url><url>
+    <loc>https://milindchawre.github.io/site/tags/goldilocks/</loc>
+    <lastmod>2020-05-14T20:45:09+05:30</lastmod>
+  </url><url>
+    <loc>https://milindchawre.github.io/site/tags/polaris/</loc>
+    <lastmod>2020-04-27T18:01:10+05:30</lastmod>
+  </url><url>
+    <loc>https://milindchawre.github.io/site/blog/setting-up-polaris-on-kubernetes/</loc>
+    <lastmod>2020-04-27T18:01:10+05:30</lastmod>
+  </url><url>
+    <loc>https://milindchawre.github.io/site/about/</loc>
+    <lastmod>2020-04-26T00:00:00+00:00</lastmod>
   </url>
-  
 </urlset>

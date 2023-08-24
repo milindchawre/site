@@ -1,0 +1,461 @@
+
+<!doctype html>
+
+<html xmlns="http://www.w3.org/1999/xhtml"  lang="en">
+
+    <head>
+
+        
+        <meta charset="UTF-8" />
+
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+                
+        <title> 
+             Looking Under the Hood of a Kubernetes Cluster  
+        </title>
+        
+        
+            <link href="https://milindchawre.github.io/site/index.xml" rel="alternate" type="application/rss+xml" title="Milind&#39;s Blog" />
+        
+
+        
+        <link rel="stylesheet" href="/site/css/style.css"/>
+
+        
+        
+            <link rel='stylesheet' href='https://milindchawre.github.io/site/css/custom.css'>
+        
+        
+    </head>
+
+    <body>
+
+
+
+<section class="section">
+  <div class="container">
+    <nav id="nav-main" class="nav">
+      <div id="nav-name" class="nav-left">
+        <a id="nav-anchor" class="nav-item" href="https://milindchawre.github.io/site/">
+          <h1 id="nav-heading" class="title is-4">Milind&#39;s Blog</h1>
+        </a>
+      </div>
+      <div class="nav-right">
+        
+        
+        <nav id="nav-items" class="nav-item level is-mobile">
+          <a class="level-item" aria-label="about" href='/site/about'
+           rel='noopener'>
+            <span class="icon">
+              <i class>
+
+<svg viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+    
+    <circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12" y2="8"></line>
+    
+  </svg>
+</i>
+            </span>
+          </a>
+          <a class="level-item" aria-label="resume" href='https://milindchawre.github.io'
+           target='_blank'  rel='noopener'>
+            <span class="icon">
+              <i class>
+
+<svg viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+    
+    <path d="M22.125 2.25H1.875A1.127 1.127 0 0 0 .75 3.375v17.25a1.127 1.127 0 0 0 1.125 1.125H6v-2.757c0-.351.192-.656.477-.817l.005-.002l4.311-2.396l-1.419-3.546V9.376a2.625 2.625 0 1 1 5.25 0v2.856l-1.419 3.546l4.312 2.396c.29.163.482.469.482.819v2.757h4.125a1.127 1.127 0 0 0 1.125-1.125V3.375a1.127 1.127 0 0 0-1.125-1.125zm-.375 18H19.5v-1.257c0-.911-.5-1.706-1.241-2.124l-.012-.006l-3.157-1.755l1.035-2.588V9.376a4.125 4.125 0 0 0-8.25 0v3.144l1.035 2.588l-3.157 1.755a2.441 2.441 0 0 0-1.253 2.13v1.257H2.25V3.75h19.5z" fill="black"/>
+    
+  </svg>
+</i>
+            </span>
+          </a>
+          <a class="level-item" aria-label="email" href='mailto:milindchawre@outlook.com'
+           target='_blank'  rel='noopener'>
+            <span class="icon">
+              <i class>
+
+<svg viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+    
+    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+    <polyline points="22,6 12,13 2,6"/>
+    
+  </svg>
+</i>
+            </span>
+          </a>
+          <a class="level-item" aria-label="github" href='https://github.com/milindchawre'
+           target='_blank'  rel='noopener'>
+            <span class="icon">
+              <i class>
+
+<svg viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+    
+    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+    
+  </svg>
+</i>
+            </span>
+          </a>
+          <a class="level-item" aria-label="linkedin" href='https://linkedin.com/in/milind-chawre'
+           target='_blank'  rel='noopener'>
+            <span class="icon">
+              <i class>
+
+<svg viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+    
+    <path stroke-width="1.8" d="m5.839218,4.101561c0,1.211972 -0.974141,2.194011 -2.176459,2.194011s-2.176459,-0.982039 -2.176459,-2.194011c0,-1.211094 0.974141,-2.194011 2.176459,-2.194011s2.176459,0.982917 2.176459,2.194011zm0.017552,3.94922l-4.388022,0l0,14.04167l4.388022,0l0,-14.04167zm7.005038,0l-4.359939,0l0,14.04167l4.360816,0l0,-7.370999c0,-4.098413 5.291077,-4.433657 5.291077,0l0,7.370999l4.377491,0l0,-8.89101c0,-6.915523 -7.829986,-6.66365 -9.669445,-3.259423l0,-1.891237z"/>
+    
+  </svg>
+</i>
+            </span>
+          </a>
+          <a class="level-item" aria-label="stackoverflow" href='https://stackoverflow.com/users/6790948/mchawre?tab=profile'
+           target='_blank'  rel='noopener'>
+            <span class="icon">
+              <i class>
+
+<svg viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+    
+    <path d="M18.986 21.865v-6.404h2.134V24H1.844v-8.539h2.13v6.404h15.012zM6.111 19.731H16.85v-2.137H6.111v2.137zm.259-4.852l10.48 2.189l.451-2.07l-10.478-2.187l-.453 2.068zm1.359-5.056l9.705 4.53l.903-1.95l-9.706-4.53l-.902 1.936v.014zm2.715-4.785l8.217 6.855l1.359-1.62l-8.216-6.853l-1.35 1.617l-.01.001zM15.751 0l-1.746 1.294l6.405 8.604l1.746-1.294L15.749 0h.002z" fill="white"/>
+    
+  </svg>
+</i>
+            </span>
+          </a>
+          <a class="level-item" aria-label="twitter" href='https://twitter.com/@milindchawre'
+           target='_blank'  rel='noopener'>
+            <span class="icon">
+              <i class>
+
+<svg viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+    
+    <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/>
+    
+  </svg>
+</i>
+            </span>
+          </a>
+          <a class="level-item" aria-label="facebook" href='https://facebook.com/milind.chawre'
+           target='_blank'  rel='noopener'>
+            <span class="icon">
+              <i class>
+
+<svg viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+    
+    <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+    
+  </svg>
+</i>
+            </span>
+          </a>
+          <a class="level-item" aria-label="rss" href='/site/index.xml'
+           target='_blank'  rel='noopener'>
+            <span class="icon">
+              <i class>
+
+<svg viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+    
+    <path d="M4 11a9 9 0 0 1 9 9"></path><path d="M4 4a16 16 0 0 1 16 16"></path><circle cx="5" cy="19" r="1"></circle>
+    
+  </svg>
+</i>
+            </span>
+          </a></nav>
+        
+      
+      </div>
+    </nav>
+
+    <nav class="nav">
+      
+
+      
+    </nav>
+
+  </div>
+</section>
+
+<section class="section">
+    
+    <div class="container">
+    
+        
+            
+<div class="subtitle tags is-6 is-pulled-right">
+    
+        
+<a class="subtitle is-6" href="/tags/kubernetes/">#kubernetes</a>
+
+
+
+  
+  | <a class="subtitle is-6" href="/tags/k8s-api-server/">#k8s-api-server</a>
+  
+
+
+    
+</div>
+
+
+
+<h2 class="subtitle is-6">
+    
+    
+        August 18, 2023 | 16:51
+    
+</h2>
+
+
+
+<h1 class="title">Looking Under the Hood of a Kubernetes Cluster</h1>
+
+<div class="content">
+
+    
+    <p><em>This blog was originally featured as a <a href="https://www.civo.com/learn/kubernetes-a-container-orchestrator-or-yet-another-api-server">guide</a> in civo cloud community.</em></p>
+<p><img src="/site/images/k8s-apiserver.png" alt="k8s-api-server"></p>
+<h3 id="introduction">Introduction</h3>
+<p>If you’re familiar with Kubernetes, you already know that <a href="https://www.civo.com/blog/kubernetes-questions-for-beginners">Kubernetes is a Container Orchestrator</a>. However, if we look closer at its core, one could argue that Kubernetes appears to be more of an API Server for your infrastructure.</p>
+<p>In Kubernetes, everything is treated as an API object. All the resources in a Kubernetes cluster, such as pods, services, deployments, and others are represented as API objects. These API objects are defined using the <a href="https://kubernetes.io/docs/concepts/overview/kubernetes-api/">Kubernetes API schema</a> and are exposed via the <a href="https://kubernetes.io/docs/reference/command-line-tools-reference/kube-apiserver/">Kubernetes API server</a>. This post explores these API server characteristics to reveal some of the inner workings of Kubernetes.</p>
+<h3 id="pre-requisites">Pre-requisites</h3>
+<p>Before we start, there are some prerequisites you’ll need to have in place:</p>
+<ul>
+<li>Kubernetes Cluster: A running Kubenetes cluster (<a href="https://www.civo.com/">CivoCloud</a> provides free credits worth $250 for 1 month)</li>
+<li>Kubectl: <a href="https://kubernetes.io/docs/reference/kubectl/">Kubectl command line tool</a> to interact with Kubernetes cluster</li>
+<li>Curl: <a href="https://curl.se/">Curl command line tool</a> to make HTTP request</li>
+</ul>
+<h3 id="what-is-the-kubernetes-api-server">What is the Kubernetes API Server?</h3>
+<p>The <a href="https://kubernetes.io/docs/reference/command-line-tools-reference/kube-apiserver/">Kubernetes API server</a> serves as the front-end for the Kubernetes control plane. It receives and processes API requests from clients, such as the <a href="https://kubernetes.io/docs/reference/kubectl/">kubectl command-line tool</a> or other <a href="https://kubernetes.io/docs/concepts/overview/components/">Kubernetes components</a>, and translates them into operations on the underlying resources.</p>
+<p>Clients interact with the Kubernetes API server using the <a href="https://kubernetes.io/docs/concepts/overview/kubernetes-api/">Kubernetes API</a>, which is a <a href="https://www.civo.com/learn/building-and-deploying-a-restful-api-with-fastapi-to-a-managed-kubernetes-cluster-on-civo#what-are-restful-apis">RESTful API</a> that supports a variety of HTTP methods, such as GET, POST, PUT, PATCH and DELETE. The Kubernetes API provides a unified interface for managing Kubernetes resources across multiple clusters.</p>
+<p>The <a href="https://kubernetes.io/docs/reference/kubernetes-api/">Kubernetes APIs</a> has two concepts in their specification: <code>Kubernetes API Verbs</code> and <code>Kubernetes Kinds</code>.</p>
+<h3 id="kubernetes-api-verbs">Kubernetes API Verbs</h3>
+<p><a href="https://kubernetes.io/docs/reference/using-api/api-concepts/#api-verbs">Verbs</a> describe the operations that can be performed on Kubernetes resources. The standard verbs used are <code>get</code>, <code>create</code>, <code>update</code>, <code>patch</code>, <code>delete</code>, <code>list</code>, <code>watch</code>, and <code>deletecollection</code>. Each of these verbs has corresponding HTTP Verbs like GET, POST, PUT, PATCH, DELETE.</p>
+<p>Example: To list all pods in specific namespace, you can use <code>get</code> verb with HTTP GET method.</p>
+<pre tabindex="0"><code>GET /api/v1/namespaces/{namespace}/pods
+</code></pre><h3 id="kubernetes-kind">Kubernetes Kind</h3>
+<p><code>Kind</code> defines the types of resources that can be created or managed in a Kubernetes cluster. Each Kubernetes resource has a specific kind that defines its properties and behavior.</p>
+<p>The <code>kind</code> field in API objects is used along with the <a href="https://kubernetes.io/docs/reference/using-api/#api-groups">API group</a> and <a href="https://kubernetes.io/docs/reference/using-api/#api-versioning">API version</a>. When requests are made to the Kubernetes API, data structures are exchanged through the bodies of requests and responses. These structures share common fields: <code>apiGroup</code>, <code>apiVersion</code> and <code>kind</code>, to help the participants of the request recognize these structures.</p>
+<p>To list all the <code>apiGroup</code>, <code>apiVersion</code> and <code>kind</code>, use the <code>kubectl api-resources</code> command.</p>
+<pre tabindex="0"><code>❯ kubectl api-resources
+NAME             SHORTNAMES         APIVERSION    NAMESPACED   KIND
+pods             po                 v1            true         Pod
+deployments      deploy             apps/v1       true         Deployment
+services         svc                v1            true         Service
+...
+output truncated for brevity
+</code></pre><p>In the above example, the resource of kind <code>Deployment</code> has apiGroup as <code>apps</code> and apiVersion as <code>v1</code>. Also note that the APIVERSION column is made up of <code>apiGroup/apiVersion</code>. For few resources like pods and services its value shown is <code>v1</code> but its actually <code>core/v1</code>. The <code>core</code> apiGroup is usually not represented in path.</p>
+<p>The apiVersion and kind are used in the manifest files written in YAML when you define Kubernetes resources. For example, to create deployment resource, you need to specify appropriate values for apiVersion and kind as defined in the <a href="https://kubernetes.io/docs/reference/kubernetes-api/workload-resources/deployment-v1/#Deployment">reference page for deployment resource</a>, such as:</p>
+<pre tabindex="0"><code>apiVersion: apps/v1
+kind: Deployment
+</code></pre><p>Refer to this <a href="https://kubernetes.io/docs/concepts/workloads/controllers/deployment/#creating-a-deployment">document</a> to check the complete YAML specification.</p>
+<h3 id="kubernetes-apis">Kubernetes APIs</h3>
+<p>There are <a href="https://kubernetes.io/docs/tasks/administer-cluster/access-cluster-api/">various ways</a> to access <a href="https://kubernetes.io/docs/reference/kubernetes-api/">Kubernetes APIs</a>, such as using HTTP REST APIs, Kubectl, <a href="https://kubernetes.io/docs/reference/using-api/client-libraries/">K8s client library</a> and others. The following command, <code>kubectl get –raw /</code> reveals all the API endpoints that are exposed by a Kubernetes API Server. In a later section, we will explore a few of these APIs.</p>
+<pre tabindex="0"><code>❯ kubectl get --raw /
+{
+  &#34;paths&#34;: [
+    &#34;/.well-known/openid-configuration&#34;,
+    &#34;/api&#34;,
+    &#34;/api/v1&#34;,
+    &#34;/apis&#34;,
+    &#34;/apis/&#34;,
+    &#34;/apis/admissionregistration.k8s.io&#34;,
+    &#34;/apis/admissionregistration.k8s.io/v1&#34;,
+    &#34;/apis/apiextensions.k8s.io&#34;,
+    &#34;/apis/apiextensions.k8s.io/v1&#34;,
+    &#34;/apis/apiregistration.k8s.io&#34;,
+    &#34;/apis/apiregistration.k8s.io/v1&#34;,
+    &#34;/apis/apps&#34;,
+    &#34;/apis/apps/v1&#34;,
+...
+output truncated for brevity
+</code></pre><h3 id="interacting-with-kubernetes-apis-via-kubectl">Interacting with Kubernetes APIs via Kubectl</h3>
+<p>Under the hood, the <a href="https://kubernetes.io/docs/reference/kubectl/">Kubectl</a> client calls Kubernetes APIs. You can examine which API requests are made to Kubernetes API Server when you execute Kubectl commands. To do so, make use of verbose flag <code>-v</code>, by settings its verbosity level to a value greater than or equal to 6.</p>
+<p>For example, if you want to know which all requests are made to Kubernetes when listing pods, use the following command.</p>
+<pre tabindex="0"><code>❯ kubectl get pods --namespace default -v6
+I0507 13:03:43.419318   10603 loader.go:373] Config loaded from file:  /Users/milindchawre/.kube/civo-demo-kubeconfig-new
+I0507 13:03:43.854134   10603 round_trippers.go:553] GET https://74.220.16.34:6443/api/v1/namespaces/default/pods?limit=500 200 OK in 428 milliseconds
+</code></pre><p>As you can see from the output, the API path used here is <code>/api/v1/namespaces/default/pods</code> which took <code>428 milliseconds</code> to respond with <code>200 OK</code> status code.</p>
+<p>If you increase the verbosity level of <code>-v</code> flag even higher, you can also see things like request headers, response headers, response body, request timeline and other parts of the HTTP request cycle.</p>
+<h3 id="interacting-with-kubernetes-api-using-http-rest-api">Interacting with Kubernetes API using HTTP REST API</h3>
+<p>Let&rsquo;s try to intract with Kubernetes APIs using HTTP REST API. To do so, lets first <a href="https://kubernetes.io/docs/tasks/extend-kubernetes/http-proxy-access-api/">setup HTTP proxy to access kubernetes api</a> and then access the actual API using Curl.</p>
+<p>The Kubernetes API server is typically secured using authentication and authorization mechanisms, and direct access to the API server may require setting up certificates, tokens, or other credentials.</p>
+<p>The <code>kubectl proxy</code> command sets up a proxy server between your local machine and the Kubernetes API server that allows you to authenticate and authorize your requests to the API server using your local Kubernetes configuration.</p>
+<pre tabindex="0"><code>❯ kubectl proxy
+Starting to serve on 127.0.0.1:8001
+</code></pre><p>Open another terminal and try to access the <code>/version</code> API that prints version information of your Kubernetes cluster.</p>
+<pre tabindex="0"><code>❯ HOST=http://127.0.0.1:8001
+
+~
+❯ curl $HOST/version
+{
+  &#34;major&#34;: &#34;1&#34;,
+  &#34;minor&#34;: &#34;23&#34;,
+  &#34;gitVersion&#34;: &#34;v1.23.6+k3s1&#34;,
+  &#34;gitCommit&#34;: &#34;418c3fa858b69b12b9cefbcff0526f666a6236b9&#34;,
+  &#34;gitTreeState&#34;: &#34;clean&#34;,
+  &#34;buildDate&#34;: &#34;2022-04-28T22:16:18Z&#34;,
+  &#34;goVersion&#34;: &#34;go1.17.5&#34;,
+  &#34;compiler&#34;: &#34;gc&#34;,
+  &#34;platform&#34;: &#34;linux/amd64&#34;
+}%
+
+~
+❯
+</code></pre><h3 id="utilizing-kubernetes-health-check-api-endpoints">Utilizing Kubernetes Health Check API Endpoints</h3>
+<p>There are few <a href="https://kubernetes.io/docs/reference/using-api/health-checks/">special API endpoints</a> exposed by Kubernetes to provide an overview of your cluster status and health, namely livez and healthz:</p>
+<pre tabindex="0"><code>❯ curl &#34;$HOST/livez?verbose&#34;
+[+]ping ok
+[+]log ok
+[+]etcd ok
+[+]poststarthook/start-kube-apiserver-admission-initializer ok
+[+]poststarthook/generic-apiserver-start-informers ok
+...
+output truncated for brevity
+...
+livez check passed
+
+~
+❯
+
+~
+❯ curl &#34;$HOST/healthz?verbose&#34;
+[+]ping ok
+[+]log ok
+[+]etcd ok
+[+]poststarthook/start-kube-apiserver-admission-initializer ok
+[+]poststarthook/generic-apiserver-start-informers ok
+...
+output truncated for brevity
+...
+healthz check passed
+
+~
+❯
+</code></pre><h3 id="exploring-kubernetes-resources-through-api-calls">Exploring Kubernetes Resources through API Calls</h3>
+<p>Now that the proxy is running, you will be able to explore the various resources running on your cluster using CURL or any other HTTP API tool.</p>
+<p><strong><em>List Pods</em></strong></p>
+<p>List all the pods in the default namespace.</p>
+<pre tabindex="0"><code>❯ curl -X GET $HOST/api/v1/namespaces/default/pods
+  &#34;kind&#34;: &#34;PodList&#34;,
+  &#34;apiVersion&#34;: &#34;v1&#34;,
+  &#34;metadata&#34;: {
+    &#34;resourceVersion&#34;: &#34;2990434&#34;
+  },
+  &#34;items&#34;: [
+    {
+      &#34;metadata&#34;: {
+        &#34;name&#34;: &#34;demo-6b6464447b-cvpwm&#34;,
+        &#34;generateName&#34;: &#34;demo-6b6464447b-&#34;,
+        &#34;namespace&#34;: &#34;default&#34;,
+        &#34;uid&#34;: &#34;01063ff9-1552-45bd-be69-37d588268af4&#34;,
+        &#34;resourceVersion&#34;: &#34;1093794&#34;,
+        &#34;creationTimestamp&#34;: &#34;2023-04-11T09:09:20Z&#34;,
+        &#34;labels&#34;: {
+          &#34;app&#34;: &#34;demo&#34;,
+          &#34;pod-template-hash&#34;: &#34;6b6464447b&#34;
+        },
+...
+output truncated for brevity
+</code></pre><p>This is equivalent to running the kubectl command: <code>kubectl get pods -n default</code></p>
+<p><strong><em>List Deployments</em></strong></p>
+<p>You can list all deployments in a given namespace, in this example, <code>project1</code>.</p>
+<pre tabindex="0"><code>❯ curl -X GET $HOST/apis/apps/v1/namespaces/project1/deployments
+{
+  &#34;kind&#34;: &#34;DeploymentList&#34;,
+  &#34;apiVersion&#34;: &#34;apps/v1&#34;,
+  &#34;metadata&#34;: {
+    &#34;resourceVersion&#34;: &#34;2990869&#34;
+  },
+  &#34;items&#34;: [
+    {
+      &#34;metadata&#34;: {
+        &#34;name&#34;: &#34;nginx&#34;,
+        &#34;namespace&#34;: &#34;project1&#34;,
+        &#34;uid&#34;: &#34;46bb89c8-86d5-4449-82f2-3c8ffb4dc954&#34;,
+        &#34;resourceVersion&#34;: &#34;2625847&#34;,
+        &#34;generation&#34;: 3,
+        &#34;creationTimestamp&#34;: &#34;2023-05-04T17:37:06Z&#34;,
+        &#34;annotations&#34;: {
+          &#34;deployment.kubernetes.io/revision&#34;: &#34;3&#34;
+        },
+...
+output truncated for brevity
+</code></pre><p>This is equivalent to running the kubectl command: <code>kubectl get deployments -n project1</code></p>
+<h3 id="creating-kubernetes-resources">Creating Kubernetes Resources</h3>
+<p>Because resources in Kubernetes are created through the API just as they are retrieved through it, you can create one using a direct API call if you so desire.</p>
+<p>Let&rsquo;s create an nginx pod directly using a Kubernetes API call. For that, we first need to create a Kubernetes manifest. In this example it’s for an nginx server:</p>
+<pre tabindex="0"><code>❯ cat &gt; pod.yaml &lt;&lt;EOF
+apiVersion: v1
+kind: Pod
+metadata:
+  name: nginx
+spec:
+  containers:
+  - image: nginx
+    name: nginx
+EOF
+
+❯
+</code></pre><p>To create the resource, we make a POST call (note that the curl -X POST flag to set the request type can be omitted as we use the <code>--data-binary</code> flag):</p>
+<pre tabindex="0"><code>❯ curl $HOST/api/v1/namespaces/project1/pods -H &#34;Content-Type: application/yaml&#34; --data-binary @pod.yaml
+</code></pre><p>This is equivalent to running the kubectl command: <code>kubectl create --namespace project1 -f pod.yaml</code></p>
+<h3 id="summary">Summary</h3>
+<p>From this tutorial, we have learned that grasping Kubernetes API-centric nature is the key to harnessing its full capabilities. Interfacing directly with the Kubernetes API Server grants significant insight into your cluster operations, enabling customization and effective debugging. You can manage resources efficiently, and extend functionalities through the development of custom resources and operators.</p>
+<p>As well as this, the Kubernetes API supports interaction via RESTful HTTP APIs, which allows for automation, integration with other tools, and direct manipulation of resources. This aids in improving control and customization.</p>
+<p>To sum up, having an in-depth understanding of how Kubernetes API Server operates enables you to customize your infrastructure, diagnose problems effectively, and ensure your applications run smoothly on Kubernetes. It opens up avenues for automation, security, and scalability, ensuring that your infrastructure is robust, resilient, and agile.</p>
+<h3 id="additional-resources">Additional resources</h3>
+<p>For more information on Kubernetes API, I suggest you explore the <a href="https://kubernetes.io/docs/concepts/overview/kubernetes-api/">official documentation of Kubernetes</a>.</p>
+<p>If you found this guide useful, let me know on twitter at <a href="https://twitter.com/milindchawre">@milindchawre</a> or you can also connect me on <a href="https://www.linkedin.com/in/milind-chawre/">Linkedin</a>.</p>
+
+
+    
+    
+        <div class="related">
+
+
+<h3>Similar articles</h3>
+
+<ul>
+	
+	<li><a href="/site/blog/pluto-a-tool-to-manage-deprecated-kubernetes-apis/">Pluto a Tool to Manage Deprecated Kubernetes Apis</a></li>
+	
+	<li><a href="/site/micro/excluding-specific-logs-from-a-particular-pod-in-fluentd/">Excluding Specific Logs From a Particular Pod in Fluentd</a></li>
+	
+	<li><a href="/site/blog/tips-to-ace-in-cka-and-ckad-exam/">Tips to ace in CKA and CKAD exam</a></li>
+	
+	<li><a href="/site/blog/sloop-a-tool-to-visualize-the-history-of-kubernetes-resources/">Sloop: a Tool to Visualize the History of Kubernetes Resources</a></li>
+	
+	<li><a href="/site/blog/k3s-upgrade-a-simplified-guide/">K3s Upgrade: A Simplified Guide</a></li>
+	
+</ul>
+
+
+</div>
+    
+
+</div>
+
+
+        
+
+    </div>
+
+</section>
+
+
+
+<section class="section">
+  <div class="container has-text-centered">
+    <p>© 2020</p>
+    
+      <p>Powered by <a href="https://gohugo.io/">Hugo</a> &amp; <a href="https://github.com/pavel-pi/kiss-em">Kiss'Em</a>.</p>
+    
+  </div>
+</section>
+
+</body>
+</html>
+

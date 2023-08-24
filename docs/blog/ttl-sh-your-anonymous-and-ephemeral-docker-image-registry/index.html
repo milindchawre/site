@@ -187,14 +187,14 @@
 <div class="subtitle tags is-6 is-pulled-right">
     
         
-<a class="subtitle is-6" href="/site/tags/docker/">#docker</a>
+<a class="subtitle is-6" href="/tags/docker/">#docker</a>
 
 
 
   
-  | <a class="subtitle is-6" href="/site/tags/registry/">#registry</a>
+  | <a class="subtitle is-6" href="/tags/registry/">#registry</a>
   
-  | <a class="subtitle is-6" href="/site/tags/ci-cd/">#ci-cd</a>
+  | <a class="subtitle is-6" href="/tags/ci-cd/">#ci-cd</a>
   
 
 
@@ -221,12 +221,12 @@
 <table>
 <thead>
 <tr>
-<th align="center"><img src="https://github.com/milindchawre/civo-k8s/raw/master/blog/ttl-sh/images/ttl-sh.png" alt="ttl-sh"></th>
+<th style="text-align:center"><img src="https://github.com/milindchawre/civo-k8s/raw/master/blog/ttl-sh/images/ttl-sh.png" alt="ttl-sh"></th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="center"><em>ttl.sh</em></td>
+<td style="text-align:center"><em>ttl.sh</em></td>
 </tr>
 </tbody>
 </table>
@@ -266,19 +266,19 @@
 <ul>
 <li>First, tag your image with ttl.sh, a UUID, &amp; time limit (i.e. <code>:2h,:60s,:30m</code>):</li>
 </ul>
-<pre><code>$ IMAGE_NAME=$(uuidgen)                              # generates UUID like &quot;f4e58dc4-375d-4c9e-9435-8ec0eac51c19&quot;
+<pre tabindex="0"><code>$ IMAGE_NAME=$(uuidgen)                              # generates UUID like &#34;f4e58dc4-375d-4c9e-9435-8ec0eac51c19&#34;
 $ docker build -t ttl.sh/${IMAGE_NAME}:1h .          # generates full image path like ttl.sh/f4e58dc4-375d-4c9e-9435-8ec0eac51c19:1h
 </code></pre><p><em><strong>Note:</strong> You don&rsquo;t necessarily need to use an UUID for the image name; it can be anything. But since anyone can anonymously pull your image, its better to stick with UUID. We used <code>uuidgen</code> utility to generate the UUID. Your OS may have a different tool to generate them.</em></p>
 <ul>
 <li>Then, push your image:</li>
 </ul>
-<pre><code>$ docker push ttl.sh/${IMAGE_NAME}:1h
+<pre tabindex="0"><code>$ docker push ttl.sh/${IMAGE_NAME}:1h
 .............................................................................
  image ttl.sh/f4e58dc4-375d-4c9e-9435-8ec0eac51c19:1h is available for 1 hour
 </code></pre><ul>
 <li>Now, you will be able to pull your image (before it expires):</li>
 </ul>
-<pre><code>$ docker pull ttl.sh/${IMAGE_NAME}:1h
+<pre tabindex="0"><code>$ docker pull ttl.sh/${IMAGE_NAME}:1h
 </code></pre><h3 id="what-can-i-use-ttlsh-for">What can I use ttl.sh for?</h3>
 <p>ttl.sh can host your container images, so there are endless possibilities where you can use it, may it be. It could be:</p>
 <ul>

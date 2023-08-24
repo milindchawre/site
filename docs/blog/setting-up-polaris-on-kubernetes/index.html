@@ -187,12 +187,12 @@
 <div class="subtitle tags is-6 is-pulled-right">
     
         
-<a class="subtitle is-6" href="/site/tags/kubernetes/">#kubernetes</a>
+<a class="subtitle is-6" href="/tags/kubernetes/">#kubernetes</a>
 
 
 
   
-  | <a class="subtitle is-6" href="/site/tags/polaris/">#polaris</a>
+  | <a class="subtitle is-6" href="/tags/polaris/">#polaris</a>
   
 
 
@@ -232,17 +232,17 @@
 <ul>
 <li>kubectl</li>
 </ul>
-<pre><code>kubectl apply -f https://github.com/fairwindsops/polaris/releases/latest/download/dashboard.yaml
+<pre tabindex="0"><code>kubectl apply -f https://github.com/fairwindsops/polaris/releases/latest/download/dashboard.yaml
 </code></pre><ul>
 <li>helm</li>
 </ul>
-<pre><code>helm repo add fairwinds-stable https://charts.fairwinds.com/stable
+<pre tabindex="0"><code>helm repo add fairwinds-stable https://charts.fairwinds.com/stable
 helm upgrade --install polaris fairwinds-stable/polaris --namespace polaris
 </code></pre><ul>
 <li>binary : download the binary from <a href="https://github.com/fairwindsops/polaris/releases">release page</a></li>
 </ul>
 <p>then use port-forward to access the dashboard:</p>
-<pre><code>kubectl port-forward --namespace polaris svc/polaris-dashboard 8080:80
+<pre tabindex="0"><code>kubectl port-forward --namespace polaris svc/polaris-dashboard 8080:80
 </code></pre><p>and visit <code>http://localhost:8080/</code> to view the dashboard.</p>
 <p><img src="https://github.com/milindchawre/civo-k8s/raw/master/blog/polaris/images/polaris1.png" alt="polaris1"></p>
 <p>As shown in the dashboard, the polaris gives a <code>grade</code> and <code>score</code> to your kubernetes cluster based on the configuration of your workloads. You can now work to improve the workload configuration to improve your cluster <code>grade</code> and <code>score</code>. This will help in making your cluster more secure, stable, scalable, and resilient.</p>
@@ -256,18 +256,18 @@ helm upgrade --install polaris fairwinds-stable/polaris --namespace polaris
 <p><img src="https://github.com/milindchawre/civo-k8s/raw/master/blog/polaris/images/polaris4.png" alt="polaris4"></p>
 <p><img src="https://github.com/milindchawre/civo-k8s/raw/master/blog/polaris/images/polaris5.png" alt="polaris5"></p>
 <p>Now we can apply the new <a href="https://raw.githubusercontent.com/milindchawre/civo-k8s/master/blog/polaris/nginx-fix.yaml">nginx-deployment</a> where we have changed few things to fix few of the misconfigurations. The changes are summarised in the diff below:</p>
-<pre><code>17c17
+<pre tabindex="0"><code>17c17
 -         image: nginx:latest
 ---
 +         image: nginx:1.18.0                        # Changed image tag from latest to specific release
 19a20,50
 +         resources:                                 # Added resource request and limits for cpu and memory
 +           limits:
-+             memory: &quot;200Mi&quot;
-+             cpu: &quot;0.5&quot;
++             memory: &#34;200Mi&#34;
++             cpu: &#34;0.5&#34;
 +           requests:
-+             memory: &quot;100Mi&quot;
-+             cpu: &quot;0.2&quot;
++             memory: &#34;100Mi&#34;
++             cpu: &#34;0.2&#34;
 +         livenessProbe:                             # Added readiness and liveness probe
 +           httpGet:
 +             path: /
@@ -296,7 +296,7 @@ helm upgrade --install polaris fairwinds-stable/polaris --namespace polaris
 <p>The <a href="https://github.com/FairwindsOps/polaris/blob/master/docs/usage.md#webhook">polaris webhook</a> provides a way to enforce some standards in all of your kubernetes deployments. Once you have addressed all the misconfigurations identified in the polaris dashboard, you can deploy the webhook to ensure that the configuration never slips below the configured standard. Once you deploy it in the cluster, the webhook will prevent any further kubernetes deployment that doesn&rsquo;t meet the configuration standard.</p>
 <h4 id="polaris-in-cicd-pipelines">Polaris in CI/CD pipelines</h4>
 <p>Polaris can be integrated in your CI/CD pipelines. You could set it to run on each deployment with something like the following added as a command in your pipeline, customised to your set requirements.</p>
-<pre><code>polaris audit --audit-path path/to/my/deployment/yaml --set-exit-code-on-error --set-exit-code-below-score 90
+<pre tabindex="0"><code>polaris audit --audit-path path/to/my/deployment/yaml --set-exit-code-on-error --set-exit-code-below-score 90
 </code></pre><p>For more information, check out the <a href="https://github.com/FairwindsOps/polaris">Polaris project on GitHub</a> and this intro <a href="https://www.youtube.com/watch?v=Vo4PBG6Vj0Q">video</a> for polaris.</p>
 
 

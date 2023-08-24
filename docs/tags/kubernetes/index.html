@@ -182,14 +182,48 @@
       <div class="subtitle tags is-6 is-pulled-right">
         
         
-<a class="subtitle is-6" href="/site/tags/kubernetes/">#kubernetes</a>
+<a class="subtitle is-6" href="/tags/kubernetes/">#kubernetes</a>
 
 
 
   
-  | <a class="subtitle is-6" href="/site/tags/pluto/">#pluto</a>
+  | <a class="subtitle is-6" href="/tags/k8s-api-server/">#k8s-api-server</a>
   
-  | <a class="subtitle is-6" href="/site/tags/nova/">#nova</a>
+
+
+        
+      </div>
+      <h2 class="subtitle is-6 date">
+        
+    
+        August 18, 2023 | 16:51
+    
+      </h2>
+      <h1 class="title"><a href="https://milindchawre.github.io/site/blog/looking-under-the-hood-of-a-kubernetes-cluster/">Looking Under the Hood of a Kubernetes Cluster</a></h1>
+      <div class="content">
+        This blog was originally featured as a guide in civo cloud community.
+Introduction If you’re familiar with Kubernetes, you already know that Kubernetes is a Container Orchestrator. However, if we look closer at its core, one could argue that Kubernetes appears to be more of an API Server for your infrastructure.
+In Kubernetes, everything is treated as an API object. All the resources in a Kubernetes cluster, such as pods, services, deployments, and others are represented as API objects.
+        
+        <a class="button is-link" href="https://milindchawre.github.io/site/blog/looking-under-the-hood-of-a-kubernetes-cluster/" style="height:28px">
+          Read more
+        </a>
+        
+      </div>
+    </article>
+    
+    <article>
+      <div class="subtitle tags is-6 is-pulled-right">
+        
+        
+<a class="subtitle is-6" href="/tags/kubernetes/">#kubernetes</a>
+
+
+
+  
+  | <a class="subtitle is-6" href="/tags/pluto/">#pluto</a>
+  
+  | <a class="subtitle is-6" href="/tags/nova/">#nova</a>
   
 
 
@@ -218,14 +252,14 @@ Kubernetes APIs The Kubernetes API is the front-end of the Kubernetes control pl
       <div class="subtitle tags is-6 is-pulled-right">
         
         
-<a class="subtitle is-6" href="/site/tags/kubernetes/">#kubernetes</a>
+<a class="subtitle is-6" href="/tags/kubernetes/">#kubernetes</a>
 
 
 
   
-  | <a class="subtitle is-6" href="/site/tags/fluentd/">#fluentd</a>
+  | <a class="subtitle is-6" href="/tags/fluentd/">#fluentd</a>
   
-  | <a class="subtitle is-6" href="/site/tags/logging/">#logging</a>
+  | <a class="subtitle is-6" href="/tags/logging/">#logging</a>
   
 
 
@@ -240,7 +274,7 @@ Kubernetes APIs The Kubernetes API is the front-end of the Kubernetes control pl
       <h1 class="title"><a href="https://milindchawre.github.io/site/micro/excluding-specific-logs-from-a-particular-pod-in-fluentd/">Excluding Specific Logs From a Particular Pod in Fluentd</a></h1>
       <div class="content">
         Problem: I want to exclude these noisy logs coming from activemq pod.
-kubernetes-cluster-logging $ kubectl logs activemq-79bd55f9c-jdtqf --tail 10 -f WARN | Transport Connection to: tcp://172.29.108.66:37302 failed: java.io.EOFException WARN | Transport Connection to: tcp://172.29.108.66:37366 failed: java.io.EOFException WARN | Transport Connection to: tcp://172.29.108.66:37518 failed: java.io.EOFException WARN | Transport Connection to: tcp://172.29.108.66:37582 failed: java.io.EOFException Solution:  Create regex pattern for your log line that need to be excluded. Use kubernetes_metadata filter to enrich logs with kubernetes metadata.
+kubernetes-cluster-logging $ kubectl logs activemq-79bd55f9c-jdtqf --tail 10 -f WARN | Transport Connection to: tcp://172.29.108.66:37302 failed: java.io.EOFException WARN | Transport Connection to: tcp://172.29.108.66:37366 failed: java.io.EOFException WARN | Transport Connection to: tcp://172.29.108.66:37518 failed: java.io.EOFException WARN | Transport Connection to: tcp://172.29.108.66:37582 failed: java.io.EOFException Solution: Create regex pattern for your log line that need to be excluded. Use kubernetes_metadata filter to enrich logs with kubernetes metadata.
         
         <a class="button is-link" href="https://milindchawre.github.io/site/micro/excluding-specific-logs-from-a-particular-pod-in-fluentd/" style="height:28px">
           Read more
@@ -253,16 +287,16 @@ kubernetes-cluster-logging $ kubectl logs activemq-79bd55f9c-jdtqf --tail 10 -f 
       <div class="subtitle tags is-6 is-pulled-right">
         
         
-<a class="subtitle is-6" href="/site/tags/kubernetes/">#kubernetes</a>
+<a class="subtitle is-6" href="/tags/kubernetes/">#kubernetes</a>
 
 
 
   
-  | <a class="subtitle is-6" href="/site/tags/certification/">#certification</a>
+  | <a class="subtitle is-6" href="/tags/certification/">#certification</a>
   
-  | <a class="subtitle is-6" href="/site/tags/cka/">#cka</a>
+  | <a class="subtitle is-6" href="/tags/cka/">#cka</a>
   
-  | <a class="subtitle is-6" href="/site/tags/ckad/">#ckad</a>
+  | <a class="subtitle is-6" href="/tags/ckad/">#ckad</a>
   
 
 
@@ -277,8 +311,8 @@ kubernetes-cluster-logging $ kubectl logs activemq-79bd55f9c-jdtqf --tail 10 -f 
       <h1 class="title"><a href="https://milindchawre.github.io/site/blog/tips-to-ace-in-cka-and-ckad-exam/">Tips to ace in CKA and CKAD exam</a></h1>
       <div class="content">
         This blog was originally featured as a guide in civo cloud community.
-        CKAD and CKA Certificate    I recently passed both CKA and CKAD exams, scoring 98% and 96% respectively. In this blog, I want to share my overall experience and tips to crack these exams.
-What is CKA? CKA is the Certified Kubernetes Administrator certification, which focuses on administrative skills of managing, troubleshooting and operating a kubernetes cluster.
+CKAD and CKA Certificate I recently passed both CKA and CKAD exams, scoring 98% and 96% respectively. In this blog, I want to share my overall experience and tips to crack these exams.
+What is CKA? CKA is the Certified Kubernetes Administrator certification, which focuses on administrative skills of managing, troubleshooting and operating a kubernetes cluster. The CKA exam certifies that users can design, build, configure, and expose native cloud applications for Kubernetes.
         
         <a class="button is-link" href="https://milindchawre.github.io/site/blog/tips-to-ace-in-cka-and-ckad-exam/" style="height:28px">
           Read more
@@ -291,14 +325,14 @@ What is CKA? CKA is the Certified Kubernetes Administrator certification, which 
       <div class="subtitle tags is-6 is-pulled-right">
         
         
-<a class="subtitle is-6" href="/site/tags/kubernetes/">#kubernetes</a>
+<a class="subtitle is-6" href="/tags/kubernetes/">#kubernetes</a>
 
 
 
   
-  | <a class="subtitle is-6" href="/site/tags/k3s/">#k3s</a>
+  | <a class="subtitle is-6" href="/tags/k3s/">#k3s</a>
   
-  | <a class="subtitle is-6" href="/site/tags/sloop/">#sloop</a>
+  | <a class="subtitle is-6" href="/tags/sloop/">#sloop</a>
   
 
 
@@ -317,39 +351,6 @@ Introducing Sloop Sloop is an open source tool to visualize history of all resou
 Problem: Keeping track of events in your clusters Workloads running in Kubernetes cluster are dynamic in nature. The pods, replicas, deployments in your cluster keeps going on and off over the period of time due to their ephemeral nature.
         
         <a class="button is-link" href="https://milindchawre.github.io/site/blog/sloop-a-tool-to-visualize-the-history-of-kubernetes-resources/" style="height:28px">
-          Read more
-        </a>
-        
-      </div>
-    </article>
-    
-    <article>
-      <div class="subtitle tags is-6 is-pulled-right">
-        
-        
-<a class="subtitle is-6" href="/site/tags/kubernetes/">#kubernetes</a>
-
-
-
-  
-  | <a class="subtitle is-6" href="/site/tags/k3s/">#k3s</a>
-  
-
-
-        
-      </div>
-      <h2 class="subtitle is-6 date">
-        
-    
-        July 2, 2020 | 23:03
-    
-      </h2>
-      <h1 class="title"><a href="https://milindchawre.github.io/site/blog/k3s-upgrade-a-simplified-guide/">K3s Upgrade: A Simplified Guide</a></h1>
-      <div class="content">
-        This blog was originally featured as a guide in kubezilla community.
-Introduction K3s is a lightweight Kubernetes distribution which runs with a very small footprint and is a suitable candidate for edge computing. K3s is capable of nearly everything k8s can do. It is just a more lightweight version. It is the ONLY certified Kubernetes distribution built for IoT &amp; Edge computing. It is a highly available, certified Kubernetes distribution designed for production workloads in unattended, resource-constrained, remote locations or inside IoT appliances.
-        
-        <a class="button is-link" href="https://milindchawre.github.io/site/blog/k3s-upgrade-a-simplified-guide/" style="height:28px">
           Read more
         </a>
         

@@ -187,12 +187,12 @@
 <div class="subtitle tags is-6 is-pulled-right">
     
         
-<a class="subtitle is-6" href="/site/tags/kubernetes/">#kubernetes</a>
+<a class="subtitle is-6" href="/tags/kubernetes/">#kubernetes</a>
 
 
 
   
-  | <a class="subtitle is-6" href="/site/tags/goldilocks/">#goldilocks</a>
+  | <a class="subtitle is-6" href="/tags/goldilocks/">#goldilocks</a>
   
 
 
@@ -237,19 +237,19 @@
 <ul>
 <li><code>kubectl</code> to be able to manually install Goldilocks, you would have to <a href="https://github.com/FairwindsOps/goldilocks">clone the repository</a> and from its root directory run the following:</li>
 </ul>
-<pre><code>kubectl create namespace goldilocks
+<pre tabindex="0"><code>kubectl create namespace goldilocks
 kubectl -n goldilocks apply -f hack/manifests/controller
 kubectl -n goldilocks apply -f hack/manifests/dashboard
 </code></pre><ul>
 <li>helm</li>
 </ul>
-<pre><code>helm repo add fairwinds-stable https://charts.fairwinds.com/stable
+<pre tabindex="0"><code>helm repo add fairwinds-stable https://charts.fairwinds.com/stable
 helm install --name goldilocks --namespace goldilocks --set installVPA=true fairwinds-stable/goldilocks
 </code></pre><ul>
 <li>binary : download the binary from <a href="https://github.com/FairwindsOps/goldilocks/releases">release page</a></li>
 </ul>
 <p>then use kubectl&rsquo;s port-forward function to access the dashboard:</p>
-<pre><code>kubectl -n goldilocks port-forward svc/goldilocks-dashboard 8080:80
+<pre tabindex="0"><code>kubectl -n goldilocks port-forward svc/goldilocks-dashboard 8080:80
 </code></pre><p>and visit <code>http://localhost:8080/</code> to view the dashboard.</p>
 <p><img src="https://github.com/milindchawre/civo-k8s/raw/master/blog/goldilocks/images/g1.png" alt="goldilocks1"></p>
 <p>As shown in the dashboard, there are no initial recommendations for any deployment. This is because Goldilocks only provides
@@ -263,7 +263,7 @@ recommendations for deployments in those namespace which have the label <code>go
 <p>The primary goal of VPA is to actually set those for you, but the company isn’t comfortable with the way it does this and
 prefers to use it primarily for recommendations, Goldilocks’s creator <a href="https://www.linkedin.com/in/sudermanjr/">Andy Suderman</a> writes in a <a href="https://www.fairwinds.com/news/introducing-goldilocks-a-tool-for-recommending-resource-requests">blog post</a>.</p>
 <blockquote>
-<p><em>&ldquo;The way we utilize the VPA recommendation engine is simple. We run a controller in the cluster that watches for namespaces that are labelled with <code>goldilocks.fairwinds.com/enabled=true</code>. Within those enabled namespaces, we look at every deployment object and create a corresponding VPA object. That VPA is set with <code>Mode: Off </code> and doesn’t actually modify your resource requests and limits; it just sits there and provides a recommendation. To view these recommendations, you would have to use kubectl to query each and every VPA object. For medium to large deployments, this can get very tedious. That’s where we introduced Goldilocks dashboard which provides a visualization of the VPA recommendations.&quot;</em></p>
+<p><em>&ldquo;The way we utilize the VPA recommendation engine is simple. We run a controller in the cluster that watches for namespaces that are labelled with <code>goldilocks.fairwinds.com/enabled=true</code>. Within those enabled namespaces, we look at every deployment object and create a corresponding VPA object. That VPA is set with <code>Mode: Off </code> and doesn’t actually modify your resource requests and limits; it just sits there and provides a recommendation. To view these recommendations, you would have to use kubectl to query each and every VPA object. For medium to large deployments, this can get very tedious. That’s where we introduced Goldilocks dashboard which provides a visualization of the VPA recommendations.&rdquo;</em></p>
 </blockquote>
 <h4 id="excluding-recommendations-for-containers">Excluding Recommendations for Containers</h4>
 <p>Often we see clusters where every pod gets a sidecar, such as the Istio or Linkerd2 sidecars. You may not want to see resource recommendations for those containers because we may or may not have control over those values. There are two ways to exclude these containers.</p>

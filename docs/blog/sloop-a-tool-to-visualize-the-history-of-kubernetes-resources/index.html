@@ -187,14 +187,14 @@
 <div class="subtitle tags is-6 is-pulled-right">
     
         
-<a class="subtitle is-6" href="/site/tags/kubernetes/">#kubernetes</a>
+<a class="subtitle is-6" href="/tags/kubernetes/">#kubernetes</a>
 
 
 
   
-  | <a class="subtitle is-6" href="/site/tags/k3s/">#k3s</a>
+  | <a class="subtitle is-6" href="/tags/k3s/">#k3s</a>
   
-  | <a class="subtitle is-6" href="/site/tags/sloop/">#sloop</a>
+  | <a class="subtitle is-6" href="/tags/sloop/">#sloop</a>
   
 
 
@@ -273,7 +273,7 @@
 <ul>
 <li>Helm</li>
 </ul>
-<pre><code>$ git clone https://github.com/salesforce/sloop
+<pre tabindex="0"><code>$ git clone https://github.com/salesforce/sloop
 $ cd sloop/helm
 $ kubectl create ns sloop
 $ helm install sloop -n sloop ./sloop
@@ -282,7 +282,7 @@ $ helm install sloop -n sloop ./sloop
 </ul>
 <p>Refer to <a href="https://github.com/salesforce/sloop#local-docker-run">this document</a> to run sloop as a standalone docker container.</p>
 <p>then use kubectl&rsquo;s port-forward function to access the dashboard:</p>
-<pre><code>kubectl port-forward -n sloop service/sloop 8080:80
+<pre tabindex="0"><code>kubectl port-forward -n sloop service/sloop 8080:80
 </code></pre><p>and visit <code>http://localhost:8080/</code> to view the dashboard.</p>
 <p><img src="https://github.com/milindchawre/civo-k8s/raw/master/blog/sloop/images/sloop1.png" alt="sloop1"></p>
 <p>As you can see sloop provides timeline of your kubernetes resources. It also provides different filters to visualize it.</p>

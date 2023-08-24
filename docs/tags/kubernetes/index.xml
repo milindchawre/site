@@ -6,10 +6,17 @@
     <description>Recent content in kubernetes on Milind&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 06 Mar 2022 18:55:42 +0530</lastBuildDate>
-    
-	<atom:link href="https://milindchawre.github.io/site/tags/kubernetes/index.xml" rel="self" type="application/rss+xml" />
-    
+    <lastBuildDate>Fri, 18 Aug 2023 16:51:23 +0530</lastBuildDate><atom:link href="https://milindchawre.github.io/site/tags/kubernetes/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Looking Under the Hood of a Kubernetes Cluster</title>
+      <link>https://milindchawre.github.io/site/blog/looking-under-the-hood-of-a-kubernetes-cluster/</link>
+      <pubDate>Fri, 18 Aug 2023 16:51:23 +0530</pubDate>
+      
+      <guid>https://milindchawre.github.io/site/blog/looking-under-the-hood-of-a-kubernetes-cluster/</guid>
+      <description>This blog was originally featured as a guide in civo cloud community.
+Introduction If you’re familiar with Kubernetes, you already know that Kubernetes is a Container Orchestrator. However, if we look closer at its core, one could argue that Kubernetes appears to be more of an API Server for your infrastructure.
+In Kubernetes, everything is treated as an API object. All the resources in a Kubernetes cluster, such as pods, services, deployments, and others are represented as API objects.</description>
+    </item>
     
     <item>
       <title>Pluto a Tool to Manage Deprecated Kubernetes Apis</title>
@@ -29,7 +36,7 @@ Kubernetes APIs The Kubernetes API is the front-end of the Kubernetes control pl
       
       <guid>https://milindchawre.github.io/site/micro/excluding-specific-logs-from-a-particular-pod-in-fluentd/</guid>
       <description>Problem: I want to exclude these noisy logs coming from activemq pod.
-kubernetes-cluster-logging $ kubectl logs activemq-79bd55f9c-jdtqf --tail 10 -f WARN | Transport Connection to: tcp://172.29.108.66:37302 failed: java.io.EOFException WARN | Transport Connection to: tcp://172.29.108.66:37366 failed: java.io.EOFException WARN | Transport Connection to: tcp://172.29.108.66:37518 failed: java.io.EOFException WARN | Transport Connection to: tcp://172.29.108.66:37582 failed: java.io.EOFException Solution:  Create regex pattern for your log line that need to be excluded. Use kubernetes_metadata filter to enrich logs with kubernetes metadata.</description>
+kubernetes-cluster-logging $ kubectl logs activemq-79bd55f9c-jdtqf --tail 10 -f WARN | Transport Connection to: tcp://172.29.108.66:37302 failed: java.io.EOFException WARN | Transport Connection to: tcp://172.29.108.66:37366 failed: java.io.EOFException WARN | Transport Connection to: tcp://172.29.108.66:37518 failed: java.io.EOFException WARN | Transport Connection to: tcp://172.29.108.66:37582 failed: java.io.EOFException Solution: Create regex pattern for your log line that need to be excluded. Use kubernetes_metadata filter to enrich logs with kubernetes metadata.</description>
     </item>
     
     <item>
@@ -39,8 +46,8 @@ kubernetes-cluster-logging $ kubectl logs activemq-79bd55f9c-jdtqf --tail 10 -f 
       
       <guid>https://milindchawre.github.io/site/blog/tips-to-ace-in-cka-and-ckad-exam/</guid>
       <description>This blog was originally featured as a guide in civo cloud community.
-        CKAD and CKA Certificate    I recently passed both CKA and CKAD exams, scoring 98% and 96% respectively. In this blog, I want to share my overall experience and tips to crack these exams.
-What is CKA? CKA is the Certified Kubernetes Administrator certification, which focuses on administrative skills of managing, troubleshooting and operating a kubernetes cluster.</description>
+CKAD and CKA Certificate I recently passed both CKA and CKAD exams, scoring 98% and 96% respectively. In this blog, I want to share my overall experience and tips to crack these exams.
+What is CKA? CKA is the Certified Kubernetes Administrator certification, which focuses on administrative skills of managing, troubleshooting and operating a kubernetes cluster. The CKA exam certifies that users can design, build, configure, and expose native cloud applications for Kubernetes.</description>
     </item>
     
     <item>
